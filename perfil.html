@@ -1,27 +1,113 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="css/geral.css">
-    <title>Document</title>
-
+<meta charset="UTF-8">
+<title>Perfil</title>
+<link rel="stylesheet" href="perfil.css">
 </head>
-<body>
-    <header>
-    <h1 id="linha">ecossistema academico</h1>
-      <img src="eco.png" alt="EcoHub" class="logo">
-  </header>
 
-<nav>
-<a href="inicio.html">inicio</a>
-<a href="eventos.html">eventos</a>
-<a href="noticias.html">notícias</a>
-<a href="perfil.html">perfil</a>
-<a href="projetos.html">projetos</a>
-<a href="sobre.html">sobre</a>
-<a href="cadastro.html">cadastro</a>
-<a href="login.html">login</a>
-</nav>
+<body>
+
+<header>
+  <nav>
+    <h2>EcoHub</h2>
+    <ul>
+      <li>Início</li>
+      <li>Feed</li>
+      <li>Eventos</li>
+      <li>Perfil</li>
+    </ul>
+  </nav>
+</header>
+
+<section class="perfil-header">
+  <div class="foto-perfil"></div>
+
+  <div class="info-perfil">
+    <h1>João Pedro Santos</h1>
+    <p>Engenharia de Software - 5º Semestre</p>
+    <p class="bio">
+      Desenvolvedor full-stack apaixonado por tecnologia e inovação.
+    </p>
+
+    <div class="stats">
+      <span>34 Projetos</span>
+      <span>120 Posts</span>
+      <span>560 Curtidas</span>
+    </div>
+
+    <button>Editar Perfil</button>
+  </div>
+</section>
+
+
+<section class="tabs">
+  <button onclick="mostrarAba('postagens')">Postagens</button>
+  <button onclick="mostrarAba('projetos')">Projetos</button>
+  <button onclick="mostrarAba('sobre')">Sobre</button>
+</section>
+
+<section id="postagens" class="conteudo-perfil">
+
+  <article class="post">
+    <h3>Sistema de Controle de Acesso</h3>
+    <p>
+      Acabei de publicar meu projeto de API RESTful com Node.js e TypeScript!
+    </p>
+  </article>
+
+  <article class="post">
+    <h3>Workshop Clean Architecture</h3>
+    <p>
+      Participando do workshop hoje. Aprendendo bastante sobre boas práticas.
+    </p>
+  </article>
+
+</section>
+
+
+<section id="projetos" class="conteudo-perfil" style="display:none;">
+
+  <button class="publicar-projeto">Publicar Projeto</button>
+
+  <p class="sem-projetos">
+    Você ainda não publicou nenhum projeto.
+  </p>
+
+</section>
+
+
+<section id="sobre" class="conteudo-perfil" style="display:none;">
+
+  <h3>Sobre</h3>
+  <p>
+    Desenvolvedor focado em criar soluções que impactem positivamente a sociedade.
+  </p>
+
+  <h3>Formação</h3>
+  <p>Engenharia de Software - Faculdade Eniac</p>
+
+  <h3>Habilidades</h3>
+  <div class="habilidades">
+    <span>JavaScript</span>
+    <span>React</span>
+    <span>Node.js</span>
+    <span>Python</span>
+    <span>SQL</span>
+    <span>Docker</span>
+  </div>
+
+</section>
+
+<script>
+function mostrarAba(aba) {
+  document.getElementById("postagens").style.display = "none";
+  document.getElementById("projetos").style.display = "none";
+  document.getElementById("sobre").style.display = "none";
+
+  document.getElementById(aba).style.display = "block";
+}
+</script>
+
 </body>
 </html>
