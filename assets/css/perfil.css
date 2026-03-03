@@ -1,7 +1,3 @@
-<<<<<<< HEAD:assets/css/perfil.css
-
-=======
->>>>>>> d67967416f765ec9817f79a892797f1ce098844b:css/perfil.css
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -11,9 +7,13 @@ body {
 /* NAVBAR */
 
 header {
-  background-color: #053B5E;
-  padding: 15px 40px;
-  color: white;
+    background: #051D40;
+    padding: 20px;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* separa esquerda e direita */
 }
 
 nav {
