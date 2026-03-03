@@ -9,11 +9,11 @@
 <body>
 
     <div class="container">
-         <img src="../assets/img/eco-certo.png" alt="EcoHub" class="logo">
+        <img src="" alt="EcoHub" class="logo">
 
         <h1 >Cadastro</h1>
 
-        <form>
+        <form id="formCadastro">
             <input type="text" placeholder="Nome completo" required>
             <input type="email" placeholder="seu.email@eniac.edu.br" required>
             <div class="linha">
@@ -39,8 +39,9 @@
                 </select>
             </div>
 
-            <input type="password" placeholder="Senha" required>
-            <input type="password" placeholder="Confirmar senha" required>
+            <input type="password" id="senha" placeholder="Senha" required>
+            <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required>
+            <p id="erroSenha" class="erro-senha"></p>
             <div class="termos">
                 <input type="checkbox" id="aceitarTermos" required>
                 <label for="aceitarTermos">
@@ -59,6 +60,6 @@
             <a href="login.html">Fazer login</a>
         </p>
     </div>
-    
+    <script src="../js/cadastro.js" defer></script>
 </body>
 </html>
