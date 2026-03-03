@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  background-color: #053B5E;
+  background-color: #053B5E; 
   width: 380px;
   padding: 24px;
   border-radius: 8px;
@@ -171,6 +171,20 @@ select {
   flex: 1;
   font-size: 16px;
   height: 100%;
+}
+.erro-senha {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 6px;
+}
+.erro-input {
+  border: 2px solid #ff4d4d;
+}
+
+.erro-senha {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: 6px;
 }
 @media (max-width: 480px) {
 
