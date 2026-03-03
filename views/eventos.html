@@ -1,122 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Perfil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos - Ecossistema Academy</title>
 
-<link rel="stylesheet" href="../assets/css/eventos.css">
-<link rel="stylesheet" href="../assets/css/geral.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<header>
-  <nav>
-  <img src="../assets/img/eco-certo.png" alt="EcoHub" class="logo">
-    <ul>
-    <a href="inicio.html">inicio</a>
-<a href="eventos.html">eventos</a>
-<a href="noticias.html">notícias</a>
-<a href="feed.html">feed</a>
-<a href="projetos.html">projetos</a>
-<a href="sobre.html">sobre</a>
-<a href="cadastro.html">cadastro</a>
-<a href="login.html">login</a>
-<a href="perfil.html" class="link-perfil">
-    <img src="../assets/img/perfil.jpg" alt="Perfil">
-</a>
-    </ul>
-  </nav>
+<!-- HEADER -->
+<header class="topbar">
+  <div class="logo-area">
+   <div class="logo-box">
+  <img src="eco.png" alt="Logo Ecossistema Academy">
+</div>
+    <div class="logo-text">
+      <strong class="calmapae">Ecossistema Academy</strong>
+      <span class="calmaa">Conectando estudantes e projetos reais</span>
+    </div>
+  </div>
+
+  <div class="top-icons">
+    <div class="bell" id="notificationBell">🔔</div>
+    <div class="avatar"></div>
+  </div>
 </header>
 
-<section class="perfil-header">
-  <div class="foto-perfil"></div>
+<!-- NAV -->
+<nav class="navbar">
+  <a href="#">Início</a>
+  <a href="#">Eventos</a>
+  <a href="#">Projetos</a>
+  <a href="#">Perfil</a>
+</nav>
 
-  <div class="info-perfil">
-    <h1>João Pedro Santos</h1>
-    <p>Engenharia de Software - 5º Semestre</p>
-    <p class="bio">
-      Desenvolvedor full-stack apaixonado por tecnologia e inovação.
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Eventos do Ecossistema</h1>
+    <p>
+      Participe de workshops, palestras e encontros para expandir seus conhecimentos
+      e fazer networking com outros estudantes e profissionais.
     </p>
+  </section>
 
-    <div class="stats">
-      <span>34 Projetos</span>
-      <span>120 Posts</span>
-      <span>560 Curtidas</span>
+  <!-- SMALL CARDS -->
+  <section class="top-cards">
+    <div class="small-card">
+      📅
+      <h3>Ver Calendário Completo</h3>
+      <p>Veja todos os eventos programados</p>
     </div>
 
-    <button>Editar Perfil</button>
-  </div>
-</section>
+    <div class="small-card">
+      ✉️
+      <h3>Receber no Email</h3>
+      <p>Cadastre-se para receber avisos</p>
+    </div>
 
+    <div class="small-card">
+      👥
+      <h3>Meus Eventos</h3>
+      <p>Eventos que você confirmou presença</p>
+    </div>
+  </section>
 
-<section class="tabs">
-  <button onclick="mostrarAba('postagens')">Postagens</button>
-  <button onclick="mostrarAba('projetos')">Projetos</button>
-  <button onclick="mostrarAba('sobre')">Sobre</button>
-</section>
+  <!-- EVENTS -->
+  <section>
+    <h2 class="section-title">Próximos Eventos</h2>
 
-<section id="postagens" class="conteudo-perfil">
+    <div class="events">
 
-  <article class="post">
-    <h3>Sistema de Controle de Acesso</h3>
+      <!-- EVENT 1 -->
+      <div class="event-card">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="">
+        <div class="event-content">
+          <span class="badge">Workshop</span>
+          <span class="capacity">👥 25/30</span>
+
+          <h3 class="event-title">Workshop de React Native</h3>
+
+          <p class="event-desc">
+            Aprenda os fundamentos do React Native e desenvolva seu primeiro aplicativo móvel.
+          </p>
+
+          <p class="event-info">📅 sábado, 17 de outubro de 2026</p>
+          <p class="event-info">⏰ 14:00 - 18:00</p>
+          <p class="event-info">📍 Sala 101, Edifício Principal</p>
+
+          <button class="button confirm-btn">Confirmar Presença</button>
+        </div>
+      </div>
+
+      <!-- EVENT 2 -->
+      <div class="event-card">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644" alt="">
+        <div class="event-content">
+          <span class="badge">Palestra</span>
+          <span class="capacity">👥 40/50</span>
+
+          <h3 class="event-title">Palestra sobre UX/UI Design</h3>
+
+          <p class="event-desc">
+            Conheça as melhores práticas de design de experiência do usuário e interface do usuário.
+          </p>
+
+          <p class="event-info">📅 quarta-feira, 20 de maio de 2026</p>
+          <p class="event-info">⏰ 10:00 - 12:00</p>
+          <p class="event-info">📍 Auditório Central</p>
+
+          <button class="button confirm-btn">Confirmar Presença</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+<footer class="footer">
+  <div class="footer-content">
+    
+    <img src="logo2.eniac.png" alt="Logo" class="footer-logo">
+
     <p>
-      Acabei de publicar meu projeto de API RESTful com Node.js e TypeScript!
+      © 2026 Ecossistema Academy. Todos os direitos reservados.
+      Conectando estudantes e projetos reais.
     </p>
-  </article>
 
-  <article class="post">
-    <h3>Workshop Clean Architecture</h3>
-    <p>
-      Participando do workshop hoje. Aprendendo bastante sobre boas práticas.
-    </p>
-  </article>
-
-</section>
-
-
-<section id="projetos" class="conteudo-perfil" style="display:none;">
-
-  <button class="publicar-projeto">Publicar Projeto</button>
-
-  <p class="sem-projetos">
-    Você ainda não publicou nenhum projeto.
-  </p>
-
-</section>
-
-
-<section id="sobre" class="conteudo-perfil" style="display:none;">
-
-  <h3>Sobre</h3>
-  <p>
-    Desenvolvedor focado em criar soluções que impactem positivamente a sociedade.
-  </p>
-
-  <h3>Formação</h3>
-  <p>Engenharia de Software - Faculdade Eniac</p>
-
-  <h3>Habilidades</h3>
-  <div class="habilidades">
-    <span>JavaScript</span>
-    <span>React</span>
-    <span>Node.js</span>
-    <span>Python</span>
-    <span>SQL</span>
-    <span>Docker</span>
   </div>
-
-</section>
-
-<script>
-function mostrarAba(aba) {
-  document.getElementById("postagens").style.display = "none";
-  document.getElementById("projetos").style.display = "none";
-  document.getElementById("sobre").style.display = "none";
-
-  document.getElementById(aba).style.display = "block";
-}
-</script>
-
+</footer>
+<!-- JS -->
+<script src="js/script.js"></script>
 </body>
 </html>
