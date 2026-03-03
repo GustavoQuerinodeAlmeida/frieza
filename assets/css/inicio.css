@@ -14,6 +14,10 @@ H2{
      margin-top: 20px; /* espaço acima do <h2> */
     margin-bottom: 20px;
      font-size: 20px; /* aumenta aqui */
+     margin-bottom: 20px;
+    text-align: center;
+    
+
 }
 
 #inicio{
@@ -41,9 +45,7 @@ h1, p {
 
 }
 
-.noticias h2 {
-    margin-bottom: 20px;
-}
+
 
 .card-noticia {
     background: white;
@@ -64,6 +66,7 @@ h1, p {
 }
 .layout {
     display: flex;
+    
 }
 
 .conteudo {
@@ -72,10 +75,12 @@ h1, p {
 }
 
 .noticias {
-    flex: 1; /* menor */
-    padding: 20px;
-    background: #f4f4f4;
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
 }
+
 #noticia1{
 background-color: white;
 }
@@ -141,7 +146,6 @@ background-color: white;
     padding: 20px 30px;
     border-radius: 10px;
     transition: 0.3s;
-
       text-align: center;
 }
 
