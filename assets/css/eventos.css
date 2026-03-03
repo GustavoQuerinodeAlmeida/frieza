@@ -86,18 +86,47 @@ body{
   margin-bottom:40px;
 }
 
-.small-card{
-  background:#fff;
-  padding:35px;
-  border-radius:18px;
-  border:1px solid #eee;
-  text-align:center;
-  transition:0.2s;
+.top-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin: 40px;
+  flex-wrap: wrap;
 }
 
-.small-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+.small-card {
+  text-decoration: none;
+  color: #333;
+  background: #f8f9fc;
+  padding: 30px 20px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.small-card i {
+  font-size: 35px;
+  margin-bottom: 15px;
+  color: #051D40;
+}
+
+.small-card h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #051D40;
+}
+
+.small-card p {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.small-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  background: #ffffff;
 }
 
 /* EVENTS */
