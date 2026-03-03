@@ -74,15 +74,17 @@ button[type="submit"]:hover {
   background-color: #004182;
 }
 
-button[type="button"] {
-  background-color: transparent;
-  border: 1px solid #8c8c8c;
+.btn-secundario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  border-radius: 24px;
   background-color: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.40);
-}
-
-button[type="button"]:hover {
-  background-color: #f3f2ef;
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.4);
 }
 
 .troca-pagina {
@@ -100,16 +102,6 @@ button[type="button"]:hover {
 
 .troca-pagina a:hover {
   text-decoration: underline;
-}
-.inicio {
-    display: flex;
-    margin-top: 20px;
-    text-decoration: none;
-    color: black;
-    font-weight: 600;;
-}
-.inicio:hover {
-    text-decoration: underline;
 }
 .termos {
     display: flex;
@@ -130,7 +122,7 @@ button[type="button"]:hover {
 }
 .form-group {
     display: block;
-    margin-bottom:5px
+    margin-bottom:5px;
     font-weight: bold;
 }
 .lembrar {
@@ -140,20 +132,46 @@ button[type="button"]:hover {
     color: white;
     gap: 3px;
 }
-.logo-capela {
-width: 80px;
-height: auto;
-margin-bottom: 20px;
-}
 select {
     width: 200px;
     padding: 8px;
-    border: 2px solid #4DA3D9;
+    border: 2px solid white;
     border-radius: 8px;
     font-size: 14px;
     cursor: pointer;
 }
+.linha {
+  display: flex;
+  gap: 10px;
+}
 
+.linha select {
+  flex: 1;
+  width: 100%;
+}
+.campo {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  height: 48px;
+  padding: 0 12px;
+}
+
+.campo img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.campo input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  height: 100%;
+}
 @media (max-width: 480px) {
 
   body {
