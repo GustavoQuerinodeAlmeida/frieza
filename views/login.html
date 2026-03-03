@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login_cadastro.css">
+    <link rel="stylesheet" href="../assets/css/login_cadastro.css">
     <title>Login</title>
 </head>
 <body>
 
     <div class="container">
-        <img src="../img/eco.png" alt="Logo" class="logo">
+        <img src="../assets/img/eco.png" alt="Logo" class="logo">
 
         <h1>Login</h1>
 
         <form>
-            <input type="text" placeholder="Nome ou E-mail" required>
+            <input type="text" placeholder="E-mail" required>
             <input type="password" placeholder="Senha" required>
             <div class="lembrar">
                 <input type="checkbox" id="lembrarLogin" required>
                 <label for="lembrarLogin">Lembrar-me</label>
             </div>
             <button type="submit">Entrar</button>
-            <button type="button">Voltar</button>
+            <a href="../views/inicio.html" class="btn-secundario">
+            Voltar para página inicial
+            </a>
         </form>
 
         <p class="troca-pagina">
@@ -29,6 +31,4 @@
             <a href="cadastro.html">Cadastre-se</a>
         </p>
     </div>
-    <a class="inicio" href="inicio.html">Voltar para página inicial</a>
-</body>
 </html>
