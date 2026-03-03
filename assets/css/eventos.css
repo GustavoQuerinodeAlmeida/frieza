@@ -11,69 +11,7 @@ body{
 }
 
 /* HEADER */
-.topbar{
-  background: linear-gradient(to right, #051D40, #053B5E, #2788C8);
-  padding:15px 40px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:3px solid #053B5E;
-}
 
-.logo-area{
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
-
-.logo-box{
-  background:#053B5E; /* remove se não quiser fundo amarelo */
-  padding:8px;
-  border-radius:10px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.logo-box img{
-  height:40px; /* controla tamanho da logo */
-  width:auto;
-  display:block;
-}
-
-.logo-text span{
-  font-size:13px;
-  color:#666;
-}
-
-.top-icons{
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
-
-.bell{
-  position:relative;
-  cursor:pointer;
-}
-
-.bell::after{
-  content:'';
-  position:absolute;
-  top:-2px;
-  right:-2px;
-  width:8px;
-  height:8px;
-  background:red;
-  border-radius:50%;
-}
-
-.avatar{
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  background:url('https://i.pravatar.cc/150') center/cover;
-}
 
 /* NAV */
 .navbar{

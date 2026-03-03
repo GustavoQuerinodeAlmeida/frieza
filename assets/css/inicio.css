@@ -4,7 +4,7 @@ h1 {
     background: linear-gradient(#2788C8, #31BADF);
    padding: 60px 20px;
    font-family: Arial, Helvetica, sans-serif;
-     font-size: 40px; 
+     font-size: 60px; 
      margin: 5px 0;
 }
 
@@ -109,3 +109,42 @@ background-color: white;
     text-decoration: underline;
 }
 
+/*css relacionado a informações */
+
+.estatisticas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 40px 20px;
+}
+
+
+
+.card .icone {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 40px;
+    margin: 10px 0;
+    color: #0d3b66;
+}
+
+.card p {
+    color: #555;
+}
+
+.card {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+      text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}

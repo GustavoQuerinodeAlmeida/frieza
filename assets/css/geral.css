@@ -14,7 +14,7 @@ body {
 /* HEADER */
 header {
     background: #051D40;  /* Cor de fundo */
-    padding: 20px;         /* Espaçamento interno */
+    padding: 10px;         /* Espaçamento interno */
     color: white;          /* Cor do texto */
     display: flex;         /* Usando flexbox para alinhas os itens */
     align-items: center;   /* Alinha os itens no centro verticalmente */
