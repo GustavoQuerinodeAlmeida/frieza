@@ -219,29 +219,3 @@ body{
 }
 /* FOOTER */
 
-.footer{
-  background:#051D40; /* cor de fundo */
-  color:white;
-  padding:20px 20px;
-  margin-top:60px;
-}
-
-.footer-content{
-  max-width:1200px;
-  margin:0 auto;
-  text-align:center;
-}
-
-.footer-logo{
-  height:50px;
-  margin-bottom:20px;
-  border-radius: 8px;
-}
-
-.footer p{
-  font-size:14px;
-  opacity:0.8;
-}
-.calmapae{
-    color: #e4dddd;
-}
