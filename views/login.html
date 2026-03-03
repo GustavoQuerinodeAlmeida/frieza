@@ -9,15 +9,16 @@
 <body>
 
     <div class="container">
-        <img src="../assets/img/eco-certo.png" alt="EcoHub" class="logo">
+        <img src="" alt="EcoHub" class="logo">
 
         <h1>Login</h1>
 
-        <form>
+        <form id="formLogin" >
             <input type="text" placeholder="E-mail" required>
             <input type="password" placeholder="Senha" required>
+            <p id="erroLogin" class="erro-senha"></p>
             <div class="lembrar">
-                <input type="checkbox" id="lembrarLogin" required>
+                <input type="checkbox" id="lembrarLogin">
                 <label for="lembrarLogin">Lembrar-me</label>
             </div>
             <button type="submit">Entrar</button>
@@ -31,4 +32,6 @@
             <a href="cadastro.html">Cadastre-se</a>
         </p>
     </div>
-</html>
+    <script src="../js/login.js" defer></script>
+</body>
+</html> 
