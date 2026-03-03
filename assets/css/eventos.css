@@ -1,0 +1,280 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#f4f4f4;
+  color:#111;
+}
+
+/* HEADER */
+.topbar{
+  background: linear-gradient(to right, #051D40, #053B5E, #2788C8);
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:3px solid #053B5E;
+}
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.logo-box{
+  background:#053B5E; /* remove se não quiser fundo amarelo */
+  padding:8px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.logo-box img{
+  height:40px; /* controla tamanho da logo */
+  width:auto;
+  display:block;
+}
+
+.logo-text span{
+  font-size:13px;
+  color:#666;
+}
+
+.top-icons{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.bell{
+  position:relative;
+  cursor:pointer;
+}
+
+.bell::after{
+  content:'';
+  position:absolute;
+  top:-2px;
+  right:-2px;
+  width:8px;
+  height:8px;
+  background:red;
+  border-radius:50%;
+}
+
+.avatar{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:url('https://i.pravatar.cc/150') center/cover;
+}
+
+/* NAV */
+.navbar{
+  background:#fff;
+  padding:15px 40px;
+  display:flex;
+  gap:40px;
+  border-bottom:1px solid #eee;
+}
+
+.navbar a{
+  text-decoration:none;
+  color:#444;
+  font-weight:500;
+  position:relative;
+  padding-bottom:8px;
+}
+
+.navbar a{
+  position:relative;
+  text-decoration:none;
+  color:#444;
+  font-weight:500;
+  padding-bottom:8px;
+}
+
+/* Linha escondida */
+.navbar a::after{
+  content:'';
+  position:absolute;
+   left:50%;
+  bottom:-8px;
+  width:0%;
+  height:3px;
+  background:#2788C8;
+  transition:0.3s ease;
+  transform:translateX(-50%);
+}
+
+/* Quando passar o mouse */
+.navbar a:hover::after{
+  width:100%;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1200px;
+  margin:40px auto;
+  padding:0 20px;
+}
+
+/* HERO */
+.hero{
+ background-color: #051D40;
+ color: white;
+  padding:45px;
+  border-radius:20px;
+  margin-bottom:40px;
+}
+
+.hero h1{
+  font-size:32px;
+  font-weight:800;
+  margin-bottom:10px;
+}
+
+/* SMALL CARDS */
+.top-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  margin-bottom:40px;
+}
+
+.small-card{
+  background:#fff;
+  padding:35px;
+  border-radius:18px;
+  border:1px solid #eee;
+  text-align:center;
+  transition:0.2s;
+}
+
+.small-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* EVENTS */
+.section-title{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:25px;
+}
+
+.events{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+  gap:30px;
+}
+
+.event-card{
+  background:#fff;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid #eee;
+  transition:0.2s;
+}
+
+.event-card:hover{
+  box-shadow:0 12px 30px rgba(0,0,0,0.06);
+}
+
+.event-card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+
+.event-content{
+  padding:25px;
+}
+
+.badge{
+  background:#053B5E;
+  color: #e4dddd;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:600;
+}
+
+.capacity{
+  float:right;
+  font-size:13px;
+  color:#666;
+}
+
+.event-title{
+  font-size:20px;
+  font-weight:700;
+  margin:10px 0;
+}
+
+.event-desc{
+  font-size:14px;
+  color:#555;
+  margin-bottom:15px;
+}
+
+.event-info{
+  font-size:14px;
+  color:#444;
+}
+
+.button{
+  margin-top:20px;
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  background:#053B5E;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.button:hover{
+  background:#051D40;
+}
+
+@media(max-width:768px){
+  .events{
+    grid-template-columns:1fr;
+  }
+}
+/* FOOTER */
+
+.footer{
+  background:#051D40; /* cor de fundo */
+  color:white;
+  padding:20px 20px;
+  margin-top:60px;
+}
+
+.footer-content{
+  max-width:1200px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.footer-logo{
+  height:50px;
+  margin-bottom:20px;
+  border-radius: 8px;
+}
+
+.footer p{
+  font-size:14px;
+  opacity:0.8;
+}
+.calmapae{
+    color: #e4dddd;
+}
