@@ -17,6 +17,7 @@ H2{
      margin-bottom: 20px;
     text-align: center;
     
+    
 
 }
 
@@ -151,4 +152,10 @@ background-color: white;
 
 .card:hover {
     transform: translateY(-5px);
+}
+
+body {
+
+    background: #f4f4f4;;
+   
 }
