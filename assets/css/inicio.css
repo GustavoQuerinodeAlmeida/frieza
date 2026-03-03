@@ -35,9 +35,8 @@ h1, p {
     flex: 1;
     padding: 20px;
     background: #f4f4f4;
-
     display: flex;
-    gap: 15px;          /* espaço entre as caixas */
+    gap: 35px;          /* espaço entre as caixas */
     flex-wrap: wrap;  
 
 }
@@ -51,7 +50,6 @@ h1, p {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-
     width: 200px; /* define largura */
 }
 
@@ -81,3 +79,33 @@ h1, p {
 #noticia1{
 background-color: white;
 }
+/* css relacionado a imagens na caixa de noticias  */
+.card-noticia img {
+    width: 100%; /* A imagem ocupa toda a largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Borda arredondada nas imagens */
+    object-fit: cover; /* Faz com que a imagem cubra o espaço sem deformar */
+}
+
+.card-noticia h3 {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.card-noticia p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card-noticia a {
+    text-decoration: none;
+    color: #0d3b66;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.card-noticia a:hover {
+    text-decoration: underline;
+}
+
