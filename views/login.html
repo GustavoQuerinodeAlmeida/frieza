@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,11 +14,16 @@
         <h1>Login</h1>
 
         <form>
-            <input type="text" placeholder="Nome ou E-mail" required>
+            <input type="text" placeholder="E-mail" required>
             <input type="password" placeholder="Senha" required>
-
+            <div class="lembrar">
+                <input type="checkbox" id="lembrarLogin" required>
+                <label for="lembrarLogin">Lembrar-me</label>
+            </div>
             <button type="submit">Entrar</button>
-            <button type="button">Voltar</button>
+            <a href="../views/inicio.html" class="btn-secundario">
+            Voltar para página inicial
+            </a>
         </form>
 
         <p class="troca-pagina">
@@ -27,6 +31,4 @@
             <a href="cadastro.html">Cadastre-se</a>
         </p>
     </div>
-
-</body>
 </html>
