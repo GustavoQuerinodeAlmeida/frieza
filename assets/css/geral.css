@@ -1,0 +1,130 @@
+/* RESET */
+html, body {
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    padding-top: 80px; /* mesma altura do header */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-bottom: 20px;
+}
+
+/* HEADER */
+header {
+    background: #051D40;  /* Cor de fundo */
+    padding: 10px;         /* Espaçamento interno */
+    color: white;          /* Cor do texto */
+    display: flex;         /* Usando flexbox para alinhas os itens */
+    align-items: center;   /* Alinha os itens no centro verticalmente */
+    justify-content: space-between; /* Alinha os itens nas extremidades */
+    height: 80px;          /* Altura do header */
+    position: fixed;       /* Fixa o header no topo */
+    top: 0;                /* Alinha ao topo da página */
+    left: 0;               /* Alinha à esquerda */
+    width: 100%;           /* Ocupa toda a largura da página */
+    z-index: 1000;         /* Garante que o header fique acima de outros conteúdos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+}
+
+/* LOGO */
+header img {
+    width: 200px;
+    height: auto;
+}
+
+/* NAV */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 6px 14px;
+    transition: 0.3s;
+    background-color: #051D40;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family :poppins, sans-serif;
+}
+
+nav a:hover {
+    background-color: #2788C8;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+}
+
+/* CONTEÚDO */
+.conteudo {
+    flex: 3;
+    padding: 20px;
+}
+
+
+.link-perfil {
+    position: relative; /* Necessário para o círculo ficar atrás da imagem */
+    display: inline-block; /* Para a imagem e o círculo ficarem alinhados */
+}
+
+.link-perfil img {
+    display: block; /* Evita o espaço abaixo da imagem */
+    border-radius: 100%; /* Torna a imagem redonda */
+    position: relative; /* Posiciona a imagem normalmente */
+     width: 35px;
+    cursor: pointer;
+      border-radius: 50px;
+}
+
+
+.link-perfil::before {
+    content: ''; /* Cria um elemento vazio */
+    position: absolute; /* Posiciona o círculo */
+    bottom: -10px; /* Distância da imagem para o círculo */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Alinha perfeitamente */
+    width: 100px; /* Tamanho do círculo */
+    height: 100px; /* Tamanho do círculo */
+    border-radius: 100%; /* Torna o fundo redondo */
+    z-index: -1; /* Coloca o círculo atrás da imagem */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil para dar um efeito */
+}
+
+/* footer */
+
+.footer{
+  background:#051D40;
+  color:white;
+  padding:20px 20px;
+  margin-top: auto;
+}
+
+.footer-content{
+  max-width:1200px;
+  margin:0 auto;
+  text-align:center;
+}
+
+.footer-logo{
+  height:50px;
+  margin-bottom:20px;
+  border-radius: 8px;
+}
+
+.footer p{
+  font-size:14px;
+  opacity:0.8;
+}
+.calmapae{
+    color: #e4dddd;
+}
