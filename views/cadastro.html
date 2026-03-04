@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/login_cadastro.css">
+    <title class="titulohead">Cadastro</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/icon.png"> 
+</head>
+<body>
+
+    <div class="container">
+        <img src="../assets/img/logosite.png" alt="EcoHub" class="logo">
+
+        <h1 >Cadastro</h1>
+
+        <form id="formCadastro">
+            <input type="text" placeholder="Nome completo" required>
+            <input type="email" placeholder="seu.email@eniac.edu.br" required>
+            <div class="linha">
+                <select id="curso" name="curso" required>
+                    <option value="">curso</option>
+                    <option value="eng_software">Eng. Software</option>
+                    <option value="ciencia_computacao">Ciência da Computação</option>
+                    <option value="sistemas_info">Sistemas de Informação</option>
+                    <option value="analise_dev">Análise e Desenvolvimento</option>
+                    <option value="redes">Redes de Computadores</option>
+                </select>
+
+                <select id="semestre" name="semestre" required>
+                    <option value="">semestre</option>
+                    <option value="1">1º Semestre</option>
+                    <option value="2">2º Semestre</option>
+                    <option value="3">3º Semestre</option>
+                    <option value="4">4º Semestre</option>
+                    <option value="5">5º Semestre</option>
+                    <option value="6">6º Semestre</option>
+                    <option value="7">7º Semestre</option>
+                    <option value="8">8º Semestre</option>
+                </select>
+            </div>
+
+            <input type="password" id="senha" placeholder="Senha" required>
+            <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required>
+            <p id="erroSenha" class="erro-senha"></p>
+            <div class="termos">
+                <input type="checkbox" id="aceitarTermos" required>
+                <label for="aceitarTermos">
+                Eu concordo com os <a href="#">Termos de Uso</a> e 
+                <a href="#">Política de Privacidade</a>
+                </label>
+            </div>
+            <button type="submit">Cadastrar</button>
+            <a href="../views/inicio.html" class="btn-secundario">
+            Voltar para página inicial
+            </a>
+        </form>
+
+        <p class="troca-pagina">
+            Já tem uma conta?
+            <a href="login.html">Fazer login</a>
+        </p>
+    </div>
+    <script src="../js/cadastro.js" defer></script>
+</body>
+</html>

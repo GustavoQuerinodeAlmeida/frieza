@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/login_cadastro.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="container">
+        <img src="../assets/img/logosite.png" alt="EcoHub" class="logo">
+
+        <h1>Login</h1>
+
+        <form id="formLogin" >
+            <input type="text" placeholder="E-mail" required>
+            <input type="password" placeholder="Senha" required>
+            <p id="erroLogin" class="erro-senha"></p>
+            <div class="lembrar">
+                <input type="checkbox" id="lembrarLogin">
+                <label for="lembrarLogin">Lembrar-me</label>
+            </div>
+            <button type="submit">Entrar</button>
+            <a href="../views/inicio.html" class="btn-secundario">
+            Voltar para página inicial
+            </a>
+        </form>
+
+        <p class="troca-pagina">
+            Não tem cadastro?
+            <a href="cadastro.html">Cadastre-se</a>
+        </p>
+    </div>
+    <script src="../js/login.js" defer></script>
+</body>
+</html> 
