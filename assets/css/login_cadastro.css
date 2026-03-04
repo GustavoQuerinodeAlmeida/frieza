@@ -26,7 +26,7 @@ body {
 .logo {
   display: block;
   width: 140px;
-  margin: 0 auto 20px;
+  margin: 0 auto 5px;
 }
 
 h1 {
@@ -86,7 +86,9 @@ button[type="submit"]:hover {
   font-size: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,.4);
 }
-
+.btn-secundario:hover {
+  background-color: #ddd8d8;
+}
 .troca-pagina {
   margin-top: 16px;
   text-align: center;
@@ -101,7 +103,7 @@ button[type="submit"]:hover {
 }
 
 .troca-pagina a:hover {
-  text-decoration: underline;
+  text-decoration: underline;             
 }
 .termos {
     display: flex;
