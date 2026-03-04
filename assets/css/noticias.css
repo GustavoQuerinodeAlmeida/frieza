@@ -1,0 +1,129 @@
+.noticias {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f4;
+    display: flex;
+    gap: 35px;          /* espaço entre as caixas */
+    flex-wrap: wrap;  
+
+}
+
+
+
+.card-noticia {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 200px; /* define largura */
+}
+
+.card-noticia a {
+    text-decoration: none;
+    color: #0d3b66;
+    font-weight: bold;
+}
+
+.card-noticia a:hover {
+    text-decoration: underline;
+}
+.layout {
+    display: flex;
+    
+}
+
+.conteudo {
+    flex: 3; /* ocupa mais espaço */
+    padding: 20px;
+}
+
+.noticias {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+#noticia1{
+background-color: white;
+}
+/* css relacionado a imagens na caixa de noticias  */
+.card-noticia img {
+    width: 100%; /* A imagem ocupa toda a largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Borda arredondada nas imagens */
+    object-fit: cover; /* Faz com que a imagem cubra o espaço sem deformar */
+}
+
+.card-noticia h3 {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.card-noticia p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card-noticia a {
+    text-decoration: none;
+    color: #0d3b66;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.card-noticia a:hover {
+    text-decoration: underline;
+}
+
+/*css relacionado a informações */
+
+.estatisticas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 40px 20px;
+}
+
+
+
+.card .icone {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 40px;
+    margin: 10px 0;
+    color: #0d3b66;
+}
+
+.card p {
+    color: #555;
+}
+
+.card {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+      text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+body {
+
+    background: #f4f4f4;;
+   
+}
+
+h2{
+    text-align: center;
+    margin-top: 20px;
+    
+}
