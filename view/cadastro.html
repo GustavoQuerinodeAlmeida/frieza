@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/login_cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <div class="container">
+        <img src="../img/eco.png" alt="Logo" class="logo">
+
+        <h1 >Cadastro</h1>
+
+        <form>
+            <input type="text" placeholder="Nome completo" required>
+            <input type="email" placeholder="seu.email@eniac.edu.br" required>
+            <select id="curso" name="curso">
+                <option value="">Selecione seu curso </option>
+                <option value="eng_software">Eng. Software</option>
+                <option value="ciencia_computacao">Ciência da Computação</option>
+                <option value="sistemas_info">Sistemas de Informação</option>
+                <option value="analise_dev">Análise e Desenvolvimento</option>
+                <option value="redes">Redes de Computadores</option>
+            </select>
+            <select id="semestre" name="semestre" required>
+                <option value="">Selecione o semestre</option>
+                <option value="1">1º Semestre</option>
+                <option value="2">2º Semestre</option>
+                <option value="3">3º Semestre</option>
+                <option value="4">4º Semestre</option>
+                <option value="5">5º Semestre</option>
+                <option value="6">6º Semestre</option>
+                <option value="7">7º Semestre</option>
+                <option value="8">8º Semestre</option>
+            </select>
+
+            <input type="password" placeholder="Senha" required>
+            <input type="password" placeholder="Confirmar senha" required>
+            <div class="termos">
+                <input type="checkbox" id="aceitarTermos" required>
+                <label for="aceitarTermos">
+                Eu concordo com os <a href="#">Termos de Uso</a> e 
+                <a href="#">Política de Privacidade</a>
+                </label>
+            </div>
+            <button type="submit">Cadastrar</button>
+            <button type="button">Voltar</button>
+        </form>
+
+        <p class="troca-pagina">
+            Já tem uma conta?
+            <a href="login.html">Fazer login</a>
+        </p>
+    </div>
+    <a class="inicio" href="inicio.html">Voltar para página inicial</a>
+</body>
+</html>
