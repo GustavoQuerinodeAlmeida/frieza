@@ -142,3 +142,7 @@ h2{
 .conteudo-extra {
     display: none;
 }
+
+.conteudo-extra.ativo {
+    display: block;
+}
