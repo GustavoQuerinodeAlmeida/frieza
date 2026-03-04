@@ -1,0 +1,182 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f3f2ef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  background-color: #053B5E;
+  width: 380px;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+}
+
+.logo {
+  display: block;
+  width: 140px;
+  margin: 0 auto 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+}
+
+form {
+  display:   flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  height: 48px;
+  padding: 0 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #8c8c8c;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0a66c2;
+}
+
+button {
+  height: 48px;
+  font-size: 16px;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #0a66c2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.40);
+}
+
+button[type="submit"]:hover {
+  background-color: #004182;
+}
+
+button[type="button"] {
+  background-color: transparent;
+  border: 1px solid #8c8c8c;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.40);
+}
+
+button[type="button"]:hover {
+  background-color: #f3f2ef;
+}
+
+.troca-pagina {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+.troca-pagina a {
+  color: #4DA3D9;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.troca-pagina a:hover {
+  text-decoration: underline;
+}
+.inicio {
+    display: flex;
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;;
+}
+.inicio:hover {
+    text-decoration: underline;
+}
+.termos {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+}
+.termos input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.termos a {
+    color: #4DA3D9;
+    text-decoration: none;
+}
+.termos a:hover {
+    text-decoration: underline;
+}
+.form-group {
+    display: block;
+    margin-bottom:5px
+    font-weight: bold;
+}
+.lembrar {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    gap: 3px;
+}
+.logo-capela {
+width: 80px;
+height: auto;
+margin-bottom: 20px;
+}
+select {
+    width: 200px;
+    padding: 8px;
+    border: 2px solid #4DA3D9;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+
+  body {
+    padding: 16px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 360px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  input,
+  button {
+    height: 46px;
+    font-size: 15px;
+  }
+
+  .logo {
+    width: 120px;
+  }}

@@ -1,18 +1,43 @@
-const botoes = document.querySelectorAll(".ler-mais");
+document.addEventListener("DOMContentLoaded", function () {
 
-botoes.forEach(botao => {
-    botao.addEventListener("click", function(event) {
-        event.preventDefault();
+    const botoes = document.querySelectorAll(".ler-mais");
 
-        const card = this.closest(".card-noticia");
-        const conteudo = card.querySelector(".conteudo-extra");
+    botoes.forEach(botao => {
 
-        if (conteudo.style.display === "block") {
-            conteudo.style.display = "none";
-            this.textContent = "Ler mais";
-        } else {
-            conteudo.style.display = "block";
-            this.textContent = "Ler menos";
-        }
+        botao.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            const card = this.closest(".card-noticia");
+            const conteudo = card.querySelector(".conteudo-extra");
+
+            // usa classList em vez de style
+            conteudo.classList.toggle("ativo");
+
+            if (conteudo.classList.contains("ativo")) {
+                this.textContent = "Ler menos";
+            } else {
+                this.textContent = "Ler mais";
+            }
+        });
+
     });
+
+    // 🔥 ABRIR AUTOMATICAMENTE SE TIVER #
+    if (window.location.hash) {
+
+        const id = window.location.hash.substring(1);
+        const noticia = document.getElementById(id);
+
+        if (noticia) {
+
+            const conteudo = noticia.querySelector(".conteudo-extra");
+            const botao = noticia.querySelector(".ler-mais");
+
+            if (conteudo && botao) {
+                conteudo.classList.add("ativo");
+                botao.textContent = "Ler menos";
+            }
+        }
+    }
+
 });
