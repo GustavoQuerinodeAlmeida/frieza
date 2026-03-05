@@ -10,15 +10,12 @@ h1 {
 
 H2{
   
-   font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
      margin-top: 20px; /* espaço acima do <h2> */
     margin-bottom: 20px;
      font-size: 40px; /* aumenta aqui */
      margin-bottom: 20px;
     text-align: center;
-    
-    
-
 }
 
 #inicio{
@@ -26,7 +23,7 @@ H2{
     text-align: center;
     background: #31BADF;
   padding: 20px 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 40px; /* aumenta aqui */
      line-height: 1.1;
 
@@ -158,4 +155,12 @@ body {
 
     background: #f4f4f4;;
    
+}
+
+.titulo{
+     background-color: #31BADF;
+ color: white;
+  padding:45px;
+  border-radius:100px;
+  margin-bottom:40px;
 }

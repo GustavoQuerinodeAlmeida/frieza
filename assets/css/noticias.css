@@ -1,11 +1,10 @@
 .noticias {
     flex: 1;
-    padding: 20px;
+    padding: 40px 20px;
     background: #f4f4f4;
     display: flex;
-    gap: 35px;          /* espaço entre as caixas */
-    flex-wrap: wrap;  
-
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
 
@@ -13,13 +12,12 @@
 .card-noticia {
     background: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-     width: 300px;
-
-    position: relative;
-    overflow: hidden;
+    width: 400px;
+    min-height: 250px;
 }
+
 
 .card-noticia a {
     text-decoration: none;
@@ -40,12 +38,7 @@
     padding: 20px;
 }
 
-.noticias {
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-    padding: 40px 20px;
-}
+
 
 #noticia1{
 background-color: white;
@@ -143,10 +136,6 @@ h2{
 }
 
 .conteudo-extra {
-    position: absolute;
-    bottom: 60px;
-    left: 0;
-    right: 0;
     background: white;
     padding: 10px;
     display: none;
@@ -157,4 +146,32 @@ h2{
 }
 .card-noticia.ativo .conteudo-extra {
     display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.card-noticia:target {
+    scroll-margin-top: 80px;
+}
+.titulo{
+  background-color: #051D40;
+  color: white;
+  padding: 45px;
+  border-radius: 100px;
+  margin-top: 40px;   /* espaço acima do título */
+  margin-bottom: 40px;
+}
+
+H2{
+  
+    font-family: 'Poppins', sans-serif;
+     margin-top: 20px; /* espaço acima do <h2> */
+    margin-bottom: 20px;
+     font-size: 40px; /* aumenta aqui */
+     margin-bottom: 20px;
+    text-align: center;
+    
+    
+
 }
