@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/login_cadastro.css">
-    <link rel="stylesheet" href="../assets/css/geral.css">
+
     <title>Cadastro</title>
     <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/logotitle.png">
 </head>
@@ -13,7 +14,7 @@
     <div class="container">
         <img src="../assets/img/eco-certo.png" alt="EcoHub" class="logo">
 
-        <h1 >Cadastro</h1>
+        <h1>Login</h1>
 
         <form id="formCadastro">
             <input type="text" placeholder="Nome completo" required>
@@ -47,36 +48,28 @@
                     <option value="8">8º Semestre</option>
                 </select>
             </div>
-
-            <input type="password" id="senha" placeholder="Senha" required>
-            <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required>
-            <p id="erroSenha" class="erro-senha"></p>
-      <div class="termos">
-                <input type="checkbox" id="aceitarTermos" required>
-                <label for="aceitarTermos">
-                Eu concordo com os <a href="#">Termos de Uso</a> e 
-                <a href="#">Política de Privacidade</a>
-                </label>
+           <div class="campo">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="senhaLogin" placeholder="Senha" required>
+                <i class="fa-solid fa-eye toggle-senha" onclick="toggleSenha('senhaLogin',this)"></i>
+        </div>
+            <div class="lembrar">
+                <input type="checkbox" id="lembrarLogin">
+                <label for="lembrarLogin">Lembrar-me</label>
             </div>
-            <button type="submit">Cadastrar</button>
+            <button type="submit">Entrar</button>
             <a href="../views/inicio.html" class="btn-secundario">
             Voltar para página inicial
-     </a>
+            </a>
         </form>
 
         <p class="troca-pagina">
-            Já tem uma conta?
-            <a href="login.html">Fazer login</a>
+            Não tem cadastro?
+            <a href="cadastro.html">Cadastre-se</a>
         </p>
     </div>
     <script src="../js/cadastro.js" defer></script>
-    <footer class="footer">
-    <div class="footer-content">
-    <img src="../assets/img/logo2.eniac.png" alt="Logo" class="footer-logo">
-        <p>  © 2026 Ecossistema Academy. Todos os direitos reservados.
-      Conectando estudantes e projetos reais.</p>
-    </div>
-</footer>
+    
 <script src="../js/inicio.js"></script>
 </body>
-</html>
+</html> 
