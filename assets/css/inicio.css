@@ -120,6 +120,7 @@ background-color: white;
     align-items: center;
     background: #f4f4f4;
     padding: 40px 20px;
+    margin-top: 40px; /* espaço do header */
 }
 
 
@@ -148,7 +149,7 @@ background-color: white;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+ transform: scale(1.03);
 }
 
 body {
@@ -165,3 +166,4 @@ margin: 40px auto;
 display: block;
 width: fit-content;
 }
+
