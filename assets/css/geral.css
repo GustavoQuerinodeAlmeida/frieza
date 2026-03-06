@@ -131,3 +131,118 @@ nav a:hover {
 .calmapae{
     color: #e4dddd;
 }
+/* ===== PAGINA SOBRE ===== */
+
+.container{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.hero{
+    background:#051D40;
+    color:white;
+    padding:40px;
+    border-radius:20px;
+    margin-bottom:40px;
+}
+
+.hero h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    line-height:1.6;
+}
+
+.section-title{
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:25px;
+    color:#051D40;
+}
+
+/* GRID DOS HUBS */
+
+.hubs-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:25px;
+    margin-bottom:40px;
+}
+
+/* CARD HUB */
+
+.hub-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.hub-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.hub-card h3{
+    color:#051D40;
+    margin-bottom:10px;
+}
+
+.hub-card p{
+    font-size:14px;
+    color:#555;
+    line-height:1.5;
+}
+
+/* OBJETIVO */
+
+.objetivo{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+/* ===== EQUIPE ===== */
+
+.equipe-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:25px;
+    margin-bottom:50px;
+}
+
+.equipe-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.equipe-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.equipe-card img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+.equipe-card h3{
+    color:#051D40;
+    margin-bottom:5px;
+}
+
+.equipe-card p{
+    font-size:14px;
+    color:#666;
+}
