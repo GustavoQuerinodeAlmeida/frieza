@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/login_cadastro.css">
+     <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/logotitle.png">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <img src="../assets/img/eco-certo.png" alt="EcoHub" class="logo">
+
+        <h1>Login</h1>
+
+        <form id="formLogin">
+            <input type="email" placeholder="E-mail" required>
+            <input type="password" placeholder="Senha" required>
+            <div class="lembrar">
+                <input type="checkbox" id="lembrarLogin">
+                <label for="lembrarLogin">Lembrar-me</label>
+            </div>
+            <button type="submit">Entrar</button>
+            <a href="../views/index.html" class="btn-secundario">
+            Voltar para página inicial
+            </a>
+        </form>
+
+        <p class="troca-pagina">
+            Não tem cadastro?
+            <a href="cadastro.html">Cadastre-se</a>
+        </p>
+    </div>
+    <script src="../js/login.js" defer></script>
+</body>
+</html> 

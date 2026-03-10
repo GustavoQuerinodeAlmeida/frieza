@@ -1,0 +1,207 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* BODY - modo claro por padrão */
+body {
+    background: #f4f4f4;
+    color: #111;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ===== MODO ESCURO ===== */
+body.dark {
+    background: #121212;
+    color: #e4e4e4;
+}
+
+/* CONTAINER */
+.noticias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* CARD NOTÍCIA */
+.card-noticia {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    min-height: 250px;
+    width: calc(33.33% - 40px); /* 3 por linha */
+}
+
+body.dark .card-noticia {
+    background: #2a2a2a;
+    color: #e4e4e4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-noticia a {
+    text-decoration: none;
+    color: #0d3b66;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+body.dark .card-noticia a {
+    color: #2788C8;
+}
+
+.card-noticia a:hover {
+    text-decoration: underline;
+}
+
+body.dark .card-noticia a:hover {
+    color: #fff;
+}
+
+/* CSS relacionado a imagens */
+.card-noticia img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-noticia h3 {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.card-noticia p {
+    font-size: 14px;
+    color: #555;
+}
+
+body.dark .card-noticia p {
+    color: #bbb;
+}
+
+.card-noticia .texto-completo {
+    display: none;
+}
+
+/* Link Externo */
+.link-externo {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #555;
+}
+
+body.dark .link-externo {
+    color: #bbb;
+}
+
+/* Conteúdo extra */
+.conteudo-extra {
+    background: white;
+    padding: 10px;
+    display: none;
+}
+
+body.dark .conteudo-extra {
+    background: #333;
+    color: #e4e4e4;
+}
+
+.conteudo-extra.ativo {
+    display: block;
+}
+
+.card-noticia.ativo .conteudo-extra {
+    display: block;
+}
+
+/* Estatísticas */
+.estatisticas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 40px 20px;
+}
+
+body.dark .estatisticas {
+    background: #222;
+}
+
+/* Cartões */
+.card {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+body.dark .card {
+    background: #2a2a2a;
+    color: #e4e4e4;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+body.dark .card:hover {
+    transform: translateY(-5px);
+}
+
+/* Título */
+.titulo {
+     background-color: #051D40;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px 40px;
+    border-radius: 30px;
+    margin: 40px auto;
+    display: block;
+    width: fit-content;
+}
+
+body.dark .titulo {
+    background-color: #2a2a2a;
+}
+
+/* h2 */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    text-align: center;
+    
+}
+
+body.dark h2 {
+    color: #e4e4e4;
+}
+
+/* Responsivo */
+@media(max-width: 900px) {
+    .noticias {
+        flex-direction: column;
+    }
+}
+
+body.dark .titulo {
+    background-color: #2a2a2a; /* fundo escuro */
+    color: #e4e4e4; /* texto claro */
+    border: 1px solid #444; /* opcional: borda suave */
+}
+

@@ -1,0 +1,222 @@
+h1 {
+    color: white;
+    text-align: center;
+    background: linear-gradient(#051D40, #053B5E);
+   padding: 60px 20px;
+   font-family: Arial, Helvetica, sans-serif;
+     font-size: 60px; 
+     margin: 5px 0;
+}
+
+H2{
+  
+    font-family: 'Poppins', sans-serif;
+     margin-top: 20px; /* espaço acima do <h2> */
+    margin-bottom: 20px;
+     font-size: 40px; /* aumenta aqui */
+     margin-bottom: 20px;
+    text-align: center;
+}
+
+#inicio{
+      color: white;
+    text-align: center;
+    background: #053B5E;
+  padding: 20px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px; /* aumenta aqui */
+     line-height: 1.1;
+
+}
+h1, p {
+    margin: 0;
+}
+
+/* tudo para baixou e sobre as caixas de noticias  */
+.noticias {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f4;
+    display: flex;
+    gap: 35px;          /* espaço entre as caixas */
+    flex-wrap: wrap;  
+
+}
+
+
+
+.card-noticia {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 200px; /* define largura */
+}
+
+.card-noticia a {
+    text-decoration: none;
+    color: #2788C8;
+    font-weight: bold;
+}
+
+.card-noticia a:hover {
+    text-decoration: underline;
+}
+.layout {
+    display: flex;
+    
+}
+
+.conteudo {
+    flex: 3; /* ocupa mais espaço */
+    padding: 20px;
+}
+
+.noticias {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+#noticia1{
+background-color: white;
+}
+/* css relacionado a imagens na caixa de noticias  */
+.card-noticia img {
+    width: 100%; /* A imagem ocupa toda a largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Borda arredondada nas imagens */
+    object-fit: cover; /* Faz com que a imagem cubra o espaço sem deformar */
+}
+
+.card-noticia h3 {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.card-noticia p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card-noticia a {
+    text-decoration: none;
+    color: #0d3b66;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.card-noticia a:hover {
+    text-decoration: underline;
+}
+
+/*css relacionado a informações */
+
+.estatisticas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f4f4f4;
+    padding: 40px 20px;
+    margin-top: 40px; /* espaço do header */
+}
+
+
+
+.card .icone {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 40px;
+    margin: 10px 0;
+    color: #0d3b66;
+}
+
+.card p {
+    color: #555;
+}
+
+.card {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+      text-align: center;
+cursor: pointer;
+}
+
+
+.card:hover {
+ transform: scale(1.03);
+}
+
+body {
+
+    background: #f4f4f4;;
+   
+}
+.titulo{
+background-color: #051D40;
+color: white;
+padding: 20px 40px;
+border-radius: 30px;
+margin: 40px auto;
+display: block;
+width: fit-content;
+}
+
+/* ===== MODO ESCURO ===== */
+
+body.dark{
+    background: #121212;
+    color: white;
+}
+
+
+
+/* seção estatísticas */
+body.dark .estatisticas{
+    background: #181818;
+}
+
+/* seção notícias */
+body.dark .noticias{
+    background: #181818;
+}
+
+/* cards */
+body.dark .card{
+    background: #2a2a2a;
+    color: white;
+}
+
+body.dark .card-noticia{
+    background: #1f1f1f;
+    color: white;
+}
+
+/* textos */
+body.dark .card p,
+body.dark .card-noticia p{
+    color: #ccc;
+}
+
+/* título */
+body.dark .titulo{
+    background: #2a2a2a;
+}
+
+.card-link{
+    text-decoration: none;
+    color: inherit;
+    display: block; /* remove a faixa embaixo */
+}
+
+.dark{
+background:#121212;
+color:white;
+}

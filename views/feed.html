@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="../assets/css/geral.css">
+      <link rel="stylesheet" href="../assets/css/feed.css">
+       <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/logotitle.png">
+</head>
+<body>
+   <header>
+
+<img src="../assets/img/logohead.png" alt="EcoHub" class="logo">
+
+<nav>
+<a href="Inicio.html">Inicio</a>
+<a href="Eventos.html">Eventos</a>
+<a href="Noticias.html">Notícias</a>
+<a href="Feed.html"class="ativo">Feed</a>
+<a href="Projetos.html">Projetos</a>
+<a href="Sobre.html">Sobre</a>
+</nav>
+
+<div class="header-direita">
+
+<a href="Cadastro.html">Cadastro</a>
+
+<button id="modo">🌙</button>
+
+<a href="Perfil.html" class="link-perfil">
+<img src="../assets/img/perfil.jpg" alt="Perfil">
+</a>
+
+</div>
+
+</header>
+<section class="twitter-feed">
+  <div class="feed-header">
+    <h2>Feed</h2>
+    <p class="feed-subtitle">Últimas Atualizações</p>
+  </div>
+<div class="postar-card">
+
+    <div class="postar-header">
+        <img src="../assets/img/perfil.jpg" alt="Avatar" class="avatar">
+        <textarea placeholder="O que você quer compartilhar?" id="novoPost"></textarea>
+    </div>
+<div class="tweet-actions">
+        <button>💬 </button>
+        <button>❤️ </button>
+        <button>🔗 </button>
+        <button onclick="publicarPost()">Publicar</button>
+      </div>
+    
+      
+    
+</div>
+  <div class="feed-container">
+
+    <!-- Tweet 1 -->
+    <div class="tweet-card">
+      <div class="tweet-header">
+        <img src="../assets/img/perfil.jpg" alt="Avatar" class="avatar">
+        <div class="tweet-user">
+          <span class="name">João Silva</span>
+          <span class="username">@joaosilva</span>
+        </div>
+      </div>
+      <p class="tweet-text">Este é um exemplo de post no estilo Twitter, com texto chamativo e clean.</p>
+      <img src="https://via.placeholder.com/400x200" alt="Imagem do post" class="tweet-img">
+      <div class="tweet-actions">
+        <button>💬 Comentar</button>
+        <button>❤️ Curtir</button>
+        <button>🔗 Compartilhar</button>
+      </div>
+    </div>
+
+    <!-- Tweet 2 -->
+
+    <div class="tweet-card">
+  <div class="tweet-header">
+    <img src="../assets/img/perfil.jpg" alt="Avatar" class="avatar">
+    <div class="tweet-user">
+      <span class="name">Maria Oliveira</span>
+      <span class="username">@mariaoliveira</span>
+    </div>
+  </div>
+
+  <p class="tweet-text">Outro post de exemplo, sem imagem.</p>
+
+  <div class="tweet-actions">
+    <button>💬 Comentar</button>
+    <button>❤️ Curtir</button>
+    <button>🔗 Compartilhar</button>
+  </div>
+</div>
+
+
+    <!-- Tweet 3 -->
+    <div class="tweet-card">
+      <div class="tweet-header">
+        <img src="../assets/img/perfil.jpg" alt="Avatar" class="avatar">
+        <div class="tweet-user">
+
+
+
+          <span class="name">Lucas Costa</span>
+          <span class="username">@lucascosta</span>
+        </div>
+      </div>
+      <p class="tweet-text">Post com imagem de destaque para engajamento do usuário.</p>
+      <img src="https://via.placeholder.com/400x200" alt="Imagem do post" class="tweet-img">
+      <div class="tweet-actions">
+        <button>💬 Comentar</button>
+        <button>❤️ Curtir</button>
+        <button>🔗 Compartilhar</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+<footer class="footer">
+    <div class="footer-content">
+    <img src="../assets/img/logo2.eniac.png" alt="Logo" class="footer-logo">
+        <p>  © 2026 Ecossistema Academy. Todos os direitos reservados.
+      Conectando estudantes e projetos reais.</p>
+    </div>
+</footer>
+<script src="../js/feed.js"></script>
+<script src="../js/geral.js"></script>
+</body>
+</html>

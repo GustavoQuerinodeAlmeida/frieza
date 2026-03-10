@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calendário - Ecossistema Academy</title>
+
+<link rel="stylesheet" href="../assets/css/geral.css">
+<link rel="stylesheet" href="../assets/css/calendario.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/png" href="../assets/img/logotitle.png">
+
+</head>
+
+<body>
+
+ <header>
+
+<img src="../assets/img/logohead.png" alt="EcoHub" class="logo">
+
+<nav>
+<a href="Inicio.html" >Inicio</a>
+<a href="Eventos.html" class="ativo">Eventos</a>
+<a href="Noticias.html">Notícias</a>
+<a href="Feed.html">Feed</a>
+<a href="Projetos.html">Projetos</a>
+<a href="Sobre.html">Sobre</a>
+</nav>
+
+<div class="header-direita">
+
+<a href="Cadastro.html">Cadastro</a>
+
+<button id="modo">🌙</button>
+
+<a href="Perfil.html" class="link-perfil">
+<img src="../assets/img/perfil.jpg" alt="Perfil">
+</a>
+
+</div>
+
+</header>
+
+<main class="container">
+
+<section class="hero">
+<h1>Calendário de Eventos</h1>
+<p>Veja todos os eventos da comunidade Ecossistema Academy.</p>
+</section>
+
+<section class="calendar-section">
+
+<div class="calendar">
+
+<div class="calendar-header">
+<button id="prevMonth">❮</button>
+<h2 id="monthYear"></h2>
+<button id="nextMonth">❯</button>
+</div>
+
+<div class="weekdays">
+<div>Dom</div>
+<div>Seg</div>
+<div>Ter</div>
+<div>Qua</div>
+<div>Qui</div>
+<div>Sex</div>
+<div>Sáb</div>
+</div>
+
+<div id="days" class="days"></div>
+
+</div>
+
+<div class="event-panel">
+
+<h3>Eventos do Dia</h3>
+
+<div id="eventList">
+<p>Selecione um dia para ver os eventos.</p>
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer class="footer">
+
+<div class="footer-content">
+
+<img src="../assets/img/logo2.eniac.png" class="footer-logo">
+
+<p>
+© 2026 Ecossistema Academy. Todos os direitos reservados.
+Conectando estudantes e projetos reais.
+</p>
+
+</div>
+
+</footer>
+<script src="../js/geral.js"></script>
+<script src="../js/calendario.js"></script>
+</body>
+</html>

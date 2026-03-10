@@ -1,0 +1,264 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* BODY - modo claro por padrão */
+body {
+    background: #f4f4f4;
+    color: #111;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ===== MODO ESCURO ===== */
+body.dark {
+    background: #121212;
+    color: #e4e4e4;
+}
+
+/* HEADER */
+.navbar {
+    background: #fff;
+    padding: 15px 40px;
+    display: flex;
+    gap: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+body.dark .navbar {
+    background: #1f1f1f;
+    border-bottom: 1px solid #444;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+body.dark .navbar a {
+    color: #ddd;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 0%;
+    height: 3px;
+    background: #2788C8;
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+}
+
+body.dark .navbar a::after {
+    background: #4d88e0; /* Cor mais clara no modo escuro */
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* HERO */
+.hero {
+    background-color: #051D40;
+    color: white;
+    padding: 45px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+body.dark .hero {
+    background-color: #2a2a2a;
+}
+
+/* SMALL CARDS */
+.top-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+body.dark .top-cards .small-card {
+    background: #2a2a2a;
+    color: #ddd;
+}
+
+.small-card {
+    text-decoration: none;
+    color: #333;
+    background: #f8f9fc;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.dark .small-card {
+    background: #333;
+    color: #e4e4e4;
+}
+
+.small-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    background: #ffffff;
+}
+
+body.dark .small-card:hover {
+    background: #444;
+}
+
+/* EVENTS */
+.section-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+body.dark .section-title {
+    color: #e4e4e4;
+}
+
+.events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+}
+
+body.dark .events .event-card {
+    background: #2a2a2a;
+    border: 1px solid #444;
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: 0.2s;
+}
+
+body.dark .event-card {
+    background: #333;
+}
+
+.event-card:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+body.dark .event-card:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.event-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+body.dark .event-card img {
+    filter: brightness(0.7);
+}
+
+.event-content {
+    padding: 25px;
+}
+
+.badge {
+    background: #053B5E;
+    color: #e4dddd;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+body.dark .badge {
+    background: #006b85;
+}
+
+.capacity {
+    float: right;
+    font-size: 13px;
+    color: #666;
+}
+
+body.dark .capacity {
+    color: #bbb;
+}
+
+.event-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+body.dark .event-title {
+    color: #e4e4e4;
+}
+
+.event-desc {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+body.dark .event-desc {
+    color: #bbb;
+}
+
+.event-info {
+    font-size: 14px;
+    color: #444;
+}
+
+body.dark .event-info {
+    color: #bbb;
+}
+
+.button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #053B5E;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+body.dark .button {
+    background: #2788C8;
+}
+
+.button:hover {
+    background: #006b85;
+}
+
+body.dark .button:hover {
+    background: #006b85;
+}
+
+@media(max-width: 768px) {
+    .events {
+        grid-template-columns: 1fr;
+    }
+}
