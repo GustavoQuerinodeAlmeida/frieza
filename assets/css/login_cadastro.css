@@ -1,197 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-  min-height: 100vh;
-  background: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+    overflow: hidden;
 }
 
-.container {
-  background-color: #053B5E;
-  width: 380px;
-  padding: 24px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,1);
+.split-layout {
+    display: flex;
+    height: 100vh;
+    width: 100%;
 }
 
-.logo {
-  display: block;
-  width: 170px;
-  margin: 0 auto;
+/* --- LADO DO FORMULÁRIO --- */
+.form-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #ffffff;
 }
 
-h1 {
-  font-size: 25px;
-  margin-bottom: 20px;
-  color: white;
-  text-align: center;
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-logo {
+    width: 45px;
+    margin-bottom: 25px;
+    align-self: center;
+}
+
+/* Espaçamento do Título Principal */
+.form-container h2 {
+    font-size: 26px;
+    color: #051D40;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 12px; /* Mais espaço abaixo do título */
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 40px; /* Mais espaço para o formulário respirar */
+}
+
+/* Títulos internos do formulário (Login/Cadastro) */
+.form-header h3 {
+    font-size: 20px;
+    color: #051D40;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 25px; /* Espaço antes do primeiro campo */
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Aumentei o espaço entre cada campo */
 }
 
-button {
-  height: 48px;
-  font-size: 16px;
-  border-radius: 24px;
-  cursor: pointer;
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espaço entre a Label e o Campo de texto */
 }
 
-button[type="submit"] {
-  background-color: #0a66c2;
-  color: white;
-  font-weight: bold;
-  border: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.40);
+.grupo-input label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #051D40;
 }
-
-button[type="submit"]:hover {
-  background-color: #004182;
-}
-
-.btn-secundario {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  border-radius: 24px;
-  background-color: white;
-  color: black;
-  text-decoration: none;
-  font-size: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,.4);
-}
-
-.btn-secundario:hover {
-  background-color: #ddd8d8;
-}
-
-.troca-pagina {
-  margin-top: 16px;
-  text-align: center;
-  font-size: 14px;
-  color: white;
-}
-
-.troca-pagina a {
-  color: #4DA3D9;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.troca-pagina a:hover {
-  text-decoration: underline;
-}
-
-.termos {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  color: white;
-}
-
-.termos input {
-  margin-right: 10px;
-}
-.termos a {
-  color: #4DA3D9;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.termos a:hover {
-  text-decoration: underline;
-  color: #79c3f0;
-}
-
-.lembrar {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  color: white;
-  gap: 3px;
-}
-
-.linha {
-  display: flex;
-  gap: 10px;
-}
-
-.linha select {
-  flex: 1;
-}
-
-select {
-  padding: 8px;
-  border: 2px solid white;
-  border-radius: 8px;
-}
-
-/* CAMPOS COM ÍCONES */
 
 .campo {
-  position: relative;
-  display: flex;
-  align-items: center;
-  background: white;
-  border-radius: 5px;
-  height: 48px;
-  padding: 0 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #f8f9fa;
+    border: 1px solid #e1e5eb;
+    border-radius: 10px;
+    height: 50px; /* Ligeiramente mais alto para ser mais moderno */
+    padding: 0 15px;
+    transition: all 0.3s ease;
 }
 
-.campo i:first-child {
-  margin-right: 10px;
-  color: #777;
+.campo:focus-within {
+    border-color: #2788C8;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(39, 136, 200, 0.1);
+}
+
+.campo i {
+    color: #a0aab5;
+    margin-right: 12px;
+    font-size: 16px;
 }
 
 .campo input {
-  border: none;
-  outline: none;
-  flex: 1;
-  font-size: 16px;
-  height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    font-size: 14px;
+    color: #333;
 }
 
-/* OLHO DA SENHA */
-
-.toggle-senha {
-  position: absolute;
-  right: 12px;
-  cursor: pointer;
-  color: #777;
+/* Links de Login (Lembrar/Esqueceu) */
+.opcoes-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 5px;
 }
 
-.toggle-senha:hover {
-  color: black;
+.lembrar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+    cursor: pointer;
 }
 
-.erro-senha {
-  color: #ff4d4d;
-  font-size: 14px;
+.esqueci-senha {
+    color: #2788C8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
 }
 
-@media (max-width:480px){
-
-.container{
-width:100%;
-max-width:360px;
+.esqueci-senha:hover {
+    color: #051D40;
+    text-decoration: underline;
 }
 
-.logo{
-width:120px;
+/* Termos de Uso mais bonitos */
+.termos {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+    margin: 10px 0;
 }
 
+.termos input {
+    margin-top: 3px;
+    accent-color: #2788C8; /* Cor do checkbox */
+}
+
+.termos a {
+    color: #2788C8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.termos a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de Ação */
+button[type="submit"] {
+    background-color: #051D40;
+    color: white;
+    border: none;
+    height: 52px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(5, 29, 64, 0.1);
+}
+
+button[type="submit"]:hover {
+    background-color: #2788C8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(39, 136, 200, 0.2);
+}
+
+/* Links de rodapé */
+.troca-pagina {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 25px;
+    color: #555;
+}
+
+.troca-pagina a {
+    color: #2788C8;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.btn-voltar {
+    align-self: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-voltar:hover {
+    color: #666;
+}
+
+/* --- LADO DA IMAGEM --- */
+.image-side {
+    flex: 1.2;
+    background: linear-gradient(rgba(5, 29, 64, 0.8), rgba(39, 136, 200, 0.6)), 
+                url('../assets/img/eniac.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    color: white;
+}
+
+/* Estilo dos Benefícios no Cadastro */
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.benefit-item {
+    display: flex;
+    gap: 20px;
+}
+
+.benefit-item i {
+    font-size: 24px;
+    color: #31BADF;
+}
+
+.benefit-item h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.benefit-item p {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+@media (max-width: 1000px) {
+    .image-side { display: none; }
 }
