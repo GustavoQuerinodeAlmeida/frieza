@@ -143,16 +143,16 @@ body.dark .event-day {
 }
 
 /* EVENT LIST */
-.event-list {
+.event-panel{
     flex: 1;
     background: #fff;
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     height: fit-content;
 }
 
-body.dark .event-list {
+body.dark .event-panel {
     background: #333;
     color: #e4e4e4;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -189,3 +189,28 @@ body.dark .mini-event strong {
     border-radius: 10px;
     border: 2px solid #051D40;
 }
+.dom{
+    color: red;
+}
+/* Deixar todos os domingos vermelhos */
+.days div:nth-child(7n+1) {
+    color: red;
+    font-weight: 600;
+}
+/* Hover especial para domingos */
+.days div:nth-child(7n+1):hover {
+    background: rgba(255, 0, 0, 0.1);
+}
+.left-panels{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.panel{
+width: 275px;
+height: 180px;
+background: #dcdcdc;
+border-radius: 15px;
+}
+
