@@ -174,29 +174,7 @@ nav a:hover {
 
 /* CARD HUB */
 
-.hub-card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
-    transition:0.3s;
-}
 
-.hub-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-.hub-card h3{
-    color:#051D40;
-    margin-bottom:10px;
-}
-
-.hub-card p{
-    font-size:14px;
-    color:#555;
-    line-height:1.5;
-}
 
 /* OBJETIVO */
 
@@ -423,13 +401,7 @@ nav a:hover {
 
 /* CARD HUB */
 
-.hub-card{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
-    transition:0.3s;
-}
+
 
 .hub-card:hover{
     transform:translateY(-6px);
@@ -494,4 +466,45 @@ nav a:hover {
 .equipe-card p{
     font-size:14px;
     color:#666;
+}
+
+/* ===== MODO ESCURO ===== */
+
+body.dark{
+    background: #121212;
+    color: white;
+}
+
+
+
+/* seção estatísticas */
+body.dark .estatisticas{
+    background: #181818;
+}
+
+/* seção notícias */
+body.dark .noticias{
+    background: #181818;
+}
+
+/* cards */
+body.dark .card{
+    background: #2a2a2a;
+    color: white;
+}
+
+body.dark .card-noticia{
+    background: #1f1f1f;
+    color: white;
+}
+
+/* textos */
+body.dark .card p,
+body.dark .card-noticia p{
+    color: #ccc;
+}
+
+/* título */
+body.dark .titulo{
+    background: #053B5E;
 }

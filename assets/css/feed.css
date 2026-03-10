@@ -1,141 +1,70 @@
-/* Geral do feed */
-.twitter-feed {
-  width: 100%;
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 0 16px;
-  font-family: 'Poppins', sans-serif;
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
 }
 
-/* Header do feed */
-.feed-header {
-  text-align: center;
-  margin-bottom: 30px;
+/* ===== BODY ===== */
+body{
+    background:#f4f4f4;
+    color:#111;
+    transition:0.3s;
 }
 
-.feed-header h2 {
-  font-size: 32px;
-  color: #1DA1F2; /* Azul Twitter */
-  margin-bottom: 8px;
-  font-weight: 700;
+body.dark{
+    background:#121212;
+    color:#e4e4e4;
 }
 
-.feed-subtitle {
-  display: inline-block;
-  background: #E8F5FD;
-  color: #1DA1F2;
-  font-weight: 500;
-  font-size: 14px;
-  padding: 5px 14px;
-  border-radius: 20px;
+/* ===== FEED ===== */
+.twitter-feed{
+    max-width:600px;
+    margin:50px auto;
+    padding:0 20px;
 }
 
-/* Container dos tweets */
-.feed-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+/* HEADER DO FEED */
+
+.feed-header{
+    text-align:center;
+    margin-bottom:30px;
 }
 
-/* Card tweet */
-.tweet-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 14px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.feed-header h2{
+    font-size:32px;
+    color:#2788C8;
 }
 
-.tweet-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+body.dark .feed-header h2{
+    color:#4db2ff;
 }
 
-/* Header do tweet */
-.tweet-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+.feed-subtitle{
+    background:#E8F5FD;
+    color:#2788C8;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:14px;
 }
 
-.avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 12px;
+body.dark .feed-subtitle{
+    background:#1e1e1e;
 }
 
-.tweet-user {
-  display: flex;
-  flex-direction: column;
-}
-
-.tweet-user .name {
-  font-weight: 600;
-  color: #111;
-}
-
-.tweet-user .username {
-  font-size: 13px;
-  color: #555;
-}
-
-/* Texto do tweet */
-.tweet-text {
-  font-size: 15px;
-  color: #111;
-  margin-bottom: 10px;
-  line-height: 1.4;
-}
-
-/* Imagem do tweet */
-.tweet-img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-/* Ações do tweet */
-.tweet-actions {
-  display: flex;
-  gap: 20px;
-}
-
-.tweet-actions button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  color: #555;
-  transition: color 0.2s;
-}
-
-.tweet-actions button:hover {
-  color: #1DA1F2;
-}
-
-/* Responsivo */
-@media (max-width: 480px) {
-  .twitter-feed {
-    padding: 0 12px;
-  }
-  .tweet-card {
-    padding: 12px;
-  }
-  .tweet-text {
-    font-size: 14px;
-  }
-  .tweet-actions button {
-    font-size: 13px;
-  }
-}
+/* ===== POSTAR ===== */
 
 .postar-card{
     background:white;
     padding:20px;
     border-radius:10px;
-    margin-bottom:20px;
+    margin-bottom:25px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.dark .postar-card{
+    background:#2a2a2a;
 }
 
 .postar-header{
@@ -148,7 +77,10 @@
     height:80px;
     border:none;
     resize:none;
-    font-size:16px;
+    font-size:15px;
+    outline:none;
+    background:transparent;
+    color:inherit;
 }
 
 .postar-card button{
@@ -157,6 +89,119 @@
     color:white;
     border:none;
     padding:10px 15px;
-    border-radius:5px;
+    border-radius:6px;
     cursor:pointer;
+}
+
+.postar-card button:hover{
+    background:#1f6fa5;
+}
+
+/* ===== TWEET CARD ===== */
+
+.feed-container{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.tweet-card{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    transition:0.2s;
+}
+
+body.dark .tweet-card{
+    background:#2a2a2a;
+}
+
+.tweet-card:hover{
+    transform:translateY(-3px);
+}
+
+/* HEADER */
+
+.tweet-header{
+    display:flex;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.avatar{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    margin-right:10px;
+}
+
+.tweet-user{
+    display:flex;
+    flex-direction:column;
+}
+
+.name{
+    font-weight:600;
+}
+
+.username{
+    font-size:13px;
+    color:#666;
+}
+
+body.dark .username{
+    color:#aaa;
+}
+
+/* TEXTO */
+
+.tweet-text{
+    font-size:15px;
+    margin-bottom:10px;
+    line-height:1.4;
+}
+
+/* IMAGEM */
+
+.tweet-img{
+    width:100%;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+/* AÇÕES */
+
+.tweet-actions{
+    display:flex;
+    gap:20px;
+}
+
+.tweet-actions button{
+    background:none;
+    border:none;
+    cursor:pointer;
+    color:#666;
+}
+
+body.dark .tweet-actions button{
+    color:#bbb;
+}
+
+.tweet-actions button:hover{
+    color:#2788C8;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media(max-width:600px){
+
+.twitter-feed{
+    padding:0 10px;
+}
+
+.tweet-card{
+    padding:12px;
+}
+
 }
