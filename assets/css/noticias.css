@@ -175,7 +175,7 @@ body.dark .card:hover {
 }
 
 body.dark .titulo {
-    background-color: #333;
+    background-color: #2a2a2a;
 }
 
 /* h2 */
@@ -200,7 +200,7 @@ body.dark h2 {
 }
 
 body.dark .titulo {
-    background-color: #053B5E; /* fundo escuro */
+    background-color: #2a2a2a; /* fundo escuro */
     color: #e4e4e4; /* texto claro */
     border: 1px solid #444; /* opcional: borda suave */
 }

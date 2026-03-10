@@ -6,15 +6,6 @@ body {
 
 /* NAVBAR */
 
-header {
-    background: #051D40;
-    padding: 20px;
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* separa esquerda e direita */
-}
 
 nav {
   display: flex;
@@ -34,12 +25,11 @@ nav li {
 
 /* HEADER PERFIL */
 
+/* eu tirei as margens para poder ficar na tela inteira o perfil e mostrar melhor a foto e as informações do usuário */
 .perfil-header {
-  max-width: 900px;
-  margin: 30px auto;
-  background: linear-gradient(90deg, #053B5E, #2788C8);
+
+ background: linear-gradient(to bottom, #051D40, #053B5E);
   padding: 30px;
-  border-radius: 12px;
   display: flex;
   gap: 20px;
   align-items: center;
@@ -116,4 +106,54 @@ button {
   padding: 5px 10px;
   border-radius: 15px;
   font-size: 14px;
+}
+
+
+/* ===== MODO ESCURO ===== */
+
+body.dark{
+  background-color: #121212;
+  color: white;
+}
+
+/* navbar */
+
+
+
+/* perfil */
+
+body.dark .perfil-header{
+ background: linear-gradient(to bottom, #051D40, #053B5E);
+}
+
+/* foto */
+
+body.dark .foto-perfil{
+  background: #2a2a2a;
+}
+
+/* abas */
+
+body.dark .tabs button{
+  background-color: #2a2a2a;
+  color: white;
+}
+
+/* conteúdo */
+
+body.dark .conteudo-perfil{
+  background: #1e1e1e;
+}
+
+/* habilidades */
+
+body.dark .habilidades span{
+  background-color: #0d5c8c;
+}
+
+/* botões */
+
+body.dark button{
+  background-color: #0d5c8c;
+  color: white;
 }

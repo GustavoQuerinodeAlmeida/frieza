@@ -182,3 +182,10 @@ body.dark .mini-event strong {
         flex-direction: column;
     }
 }
+.days .today{
+    background-color: #2788C8 !important;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #051D40;
+}

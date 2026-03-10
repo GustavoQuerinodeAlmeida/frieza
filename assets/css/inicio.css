@@ -146,7 +146,9 @@ background-color: white;
     border-radius: 10px;
     transition: 0.3s;
       text-align: center;
+cursor: pointer;
 }
+
 
 .card:hover {
  transform: scale(1.03);
@@ -167,3 +169,54 @@ display: block;
 width: fit-content;
 }
 
+/* ===== MODO ESCURO ===== */
+
+body.dark{
+    background: #121212;
+    color: white;
+}
+
+
+
+/* seção estatísticas */
+body.dark .estatisticas{
+    background: #181818;
+}
+
+/* seção notícias */
+body.dark .noticias{
+    background: #181818;
+}
+
+/* cards */
+body.dark .card{
+    background: #2a2a2a;
+    color: white;
+}
+
+body.dark .card-noticia{
+    background: #1f1f1f;
+    color: white;
+}
+
+/* textos */
+body.dark .card p,
+body.dark .card-noticia p{
+    color: #ccc;
+}
+
+/* título */
+body.dark .titulo{
+    background: #2a2a2a;
+}
+
+.card-link{
+    text-decoration: none;
+    color: inherit;
+    display: block; /* remove a faixa embaixo */
+}
+
+.dark{
+background:#121212;
+color:white;
+}

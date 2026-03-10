@@ -475,36 +475,30 @@ body.dark{
     color: white;
 }
 
-
-
-/* seção estatísticas */
-body.dark .estatisticas{
-    background: #181818;
+.header-direita{
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-/* seção notícias */
-body.dark .noticias{
-    background: #181818;
+#modo{
+    background: #051D40;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-/* cards */
-body.dark .card{
-    background: #2a2a2a;
+.header-direita a{
+    text-decoration: none;
+    padding: 0px 14px;
+    transition: 0.3s;
+    background-color: #051D40;
     color: white;
+    border-radius: 10px;
+    font-size: 16px;
 }
 
-body.dark .card-noticia{
-    background: #1f1f1f;
-    color: white;
-}
-
-/* textos */
-body.dark .card p,
-body.dark .card-noticia p{
-    color: #ccc;
-}
-
-/* título */
-body.dark .titulo{
-    background: #053B5E;
+header-direita a:hover{
+    background-color: #2788C8;
 }

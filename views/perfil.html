@@ -12,23 +12,31 @@
 
 <body>
 
-<header>
-  <nav>
-    <img src="../assets/img/eco-certo.png" alt="EcoHub" class="logo">
-    <ul>
-      <a href="index.html">Inicio</a>
-<a href="eventos.html">Eventos</a>
-<a href="noticias.html">Notícias</a>
-<a href="feed.html">Feed</a>
-<a href="projetos.html">Projetos</a>
-<a href="sobre.html">Sobre</a>
-<a href="cadastro.html">Cadastro</a>
+ <header>
+
+<img src="../assets/img/logohead.png" alt="EcoHub" class="logo">
+
+<nav>
+<a href="Inicio.html" >Inicio</a>
+<a href="Eventos.html">Eventos</a>
+<a href="Noticias.html">Notícias</a>
+<a href="Feed.html">Feed</a>
+<a href="Projetos.html">Projetos</a>
+<a href="Sobre.html">Sobre</a>
+</nav>
+
+<div class="header-direita">
+
+<a href="Cadastro.html">Cadastro</a>
+
 <button id="modo">🌙</button>
-<a href="perfil.html" class="link-perfil" class="ativo">
-    <img src="../assets/img/perfil.jpg" alt="Perfil">
+
+<a href="Perfil.html" class="link-perfil">
+<img src="../assets/img/perfil.jpg" alt="Perfil">
 </a>
-    </ul>
-  </nav>
+
+</div>
+
 </header>
 
 <section class="perfil-header">
@@ -48,7 +56,12 @@
     </div>
 
     <button>Editar Perfil</button>
+    <button onclick="mostrarAba('postagens')">Postagens</button>
+  <button onclick="mostrarAba('projetos')">Projetos</button>
+  <button onclick="mostrarAba('sobre')">Sobre</button>
   </div>
+
+  
 </section>
 
 
