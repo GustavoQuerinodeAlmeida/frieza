@@ -1,37 +1,48 @@
-const form = document.getElementById("formCadastro");
-const botao = form.querySelector("button[type='submit']");
+const formCadastro = document.getElementById("formCadastro");
 const emailInput = document.getElementById("emailCadastro");
 const senhaInput = document.getElementById("senhaCadastro");
 const confirmarInput = document.getElementById("confirmarSenha");
 const erro = document.getElementById("erroSenha");
 
-botao.addEventListener("click", function (event) {
+// Adiciona um evento que dispara quando o usuário tenta enviar o formulário
+formCadastro.addEventListener("submit", function (event) {
+    // 1. Limpa os erros anteriores (caso o usuário esteja tentando de novo)
     erro.textContent = "";
-    emailInput.parentElement.style.borderColor = "";
     senhaInput.parentElement.style.borderColor = "";
     confirmarInput.parentElement.style.borderColor = "";
 
-    const email = emailInput.value.trim();
+    let temErro = false;
 
-    if (email !== "" && !email.endsWith("@eniac.edu.br")) {
-        erro.textContent = "Apenas e-mails institucionais (@eniac.edu.br) são permitidos.";
-        emailInput.parentElement.style.borderColor = "#ff4d4d";
-        event.preventDefault();
-        return;
-    }
-
-    if (senhaInput.value.length > 0 && senhaInput.value.length < 8) {
+    // 2. Verifica se a senha tem pelo menos 8 caracteres (Segurança básica)
+    if (senhaInput.value.length < 8) {
         erro.textContent = "A senha deve ter no mínimo 8 caracteres.";
-        senhaInput.parentElement.style.borderColor = "#ff4d4d";
-        event.preventDefault();
-        return;
+        senhaInput.parentElement.style.borderColor = "#ff4d4d"; // Borda vermelha
+        temErro = true;
+    }
+    // 3. A CONDIÇÃO PRINCIPAL: Verifica se as senhas são diferentes
+    else if (senhaInput.value !== confirmarInput.value) {
+        erro.textContent = "As senhas não coincidem. Digite novamente.";
+        senhaInput.parentElement.style.borderColor = "#ff4d4d"; // Borda vermelha
+        confirmarInput.parentElement.style.borderColor = "#ff4d4d"; // Borda vermelha
+        temErro = true;
     }
 
-    if (senhaInput.value !== confirmarInput.value) {
-        erro.textContent = "As senhas não coincidem.";
-        senhaInput.parentElement.style.borderColor = "#ff4d4d";
-        confirmarInput.parentElement.style.borderColor = "#ff4d4d";
-        event.preventDefault();
-        return;
+    // 4. Se encontrou algum erro, BLOQUEIA o envio do formulário
+    if (temErro) {
+        event.preventDefault(); // Esta função é a responsável por não deixar a página recarregar/cadastrar
     }
 });
+
+// A função do "olhinho" para mostrar/ocultar a senha (mantida para continuar funcionando)
+function toggleSenha(inputId, icon) {
+    const input = document.getElementById(inputId);
+    if (input.type === "password") {
+        input.type = "text";
+        icon.classList.remove("fa-eye");
+        icon.classList.add("fa-eye-slash");
+    } else {
+        input.type = "password";
+        icon.classList.remove("fa-eye-slash");
+        icon.classList.add("fa-eye");
+    }
+}
