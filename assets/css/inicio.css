@@ -150,6 +150,11 @@ background-color: white;
 cursor: pointer;
 }
 
+.card-link{
+    text-decoration: none; /* tira a linha */
+    color: inherit; /* mantém a cor do texto normal */
+}
+
 
 .card:hover {
  transform: scale(1.03);
