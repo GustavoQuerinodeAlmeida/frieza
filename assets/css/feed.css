@@ -205,3 +205,36 @@ body.dark .tweet-actions button{
 }
 
 }
+
+/* BODY - modo escuro */
+body.dark-mode {
+    background:#121212;
+    color:#e4e4e4;
+}
+
+/* Feed Header */
+body.dark-mode .feed-header h2 {
+    color:#4db2ff;
+}
+
+body.dark-mode .feed-subtitle {
+    background:#1e1e1e;
+}
+
+/* Postar Card */
+body.dark-mode .postar-card {
+    background:#2a2a2a;
+}
+
+/* Tweet Card */
+body.dark-mode .tweet-card {
+    background:#2a2a2a;
+}
+
+body.dark-mode .username {
+    color:#aaa;
+}
+
+body.dark-mode .tweet-actions button {
+    color:#bbb;
+}

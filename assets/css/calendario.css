@@ -214,3 +214,54 @@ background: #dcdcdc;
 border-radius: 15px;
 }
 
+/* ===== MODO ESCURO ===== */
+body.dark-mode {
+    background: #121212;
+    color: #e4e4e4;
+}
+
+body.dark-mode .hero {
+    background: #1e1e1e;
+    color: #e4e4e4;
+}
+
+body.dark-mode .calendar {
+    background: #2a2a2a;
+    color: #e4e4e4;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .calendar-header button {
+    background: #2788C8;
+}
+
+body.dark-mode .weekdays {
+    color: #bbb;
+}
+
+body.dark-mode .days div {
+    background: #333;
+    color: #e4e4e4;
+}
+
+body.dark-mode .days div:hover {
+    background: #555;
+}
+
+body.dark-mode .event-day {
+    background: #2788C8 !important;
+}
+
+body.dark-mode .event-panel {
+    background: #333;
+    color: #e4e4e4;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .mini-event {
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .mini-event strong {
+    color: #2788C8;
+}

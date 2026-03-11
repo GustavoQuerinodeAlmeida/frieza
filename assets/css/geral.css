@@ -502,3 +502,116 @@ body.dark{
 header-direita a:hover{
     background-color: #2788C8;
 }
+
+body.dark-mode {
+    background: #121212;
+    color: #e4e4e4;
+}
+
+
+/* ===== HEADER ===== */
+header {
+    background-color: #2788C8; /* modo claro */
+    color: #051D40;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* LOGO */
+header img {
+    width: 200px;
+    height: auto;
+}
+
+/* NAV LINKS */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 10px;
+    background-color: #AED6F1; /* fundo igual header */
+    color: #2788C8;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #85C1E9;
+}
+
+nav a.ativo {
+    background-color: #85C1E9;
+    color: white;
+}
+
+/* LINK PERFIL */
+.link-perfil img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* BOTÃO MODO ESCURO */
+#modo {
+    background-color: #051D40;;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #051D40;
+    transition: 0.3s;
+}
+
+#modo:hover {
+    background-color: #85C1E9;
+}
+
+/* ===== MODO ESCURO ===== */
+body.dark-mode header {
+    background-color: #051D40; /* azul escuro */
+    color: white;
+}
+
+body.dark nav a {
+    background-color: #051D40;
+    color: white;
+}
+
+body.dark nav a:hover {
+    background-color: #2788C8;
+}
+
+body.dark nav a.ativo {
+    background-color: #2788C8;
+    color: white;
+}
+
+body.dark #modo {
+    background-color: #051D40;
+    color: white;
+}
+
+body.dark #modo:hover {
+    background-color: #2788C8;
+}
+
+body.dark .link-perfil img {
+    background-color: #2a2a2a;
+}
+

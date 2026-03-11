@@ -1,11 +1,12 @@
 h1 {
-    color: white;
+    color: white; /* cor do texto no modo claro */
     text-align: center;
-    background: linear-gradient(#051D40, #053B5E);
-   padding: 60px 20px;
-   font-family: Arial, Helvetica, sans-serif;
-     font-size: 60px; 
-     margin: 5px 0;
+    background: linear-gradient(#2788C8, #31BADF); /* mesmo gradiente do header */
+    padding: 60px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    margin: 5px 0;  
+    transition: background 0.3s, color 0.3s;
 }
 
 H2{
@@ -21,7 +22,7 @@ H2{
 #inicio{
       color: white;
     text-align: center;
-    background: #053B5E;
+    background: #31BADF;
   padding: 20px 10px;
     font-family: 'Poppins', sans-serif;
     font-size: 35px; /* aumenta aqui */
@@ -160,7 +161,7 @@ body {
    
 }
 .titulo{
-background-color: #051D40;
+    background: #31BADF;
 color: white;
 padding: 20px 40px;
 border-radius: 30px;
@@ -171,52 +172,92 @@ width: fit-content;
 
 /* ===== MODO ESCURO ===== */
 
-body.dark{
+/* ===== MODO ESCURO ===== */
+body.dark-mode{
     background: #121212;
     color: white;
 }
 
-
-
 /* seção estatísticas */
-body.dark .estatisticas{
+body.dark-mode .estatisticas{
     background: #181818;
 }
 
 /* seção notícias */
-body.dark .noticias{
+body.dark-mode .noticias{
     background: #181818;
 }
 
 /* cards */
-body.dark .card{
+body.dark-mode .card{
     background: #2a2a2a;
     color: white;
 }
 
-body.dark .card-noticia{
+body.dark-mode .card-noticia{
     background: #1f1f1f;
     color: white;
 }
 
 /* textos */
-body.dark .card p,
-body.dark .card-noticia p{
+body.dark-mode .card p,
+body.dark-mode .card-noticia p{
     color: #ccc;
 }
 
 /* título */
-body.dark .titulo{
+body.dark-mode .titulo{
     background: #2a2a2a;
 }
 
-.card-link{
-    text-decoration: none;
-    color: inherit;
-    display: block; /* remove a faixa embaixo */
+
+
+body.dark-mode {
+    background: #121212;
+    color: white;
 }
 
-.dark{
-background:#121212;
-color:white;
+/* H1 modo escuro */
+body.dark-mode h1 {
+    color: white; /* texto continua legível */
+    background: linear-gradient(#051D40, #053B5E);
 }
+
+/* seção estatísticas */
+body.dark-mode .estatisticas {
+    background: #181818;
+}
+
+/* seção notícias */
+body.dark-mode .noticias {
+    background: #181818;
+}
+
+/* cards */
+body.dark-mode .card {
+    background: #2a2a2a;
+    color: white;
+}
+
+body.dark-mode .card-noticia {
+    background: #1f1f1f;
+    color: white;
+}
+
+/* textos dos cards */
+body.dark-mode .card p,
+body.dark-mode .card-noticia p {
+    color: #ccc;
+}
+
+/* título */
+body.dark-mode .titulo {
+    background: #2a2a2a;
+    color: #e4e4e4;
+}
+
+body.dark-mode #inicio{
+
+    background:  #053B5E;
+}
+

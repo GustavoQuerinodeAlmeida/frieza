@@ -108,52 +108,43 @@ button {
   font-size: 14px;
 }
 
-
 /* ===== MODO ESCURO ===== */
 
-body.dark{
+body.dark-mode{
   background-color: #121212;
   color: white;
 }
 
-/* navbar */
-
 
 
 /* perfil */
-
-body.dark .perfil-header{
+body.dark-mode .perfil-header{
  background: linear-gradient(to bottom, #051D40, #053B5E);
 }
 
 /* foto */
-
-body.dark .foto-perfil{
+body.dark-mode .foto-perfil{
   background: #2a2a2a;
 }
 
 /* abas */
-
-body.dark .tabs button{
+body.dark-mode .tabs button{
   background-color: #2a2a2a;
   color: white;
 }
 
 /* conteúdo */
-
-body.dark .conteudo-perfil{
+body.dark-mode .conteudo-perfil{
   background: #1e1e1e;
 }
 
 /* habilidades */
-
-body.dark .habilidades span{
+body.dark-mode .habilidades span{
   background-color: #0d5c8c;
 }
 
 /* botões */
-
-body.dark button{
+body.dark-mode button{
   background-color: #0d5c8c;
   color: white;
 }

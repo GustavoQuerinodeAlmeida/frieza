@@ -205,3 +205,43 @@ body.dark .titulo {
     border: 1px solid #444; /* opcional: borda suave */
 }
 
+
+/* ===== MODO ESCURO ===== */
+body.dark-mode {
+    background: #121212;
+    color: #e4e4e4;
+}
+
+body.dark-mode .card-noticia {
+    background: #2a2a2a;
+    color: #e4e4e4;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .card-noticia a {
+    color: #2788C8;
+}
+
+body.dark-mode .card-noticia a:hover {
+    color: #fff;
+}
+
+body.dark-mode .conteudo-extra {
+    background: #333;
+    color: #e4e4e4;
+}
+
+body.dark-mode .estatisticas {
+    background: #222;
+}
+
+body.dark-mode .card {
+    background: #2a2a2a;
+    color: #e4e4e4;
+}
+
+body.dark-mode .titulo {
+    background-color: #2a2a2a;
+    color: #e4e4e4;
+    border: 1px solid #444;
+}

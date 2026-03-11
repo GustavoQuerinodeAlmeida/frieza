@@ -269,3 +269,62 @@ button[type="submit"]:hover {
 @media (max-width: 1000px) {
     .image-side { display: none; }
 }
+/* ===================== */
+/* 🌙 MODO ESCURO */
+/* ===================== */
+
+body.dark-mode {
+    background-color: #0f172a;
+}
+
+body.dark-mode .form-side {
+    background-color: #0f172a;
+}
+
+body.dark-mode .form-container h2,
+body.dark-mode .form-header h3,
+body.dark-mode .grupo-input label {
+    color: #f1f5f9;
+}
+
+body.dark-mode .subtitle,
+body.dark-mode .form-header p,
+body.dark-mode .troca-pagina,
+body.dark-mode .lembrar,
+body.dark-mode .termos {
+    color: #cbd5e1;
+}
+
+body.dark-mode .campo {
+    background: #1e293b;
+    border: 1px solid #334155;
+}
+
+body.dark-mode .campo input {
+    color: #f1f5f9;
+}
+
+body.dark-mode .campo i {
+    color: #94a3b8;
+}
+
+body.dark-mode .campo:focus-within {
+    background: #1e293b;
+    border-color: #2788C8;
+}
+
+body.dark-mode button[type="submit"] {
+    background-color: #2788C8;
+}
+
+body.dark-mode button[type="submit"]:hover {
+    background-color: #31BADF;
+}
+
+body.dark-mode .btn-voltar {
+    color: #94a3b8;
+}
+
+body.dark-mode .btn-voltar:hover {
+    color: #f1f5f9;
+}

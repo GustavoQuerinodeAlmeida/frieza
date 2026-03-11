@@ -1,27 +1,25 @@
-// botão modo escuro
-const botao = document.getElementById("modo");
+document.addEventListener("DOMContentLoaded", () => {
+    const botao = document.getElementById("modo");
 
-if(botao){
-
-    // verifica modo salvo
-    if(localStorage.getItem("modo") === "dark"){
-        document.body.classList.add("dark");
-        botao.textContent = "☀️";
+    // Aplica tema salvo
+    const theme = localStorage.getItem("theme");
+    if(theme === "dark"){
+        document.body.classList.add("dark-mode");
+        if(botao) botao.textContent = "☀️";
     }
 
-    botao.addEventListener("click", () => {
+    // Evento do botão
+    if(botao){
+        botao.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
 
-        document.body.classList.toggle("dark");
-
-        if(document.body.classList.contains("dark")){
-            botao.textContent = "☀️";
-            localStorage.setItem("modo", "dark");
-        } 
-        else{
-            botao.textContent = "🌙";
-            localStorage.setItem("modo", "light");
-        }
-
-    });
-
-}
+            if(document.body.classList.contains("dark-mode")){
+                botao.textContent = "☀️";
+                localStorage.setItem("theme", "dark");
+            } else {
+                botao.textContent = "🌙";
+                localStorage.setItem("theme", "light");
+            }
+        });
+    }
+});
