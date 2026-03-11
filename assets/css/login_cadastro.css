@@ -11,7 +11,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #ffffff;
-    overflow: hidden;
+    overflow: hidden; /* Trava o scroll da tela principal para não atacar o TIC */
 }
 
 .split-layout {
@@ -26,8 +26,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 20px; /* Reduzi um pouco para ganhar espaço vertical */
     background-color: #ffffff;
+    overflow-y: auto; /* Scroll apenas interno se a tela for muito pequena */
 }
 
 .form-container {
@@ -37,55 +38,71 @@ body {
     flex-direction: column;
 }
 
+.stats-row-login{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: auto;
+
+}
+
 .icon-logo {
-    width: 45px;
-    margin-bottom: 25px;
+    width: 145px;
+    margin-bottom: 15px;
     align-self: center;
 }
 
-/* Espaçamento do Título Principal */
 .form-container h2 {
-    font-size: 26px;
+    font-size: 24px; /* Reduzi levemente para caber tudo */
     color: #051D40;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 12px; /* Mais espaço abaixo do título */
+    margin-bottom: 8px;
 }
 
 .subtitle {
     color: #666;
-    font-size: 14px;
+    font-size: 13px;
     text-align: center;
-    margin-bottom: 40px; /* Mais espaço para o formulário respirar */
+    margin-bottom: 20px; /* Reduzi para o bloco subir */
 }
 
-/* Títulos internos do formulário (Login/Cadastro) */
+/* --- O BLOCO DE INFORMAÇÃO --- */
+.form-box {
+    width: 100%;
+    border: 1px solid #e1e5eb;
+    border-radius: 12px;
+    padding: 22px; /* Ajuste fino no respiro interno */
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
 .form-header h3 {
-    font-size: 20px;
+    font-size: 18px;
     color: #051D40;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .form-header p {
-    font-size: 13px;
+    font-size: 12px;
     color: #888;
-    margin-bottom: 25px; /* Espaço antes do primeiro campo */
+    margin-bottom: 18px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Aumentei o espaço entre cada campo */
+    gap: 12px; /* Espaço reduzido para o cadastro caber na tela */
 }
 
 .grupo-input {
     display: flex;
     flex-direction: column;
-    gap: 8px; /* Espaço entre a Label e o Campo de texto */
+    gap: 5px;
 }
 
 .grupo-input label {
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
     color: #051D40;
 }
@@ -97,7 +114,7 @@ form {
     background: #f8f9fa;
     border: 1px solid #e1e5eb;
     border-radius: 10px;
-    height: 50px; /* Ligeiramente mais alto para ser mais moderno */
+    height: 44px; /* Altura otimizada para economizar tela */
     padding: 0 15px;
     transition: all 0.3s ease;
 }
@@ -123,13 +140,36 @@ form {
     color: #333;
 }
 
-/* Links de Login (Lembrar/Esqueceu) */
+/* --- SELETORES LADO A LADO --- */
+.linha {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.linha .grupo-input {
+    flex: 1;
+    min-width: 0;
+}
+
+.linha select {
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid #e1e5eb;
+    padding: 0 10px;
+    background: #f8f9fa;
+    outline: none;
+    font-size: 13px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* --- LINKS E BOTÕES --- */
 .opcoes-login {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 13px;
-    margin-top: 5px;
+    font-size: 12px;
 }
 
 .lembrar {
@@ -144,29 +184,19 @@ form {
     color: #2788C8;
     text-decoration: none;
     font-weight: 500;
-    transition: 0.2s;
 }
 
-.esqueci-senha:hover {
-    color: #051D40;
-    text-decoration: underline;
-}
-
-/* Termos de Uso mais bonitos */
 .termos {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    font-size: 12px;
+    font-size: 11px;
     color: #666;
-    line-height: 1.5;
-    margin: 10px 0;
+    line-height: 1.4;
+    margin-top: 5px;
 }
 
-.termos input {
-    margin-top: 3px;
-    accent-color: #2788C8; /* Cor do checkbox */
-}
+.termos input { margin-top: 2px; }
 
 .termos a {
     color: #2788C8;
@@ -174,22 +204,17 @@ form {
     font-weight: 600;
 }
 
-.termos a:hover {
-    text-decoration: underline;
-}
-
-/* Botão de Ação */
 button[type="submit"] {
     background-color: #051D40;
     color: white;
     border: none;
-    height: 52px;
+    height: 46px;
     border-radius: 10px;
     font-weight: 600;
     font-size: 15px;
     cursor: pointer;
     transition: all 0.3s;
-    margin-top: 10px;
+    margin-top: 5px;
     box-shadow: 0 4px 6px rgba(5, 29, 64, 0.1);
 }
 
@@ -199,11 +224,10 @@ button[type="submit"]:hover {
     box-shadow: 0 6px 12px rgba(39, 136, 200, 0.2);
 }
 
-/* Links de rodapé */
 .troca-pagina {
     text-align: center;
-    font-size: 14px;
-    margin-top: 25px;
+    font-size: 13px;
+    margin-top: 15px;
     color: #555;
 }
 
@@ -211,27 +235,22 @@ button[type="submit"]:hover {
     color: #2788C8;
     text-decoration: none;
     font-weight: 700;
-    margin-left: 5px;
 }
 
 .btn-voltar {
     align-self: center;
-    margin-top: 30px;
-    font-size: 13px;
+    margin-top: 15px;
+    font-size: 12px;
     color: #aaa;
     text-decoration: none;
-    transition: 0.2s;
-}
-
-.btn-voltar:hover {
-    color: #666;
 }
 
 /* --- LADO DA IMAGEM --- */
 .image-side {
     flex: 1.2;
+    /* CORREÇÃO DO CAMINHO PARA A IMAGEM APARECER */
     background: linear-gradient(rgba(5, 29, 64, 0.8), rgba(39, 136, 200, 0.6)), 
-                url('../assets/img/eniac.jpg') center/cover no-repeat;
+                url('../img/eniac.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,92 +258,20 @@ button[type="submit"]:hover {
     color: white;
 }
 
-/* Estilo dos Benefícios no Cadastro */
 .benefits-list {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
 }
 
 .benefit-item {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
-.benefit-item i {
-    font-size: 24px;
-    color: #31BADF;
-}
-
-.benefit-item h4 {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.benefit-item p {
-    font-size: 14px;
-    opacity: 0.85;
-}
+.benefit-item i { font-size: 22px; color: #31BADF; }
 
 @media (max-width: 1000px) {
     .image-side { display: none; }
 }
-/* ===================== */
-/* 🌙 MODO ESCURO */
-/* ===================== */
 
-body.dark-mode {
-    background-color: #0f172a;
-}
-
-body.dark-mode .form-side {
-    background-color: #0f172a;
-}
-
-body.dark-mode .form-container h2,
-body.dark-mode .form-header h3,
-body.dark-mode .grupo-input label {
-    color: #f1f5f9;
-}
-
-body.dark-mode .subtitle,
-body.dark-mode .form-header p,
-body.dark-mode .troca-pagina,
-body.dark-mode .lembrar,
-body.dark-mode .termos {
-    color: #cbd5e1;
-}
-
-body.dark-mode .campo {
-    background: #1e293b;
-    border: 1px solid #334155;
-}
-
-body.dark-mode .campo input {
-    color: #f1f5f9;
-}
-
-body.dark-mode .campo i {
-    color: #94a3b8;
-}
-
-body.dark-mode .campo:focus-within {
-    background: #1e293b;
-    border-color: #2788C8;
-}
-
-body.dark-mode button[type="submit"] {
-    background-color: #2788C8;
-}
-
-body.dark-mode button[type="submit"]:hover {
-    background-color: #31BADF;
-}
-
-body.dark-mode .btn-voltar {
-    color: #94a3b8;
-}
-
-body.dark-mode .btn-voltar:hover {
-    color: #f1f5f9;
-}
