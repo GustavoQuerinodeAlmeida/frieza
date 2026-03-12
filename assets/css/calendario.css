@@ -28,7 +28,7 @@ body.dark {
 
 /* HERO */
 .hero {
-    background: #051D40;
+    background: #31BADF;
     color: white;
     padding: 40px;
     border-radius: 20px;
@@ -143,16 +143,16 @@ body.dark .event-day {
 }
 
 /* EVENT LIST */
-.event-list {
+.event-panel{
     flex: 1;
     background: #fff;
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     height: fit-content;
 }
 
-body.dark .event-list {
+body.dark .event-panel {
     background: #333;
     color: #e4e4e4;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -188,4 +188,80 @@ body.dark .mini-event strong {
     font-weight: bold;
     border-radius: 10px;
     border: 2px solid #051D40;
+}
+.dom{
+    color: red;
+}
+/* Deixar todos os domingos vermelhos */
+.days div:nth-child(7n+1) {
+    color: red;
+    font-weight: 600;
+}
+/* Hover especial para domingos */
+.days div:nth-child(7n+1):hover {
+    background: rgba(255, 0, 0, 0.1);
+}
+.left-panels{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.panel{
+width: 275px;
+height: 180px;
+background: #dcdcdc;
+border-radius: 15px;
+}
+
+/* ===== MODO ESCURO ===== */
+body.dark-mode {
+    background: #121212;
+    color: #e4e4e4;
+}
+
+body.dark-mode .hero {
+    background: #1e1e1e;
+    color: #e4e4e4;
+}
+
+body.dark-mode .calendar {
+    background: #2a2a2a;
+    color: #e4e4e4;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .calendar-header button {
+    background: #2788C8;
+}
+
+body.dark-mode .weekdays {
+    color: #bbb;
+}
+
+body.dark-mode .days div {
+    background: #333;
+    color: #e4e4e4;
+}
+
+body.dark-mode .days div:hover {
+    background: #555;
+}
+
+body.dark-mode .event-day {
+    background: #2788C8 !important;
+}
+
+body.dark-mode .event-panel {
+    background: #333;
+    color: #e4e4e4;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .mini-event {
+    border-bottom: 1px solid #444;
+}
+
+body.dark-mode .mini-event strong {
+    color: #2788C8;
 }

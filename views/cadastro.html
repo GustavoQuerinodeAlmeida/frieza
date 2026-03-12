@@ -1,85 +1,159 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/login_cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Cadastro</title>
+    <title>Cadastro - EcoHub</title>
     <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/logotitle.png">
+    
+    <script>
+if(localStorage.getItem("theme") === "dark"){
+    document.documentElement.classList.add("dark-mode");
+}
+</script>
 </head>
 <body>
 
-    <div class="container">
-        <img src="../assets/img/eco-certo.png" alt="EcoHub" class="logo">
+    <div class="split-layout">
+       
 
-        <h1 >Cadastro</h1>
+        <div class="form-side">
+            <div class="form-container">
+                <img src="../assets/img/logosite-inv.png.png" alt="Folha" class="icon-logo">
+                <h2>Crie sua conta</h2>
+                <p class="subtitle">Preencha os dados para se cadastrar no EcoHub</p>
 
-        <form id="formCadastro">
-            <div class="campo">
-                <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="Nome completo" required>
-            </div>
-            <div class="campo">
-                <i class="fa-solid fa-envelope"></i>
-                <input type="email" placeholder="seu.email@eniac.edu.br" required>
-            </div>
-            <div class="linha">
-                <select id="curso" name="curso" required>
-                    <option value="">curso</option>
-                    <option value="eng_software">Eng. Software</option>
-                    <option value="ciencia_computacao">Ciência da Computação</option>
-                    <option value="sistemas_info">Sistemas de Informação</option>
-                    <option value="analise_dev">Análise e Desenvolvimento</option>
-                    <option value="redes">Redes de Computadores</option>
-                </select>
+                <div class="form-box">
+                    <div class="form-header">
+                        <h3>Cadastro</h3>
+                        <p>Use seu e-mail institucional da Eniac</p>
+                    </div>
 
-                <select id="semestre" name="semestre" required>
-                    <option value="">semestre</option>
-                    <option value="1">1º Semestre</option>
-                    <option value="2">2º Semestre</option>
-                    <option value="3">3º Semestre</option>
-                    <option value="4">4º Semestre</option>
-                    <option value="5">5º Semestre</option>
-                    <option value="6">6º Semestre</option>
-                    <option value="7">7º Semestre</option>
-                    <option value="8">8º Semestre</option>
-                </select>
-            </div>
+                    <form id="formCadastro">
+                        <div class="grupo-input">
+                            <label>Nome completo</label>
+                            <div class="campo">
+                                <i class="fa-regular fa-user"></i>
+                                <input type="text" placeholder="Seu nome completo" required>
+                            </div>
+                        </div>
+                        
+                        <div class="grupo-input">
+                            <label>E-mail institucional</label>
+                            <div class="campo">
+                                <i class="fa-regular fa-envelope"></i>
+                                <input type="email" id="emailCadastro" placeholder="seu.nome@eniac.edu.br" 
+                                       pattern=".+@eniac\.edu\.br$" 
+                                       title="Por favor, utilize um e-mail com o domínio @eniac.edu.br" required>
+                            </div>
+                        </div>
+                        
+                        <div class="linha">
+                            <div class="grupo-input">
+                                <label>Curso</label>
+                                <select id="curso" name="curso" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="eng_software">Eng. Software</option>
+                                    <option value="ciencia_computacao">Ciência da Computação</option>
+                                    <option value="sistemas_info">Sistemas de Informação</option>
+                                    <option value="analise_dev">Análise e Desenvolvimento</option>
+                                    <option value="redes">Redes de Computadores</option>
+                                </select>
+                            </div>
 
-           <div class="campo">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" id="senhaCadastro" placeholder="Senha" required>
-                <i class="fa-solid fa-eye toggle-senha" onclick="toggleSenha('senhaCadastro',this)"></i>
-            </div>
+                            <div class="grupo-input">
+                                <label>Semestre</label>
+                                <select id="semestre" name="semestre" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="1">1º Semestre</option>
+                                    <option value="2">2º Semestre</option>
+                                    <option value="3">3º Semestre</option>
+                                    <option value="4">4º Semestre</option>
+                                    <option value="5">5º Semestre</option>
+                                    <option value="6">6º Semestre</option>
+                                    <option value="7">7º Semestre</option>
+                                    <option value="8">8º Semestre</option>
+                                </select>
+                            </div>
+                        </div>
 
-            <div class="campo">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required>
-                <i class="fa-solid fa-eye toggle-senha" onclick="toggleSenha('confirmarSenha',this)"></i>
-            </div>
-            <p id="erroSenha" class="erro-senha"></p>
-            <div class="termos">
-                <input type="checkbox" id="aceitarTermos" required>
-                <label for="aceitarTermos">
-                Eu concordo com os <a href="#">Termos de Uso</a> e 
-                <a href="#">Política de Privacidade</a>
-                </label>
-            </div>
-            <button type="submit">Cadastrar</button>
-            <a href="../views/inicio.html" class="btn-secundario">
-            Voltar para página inicial
-            </a>
-        </form>
+                        <div class="grupo-input">
+                            <label>Senha</label>
+                            <div class="campo">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" id="senhaCadastro" placeholder="Mínimo 8 caracteres" required>
+                                <i class="fa-regular fa-eye toggle-senha" onclick="toggleSenha('senhaCadastro',this)"></i>
+                            </div>
+                        </div>
 
-        <p class="troca-pagina">
-            Já tem uma conta?
-            <a href="login.html">Fazer login</a>
-        </p>
+                        <div class="grupo-input">
+                            <label>Confirmar senha</label>
+                            <div class="campo">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" id="confirmarSenha" placeholder="Digite a senha novamente" required>
+                                <i class="fa-regular fa-eye toggle-senha" onclick="toggleSenha('confirmarSenha',this)"></i>
+                            </div>
+                        </div>
+                        
+                        <p id="erroSenha" class="erro-senha"></p>
+                        
+                        <div class="termos">
+                            <input type="checkbox" id="aceitarTermos" required>
+                            <label for="aceitarTermos">
+                                Eu concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a>
+                            </label>
+                        </div>
+                        
+                        <button type="submit">Criar conta</button>
+                        
+                        <p class="troca-pagina">
+                            Já tem uma conta? <a href="login.html">Faça login</a>
+                        </p>
+                    </form>
+                </div>
+                
+                <a href="../views/inicio.html" class="btn-voltar">&larr; Voltar para a página inicial</a>
+            </div>
+        </div>
+
+        <div class="image-side">
+            <div class="image-content">
+                <h2>Faça Parte do EcoHub</h2>
+                <p>Junte-se a milhares de alunos que já estão compartilhando seus projetos e construindo o futuro da tecnologia.</p>
+                
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <h4>Compartilhe seus projetos</h4>
+                            <p>Mostre seu trabalho para a comunidade acadêmica e empresas parceiras.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <h4>Participe de eventos</h4>
+                            <p>Hackathons, workshops e palestras com grandes nomes do mercado.</p>
+                        </div>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <div>
+                            <h4>Conecte-se com alunos</h4>
+                            <p>Faça networking, tire dúvidas e colabore em projetos inovadores.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
+    
     <script src="../js/cadastro.js" defer></script>
     <script src="../js/login_cadastro.js"></script>
+    <script src="../js/geral.js" defer></script>
 </body>
 </html>

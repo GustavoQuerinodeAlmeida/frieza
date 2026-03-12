@@ -13,6 +13,12 @@
 
 <link rel="icon" type="image/png" href="../assets/img/logotitle.png">
 
+
+    <script>
+if(localStorage.getItem("theme") === "dark"){
+    document.documentElement.classList.add("dark-mode");
+}
+</script>
 </head>
 
 <body>
@@ -52,6 +58,13 @@
 </section>
 
 <section class="calendar-section">
+    <div class="left-panels">
+<!-- add conteudo animais --> 
+<div class="panel"></div>
+<div class="panel"></div>
+<div class="panel"></div>
+
+</div>
 
 <div class="calendar">
 
@@ -62,7 +75,7 @@
 </div>
 
 <div class="weekdays">
-<div>Dom</div>
+<div class="dom">Dom</div>
 <div>Seg</div>
 <div>Ter</div>
 <div>Qua</div>

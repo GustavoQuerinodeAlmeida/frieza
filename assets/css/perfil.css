@@ -6,7 +6,6 @@ body {
 
 /* NAVBAR */
 
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -25,39 +24,41 @@ nav li {
 
 /* HEADER PERFIL */
 
-/* eu tirei as margens para poder ficar na tela inteira o perfil e mostrar melhor a foto e as informações do usuário */
-.perfil-header {
-
- background: linear-gradient(to bottom, #051D40, #053B5E);
+.perfil-header{
   padding: 30px;
   display: flex;
   gap: 20px;
   align-items: center;
-  color: white;
 }
 
-.foto-perfil {
+/* FOTO PERFIL */
+
+.foto-perfil{
   width: 90px;
   height: 90px;
   background: white;
   border-radius: 50%;
 }
 
-.info-perfil h1 {
+/* INFO PERFIL */
+
+.info-perfil h1{
   margin: 0;
 }
 
-.bio {
+.bio{
   margin-top: 5px;
 }
 
-.stats {
+.stats{
   margin-top: 10px;
   display: flex;
   gap: 20px;
 }
 
-button {
+/* BOTÃO */
+
+button{
   margin-top: 10px;
   background-color: #31BADF;
   border: none;
@@ -68,14 +69,14 @@ button {
 
 /* TABS */
 
-.tabs {
+.tabs{
   max-width: 900px;
   margin: auto;
   display: flex;
   gap: 10px;
 }
 
-.tabs button {
+.tabs button{
   background-color: #EAF3F9;
   border: none;
   padding: 10px 20px;
@@ -85,7 +86,7 @@ button {
 
 /* CONTEÚDO */
 
-.conteudo-perfil {
+.conteudo-perfil{
   max-width: 900px;
   margin: 20px auto;
   background: white;
@@ -93,14 +94,16 @@ button {
   border-radius: 12px;
 }
 
-.habilidades {
+/* HABILIDADES */
+
+.habilidades{
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
 }
 
-.habilidades span {
+.habilidades span{
   background-color: #2788C8;
   color: white;
   padding: 5px 10px;
@@ -108,52 +111,80 @@ button {
   font-size: 14px;
 }
 
+/* ================================= */
+/* ===== MODO CLARO (PADRÃO) ===== */
+/* ================================= */
 
-/* ===== MODO ESCURO ===== */
-
-body.dark{
-  background-color: #121212;
-  color: white;
+body:not(.dark-mode){
+  background-color:#F5FAFF;
+  color:#051D40;
 }
 
-/* navbar */
+body:not(.dark-mode) .perfil-header{
+  background: linear-gradient(#2788C8, #31BADF); 
+  color:white;
+}
 
+body:not(.dark-mode) .foto-perfil{
+  background:white;
+}
 
+body:not(.dark-mode) .tabs button{
+  background-color:#EAF3F9;
+  color:#051D40;
+}
+
+body:not(.dark-mode) .conteudo-perfil{
+  background:white;
+}
+
+body:not(.dark-mode) .habilidades span{
+  background-color:#2788C8;
+  color:white;
+}
+
+body:not(.dark-mode) button{
+  background-color:#31BADF;
+  color:white;
+}
+
+/* ================================= */
+/* ===== MODO ESCURO ===== */
+/* ================================= */
+
+body.dark-mode{
+  background-color:#121212;
+  color:white;
+}
 
 /* perfil */
-
-body.dark .perfil-header{
- background: linear-gradient(to bottom, #051D40, #053B5E);
+body.dark-mode .perfil-header{
+  background: linear-gradient(to bottom,#051D40,#053B5E);
 }
 
 /* foto */
-
-body.dark .foto-perfil{
-  background: #2a2a2a;
+body.dark-mode .foto-perfil{
+  background:#2a2a2a;
 }
 
 /* abas */
-
-body.dark .tabs button{
-  background-color: #2a2a2a;
-  color: white;
+body.dark-mode .tabs button{
+  background-color:#2a2a2a;
+  color:white;
 }
 
 /* conteúdo */
-
-body.dark .conteudo-perfil{
-  background: #1e1e1e;
+body.dark-mode .conteudo-perfil{
+  background:#1e1e1e;
 }
 
 /* habilidades */
-
-body.dark .habilidades span{
-  background-color: #0d5c8c;
+body.dark-mode .habilidades span{
+  background-color:#0d5c8c;
 }
 
 /* botões */
-
-body.dark button{
-  background-color: #0d5c8c;
-  color: white;
+body.dark-mode button{
+  background-color:#0d5c8c;
+  color:white;
 }

@@ -1,504 +1,296 @@
-/* RESET */
-html, body {
-    height: 100%;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
 }
 
-/* BODY */
-body {
-    padding-top: 80px; /* mesma altura do header */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    background: #f4f4f4;
-   
+html, body{
+    height:100%;
 }
 
-/* HEADER */
-header {
-    background: #051D40;
-    padding: 20px;
-    color: white;
-    display: flex;
-    align-items: center;      /* centraliza na altura */
-    height: 80px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-     position: fixed;
-    z-index: 1000;
-}
-/* LOGO */
-header img {
-    width: 200px;
-    height: auto;
+/* ================= BODY ================= */
+
+body{
+    padding-top:80px;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+    background:#f4f4f4;
 }
 
-/* NAV */
-nav{
-    flex: 1;
-    display: flex;
-    justify-content: center;  /* links no meio da página */
-    align-items: center;
-    gap: 20px;
-}
+/* ================= HEADER ================= */
 
-nav a.ativo{
-    background-color: #2788C8;
-}
-
-header nav a{
-    
-
-    text-decoration: none;
-    padding: 0px 14px;
-    transition: 0.3s;
-    background-color: #051D40;
-    color: white;
-    border-radius: 10px;
-    font-size: 16px;
-    font-family: poppins, sans-serif;
-}
-
-nav a:hover {
-    background-color: #2788C8;
-}
-
-/* LAYOUT */
-.layout {
-    display: flex;
-}
-
-/* CONTEÚDO */
-.conteudo {
-    flex: 2;
-    padding: 20px;
-}
-
-
-.link-perfil{
-    margin-left: auto;  /* joga para a direita */
-    display: flex;
-    align-items: center;
-}
-
-.link-perfil img {
-    display: block; /* Evita o espaço abaixo da imagem */
-    border-radius: 100%; /* Torna a imagem redonda */
-    position: relative; /* Posiciona a imagem normalmente */
-     width: 35px;
-    cursor: pointer;
-      
-}
-
-
-
-
-/* footer */
-
-.footer{
-  background:#051D40;
-  color:white;
-  padding:20px 20px;
-  margin-top: auto;
-  font-family: 'Poppins', sans-serif;
-}
-
-.footer-content{
-  max-width:1200px;
-  margin:0 auto;
-  text-align:center;
-}
-
-.footer-logo{
-  height:50px;
-  margin-bottom:20px;
-  border-radius: 8px;
-}
-
-.footer p{
-  font-size:14px;
-  opacity:0.8;
-}
-.calmapae{
-    color: #e4dddd;
-}
-/* ===== PAGINA SOBRE ===== */
-
-.container{
-    max-width:1200px;
-    margin:40px auto;
-    padding:0 20px;
-}
-
-.hero{
-    background:#051D40;
-    color:white;
-    padding:40px;
-    border-radius:20px;
-    margin-bottom:40px;
-}
-
-.hero h1{
-    font-size:32px;
-    margin-bottom:10px;
-}
-
-.hero p{
-    line-height:1.6;
-}
-
-.section-title{
-    font-size:24px;
-    font-weight:700;
-    margin-bottom:25px;
+header{
+    background:#2788C8; /* azul claro */
     color:#051D40;
-}
-
-/* GRID DOS HUBS */
-
-.hubs-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-    gap:25px;
-    margin-bottom:40px;
-}
-
-/* CARD HUB */
-
-
-
-/* OBJETIVO */
-
-.objetivo{
-    background:white;
-    padding:35px;
-    border-radius:18px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
-}
-/* ===== EQUIPE ===== */
-
-.equipe-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
-    gap:25px;
-    margin-bottom:50px;
-}
-
-.equipe-card{
-    background:white;
     padding:20px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    height:80px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
     transition:0.3s;
 }
 
-.equipe-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+header img{
+    width:200px;
 }
 
-.equipe-card img{
-    width:120px;
-    height:120px;
-    object-fit:cover;
-    border-radius:50%;
-    margin-bottom:15px;
-}
+/* ================= NAV ================= */
 
-.equipe-card h3{
-    color:#051D40;
-    margin-bottom:5px;
-}
-
-.equipe-card p{
-    font-size:14px;
-    color:#666;
-}
-
-/* RESET */
-html, body {
-    height: 100%;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* BODY */
-body {
-    padding-top: 80px; /* mesma altura do header */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-    background: #f4f4f4;
-   
-}
-
-/* HEADER */
-header {
-    background: #051D40;
-    padding: 20px;
-    color: white;
-    display: flex;
-    align-items: center;      /* centraliza na altura */
-    height: 80px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-     position: fixed;
-    z-index: 1000;
-}
-/* LOGO */
-header img {
-    width: 200px;
-    height: auto;
-}
-
-/* NAV */
 nav{
-    flex: 1;
-    display: flex;
-    justify-content: center;  /* links no meio da página */
-    align-items: center;
-    gap: 20px;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    padding:6px 14px;
+    border-radius:10px;
+    background: #2788C8;
+    color:white;
+    font-size:16px;
+    transition:0.3s;
+    
+}
+
+nav a:hover{
+    background:#051D40;
+    color:white;
 }
 
 nav a.ativo{
-    background-color: #2788C8;
-}
-
-header nav a{
-    
-
-    text-decoration: none;
-    padding: 0px 14px;
-    transition: 0.3s;
-    background-color: #051D40;
-    color: white;
-    border-radius: 10px;
-    font-size: 16px;
-    font-family: poppins, sans-serif;
-}
-
-nav a:hover {
-    background-color: #2788C8;
-}
-
-/* LAYOUT */
-.layout {
-    display: flex;
-}
-
-/* CONTEÚDO */
-.conteudo {
-    flex: 2;
-    padding: 20px;
-}
-
-
-.link-perfil{
-    margin-left: auto;  /* joga para a direita */
-    display: flex;
-    align-items: center;
-}
-
-.link-perfil img {
-    display: block; /* Evita o espaço abaixo da imagem */
-    border-radius: 100%; /* Torna a imagem redonda */
-    position: relative; /* Posiciona a imagem normalmente */
-     width: 35px;
-    cursor: pointer;
-      
-}
-
-
-
-
-/* footer */
-
-.footer{
-  background:#051D40;
-  color:white;
-  padding:20px 20px;
-  margin-top: auto;
-  font-family: 'Poppins', sans-serif;
-}
-
-.footer-content{
-  max-width:1200px;
-  margin:0 auto;
-  text-align:center;
-}
-
-.footer-logo{
-  height:50px;
-  margin-bottom:20px;
-  border-radius: 8px;
-}
-
-.footer p{
-  font-size:14px;
-  opacity:0.8;
-}
-.calmapae{
-    color: #e4dddd;
-}
-/* ===== PAGINA SOBRE ===== */
-
-.container{
-    max-width:1200px;
-    margin:40px auto;
-    padding:0 20px;
-}
-
-.hero{
     background:#051D40;
     color:white;
-    padding:40px;
-    border-radius:20px;
-    margin-bottom:40px;
 }
 
-.hero h1{
-    font-size:32px;
-    margin-bottom:10px;
-}
-
-.hero p{
-    line-height:1.6;
-}
-
-.section-title{
-    font-size:24px;
-    font-weight:700;
-    margin-bottom:25px;
-    color:#051D40;
-}
-
-/* GRID DOS HUBS */
-
-.hubs-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-    gap:25px;
-    margin-bottom:40px;
-}
-
-/* CARD HUB */
-
-
-
-.hub-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-.hub-card h3{
-    color:#051D40;
-    margin-bottom:10px;
-}
-
-.hub-card p{
-    font-size:14px;
-    color:#555;
-    line-height:1.5;
-}
-
-/* OBJETIVO */
-
-.objetivo{
-    background:white;
-    padding:35px;
-    border-radius:18px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
-}
-/* ===== EQUIPE ===== */
-
-.equipe-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
-    gap:25px;
-    margin-bottom:50px;
-}
-
-.equipe-card{
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.05);
-    transition:0.3s;
-}
-
-.equipe-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-}
-
-.equipe-card img{
-    width:120px;
-    height:120px;
-    object-fit:cover;
-    border-radius:50%;
-    margin-bottom:15px;
-}
-
-.equipe-card h3{
-    color:#051D40;
-    margin-bottom:5px;
-}
-
-.equipe-card p{
-    font-size:14px;
-    color:#666;
-}
-
-/* ===== MODO ESCURO ===== */
-
-body.dark{
-    background: #121212;
-    color: white;
-}
+/* ================= HEADER DIREITA ================= */
 
 .header-direita{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-#modo{
-    background: #051D40;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 8px;
-    cursor: pointer;
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
 .header-direita a{
-    text-decoration: none;
-    padding: 0px 14px;
-    transition: 0.3s;
-    background-color: #051D40;
-    color: white;
-    border-radius: 10px;
-    font-size: 16px;
+    text-decoration:none;
+    padding:6px 14px;
+    border-radius:10px;
+    background:#2788C8;
+    color:white;
+    font-size:16px;
+    transition:0.3s;
 }
 
-header-direita a:hover{
-    background-color: #2788C8;
+.header-direita a:hover{
+    background:#2788C8;
+}
+
+/* ================= PERFIL ================= */
+
+.link-perfil img{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    object-fit:cover;
+    cursor:pointer;
+}
+
+/* ================= BOTÃO MODO ================= */
+
+#modo{
+    background:#2788C8;
+    border:none;
+    padding:6px 10px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* ================= LAYOUT ================= */
+
+.layout{
+    display:flex;
+}
+
+.conteudo{
+    flex:2;
+    padding:20px;
+}
+
+/* ================= CONTAINER ================= */
+
+.container{
+    max-width:1200px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+/* ================= HERO ================= */
+
+
+
+.hero h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    line-height:1.6;
+}
+
+/* ================= TITULO ================= */
+
+.section-title{
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:25px;
+    color:#051D40;
+}
+
+/* ================= GRID ================= */
+
+.hubs-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-bottom:40px;
+}
+
+/* ================= OBJETIVO ================= */
+
+.objetivo{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ================= EQUIPE ================= */
+
+.equipe-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+    margin-bottom:50px;
+}
+
+.equipe-card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+    transition:0.3s;
+}
+
+.equipe-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.equipe-card img{
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-bottom:15px;
+}
+
+.equipe-card h3{
+    color:#051D40;
+}
+
+.equipe-card p{
+    font-size:14px;
+    color:#666;
+}
+
+/* ================= FOOTER MODO CLARO ================= */
+
+.footer{
+    background:#2788C8;
+    color:white;
+    padding:20px;
+    margin-top:auto;
+}
+
+.footer-content{
+    max-width:1200px;
+    margin:0 auto;
+    text-align:center;
+}
+
+.footer-logo{
+    height:50px;
+    margin-bottom:20px;
+    border-radius:8px;
+}
+
+.footer p{
+    font-size:14px;
+}
+
+.calmapae{
+    color:#051D40;
+}
+
+/* ================= MODO ESCURO ================= */
+
+body.dark-mode{
+    background:#121212;
+    color:white;
+}
+
+/* HEADER ESCURO */
+
+body.dark-mode header{
+    background:#051D40;
+    color:white;
+}
+
+/* MENU ESCURO */
+
+body.dark-mode nav a{
+    background:#051D40;
+    color:white;
+}
+
+body.dark-mode nav a:hover{
+    background:#2788C8;
+}
+body.dark-mode nav a.ativo{
+    background:#2788C8;
+}
+
+/* BOTÕES ESCURO */
+
+body.dark-mode #modo{
+    background:#051D40;
+}
+
+body.dark-mode .header-direita a{
+    background:#051D40;
+}
+
+/* FOOTER ESCURO */
+
+body.dark-mode .footer{
+    background:#051D40;
+    color:white;
+}
+
+body.dark-mode .calmapae{
+    color:#e4dddd;
+}
+
+body.dark-mode .link-perfil img{
+    background:#2a2a2a;
 }

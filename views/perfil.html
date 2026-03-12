@@ -8,6 +8,11 @@
 <link rel="stylesheet" href="../assets/css/geral.css">
  <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/logotitle.png">
 
+    <script>
+if(localStorage.getItem("theme") === "dark"){
+    document.documentElement.classList.add("dark-mode");
+}
+</script>
 </head>
 
 <body>
@@ -65,11 +70,6 @@
 </section>
 
 
-<section class="tabs">
-  <button onclick="mostrarAba('postagens')">Postagens</button>
-  <button onclick="mostrarAba('projetos')">Projetos</button>
-  <button onclick="mostrarAba('sobre')">Sobre</button>
-</section>
 
 <section id="postagens" class="conteudo-perfil">
 
