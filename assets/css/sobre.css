@@ -76,11 +76,7 @@ body.dark .section-title{
     transition:0.3s;
 }
 
-body.dark .hub-card{
-    background:#2a2a2a;
-    color:#e4e4e4;
-    box-shadow:0 2px 8px rgba(0,0,0,0.4);
-}
+ P
 
 .hub-card:hover{
     transform:translateY(-5px);
@@ -244,7 +240,7 @@ body.dark-mode .hub-card h3{
 }
 
 body.dark-mode .hub-card p{
-    color:#cfcfcf;
+    color:#e4e4e4;
 }
 
 
@@ -294,4 +290,9 @@ background-color: #2f2f2f;
 
 body.dark-mode h3{
     color:white;
+}
+
+body.dark-mode .equipe-card P{
+
+    color:#e4e4e4;
 }

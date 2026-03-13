@@ -227,7 +227,7 @@ body.dark-mode .card-noticia a:hover {
 }
 
 body.dark-mode .conteudo-extra {
-    background: #333;
+    background: #2a2a2a;
     color: #e4e4e4;
 }
 
@@ -236,7 +236,7 @@ body.dark-mode .estatisticas {
 }
 
 body.dark-mode .card {
-    background: #2a2a2a;
+    background: ;
     color: #e4e4e4;
 }
 
@@ -244,4 +244,9 @@ body.dark-mode .titulo {
     background-color: #2a2a2a;
     color: #e4e4e4;
     border: 1px solid #444;
+}
+
+body.dark-mode p{
+    color: #e4e4e4;
+
 }
