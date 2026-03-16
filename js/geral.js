@@ -26,3 +26,24 @@ if(botao){
     });
 
 }
+
+// ==========================================
+// LÓGICA DO DROPDOWN DE NOTIFICAÇÕES
+// ==========================================
+const btnNotificacao = document.getElementById('btnNotificacao');
+const dropdownNotificacao = document.getElementById('dropdownNotificacao');
+
+if (btnNotificacao && dropdownNotificacao) {
+    // Abre ou fecha ao clicar no sino
+    btnNotificacao.addEventListener('click', function(event) {
+        event.stopPropagation(); // Evita que o evento de fechar a tela seja acionado na mesma hora
+        dropdownNotificacao.classList.toggle('ativo');
+    });
+
+    // Fecha o dropdown se o utilizador clicar em qualquer outro lugar da página
+    document.addEventListener('click', function(event) {
+        if (!dropdownNotificacao.contains(event.target) && event.target !== btnNotificacao) {
+            dropdownNotificacao.classList.remove('ativo');
+        }
+    });
+}
