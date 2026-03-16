@@ -10,39 +10,46 @@
       
     <title>Sobre</title>
   
-    <script>
-if(localStorage.getItem("theme") === "dark"){
-    document.documentElement.classList.add("dark-mode");
-}
-</script>
+
 
 </head>
 <body>
-    <header>
-
-<img src="../assets/img/logohead.png" alt="EcoHub" class="logo">
-
+  <header>
+    <img src="../assets/img/logohead.png" alt="EcoHub" class="logo">
 <nav>
-<a href="Inicio.html" >Inicio</a>
-<a href="Eventos.html">Eventos</a>
+<a href="Inicio.html">Inicio</a>
+<a href="Eventos.html ">Eventos</a>
 <a href="Noticias.html">Notícias</a>
 <a href="Feed.html">Feed</a>
-
 <a href="Sobre.html" class="ativo">Sobre</a>
 </nav>
 
-<div class="header-direita">
+  <div class="header-direita">
+      
+      <div class="notificacao-container">
+          <button class="btn-notificacao" id="btnNotificacao">
+              <i class="fa-solid fa-bell"></i>
+              <span class="badge-notificacao">3</span> 
+          </button>
+          
+          <div class="dropdown-notificacao" id="dropdownNotificacao">
+              <h4>Suas Notificações</h4>
+              <ul>
+                  <li><strong>Novo projeto:</strong> O Hub Link+ adicionou um desafio.</li>
+                  <li><strong>Evento amanhã:</strong> A feira de tecnologia começa às 09h.</li>
+                  <li><strong>Mensagem:</strong> Você tem uma nova conexão.</li>
+              </ul>
+          </div>
+      </div>
 
-<a href="Cadastro.html">Cadastro</a>
+      <a href="Cadastro.html" class="btn-cadastro">Cadastre-se</a>
 
-<button id="modo">🌙</button>
+      <button id="modo">🌙</button>
 
-<a href="Perfil.html" class="link-perfil">
-<img src="../assets/img/perfil.jpg" alt="Perfil">
-</a>
-
-</div>
-
+      <a href="Perfil.html" class="link-perfil">
+          <img src="../assets/img/perfil.jpg" alt="Perfil">
+      </a>
+  </div>
 </header>
  <main>
 
