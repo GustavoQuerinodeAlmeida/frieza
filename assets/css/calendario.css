@@ -1,267 +1,239 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
+/* ===== CALENDÁRIO ===== */
 
-/* BODY - modo claro por padrão */
-body {
-    background: #f4f4f4;
-    color: #111;
-    transition: background 0.3s, color 0.3s;
-}
-
-/* ===== MODO ESCURO ===== */
-body.dark {
-    background: #121212;
-    color: #e4e4e4;
-}
-
-/* CONTAINER */
-.container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-/* HERO */
-.hero {
-    background: #31BADF;
-    color: white;
-    padding: 40px;
-    border-radius: 20px;
-    margin-bottom: 40px;
-}
-
-body.dark .hero {
-    background: #2a2a2a;
-    color: #e4e4e4;
-}
-
-/* CALENDAR SECTION */
-.calendar-section {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-/* CALENDAR BOX */
-.calendar {
-    flex: 2;
-    background: #fff;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-body.dark .calendar {
-    background: #2a2a2a;
-    color: #e4e4e4;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* HEADER */
-.calendar-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.calendar-header button {
-    background: #053B5E;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-body.dark .calendar-header button {
-    background: #2788C8;
-}
-
-/* WEEKDAYS */
-.weekdays {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-body.dark .weekdays {
-    color: #bbb;
-}
-
-/* DAYS */
-.days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-}
-
-.days div {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    background: #f4f4f4;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-body.dark .days div {
-    background: #333;
-    color: #e4e4e4;
-}
-
-.days div:hover {
-    background: #e6eef5;
-}
-
-body.dark .days div:hover {
-    background: #555;
-}
-
-.empty {
-    background: transparent !important;
-    cursor: default;
-}
-
-.event-day {
-    background: #053B5E !important;
-    color: white;
-    font-weight: 700;
-}
-
-body.dark .event-day {
-    background: #2788C8 !important;
-}
-
-/* EVENT LIST */
-.event-panel{
-    flex: 1;
-    background: #fff;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    height: fit-content;
-}
-
-body.dark .event-panel {
-    background: #333;
-    color: #e4e4e4;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.mini-event {
-    margin-top: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
-}
-
-body.dark .mini-event {
-    border-bottom: 1px solid #444;
-}
-
-.mini-event strong {
-    color: #051D40;
-}
-
-body.dark .mini-event strong {
-    color: #2788C8;
-}
-
-/* RESPONSIVO */
-@media(max-width: 900px) {
-    .calendar-section {
-        flex-direction: column;
+.calendar-section{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
     }
-}
-.days .today{
-    background-color: #2788C8 !important;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 2px solid #051D40;
-}
-.dom{
-    color: red;
-}
-/* Deixar todos os domingos vermelhos */
-.days div:nth-child(7n+1) {
-    color: red;
-    font-weight: 600;
-}
-/* Hover especial para domingos */
-.days div:nth-child(7n+1):hover {
-    background: rgba(255, 0, 0, 0.1);
-}
-.left-panels{
-display: flex;
-flex-direction: column;
-gap: 20px;
-}
+    
+    /* CALENDÁRIO */
+    
+    .calendar{
+        flex:2;
+        min-width:600px; /* impede o calendário de diminuir */
+        background:#fff;
+        padding:30px;
+        border-radius:20px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.05);
+        }
+    
+    /* HEADER */
+    
+    .calendar-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    }
+    
+    .calendar-header button{
+    background:#053B5E;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    }
+    
+    /* DIAS DA SEMANA */
+    
+    .weekdays{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    text-align:center;
+    font-weight:600;
+    margin-bottom:10px;
+    }
+    
+    /* GRID DOS DIAS */
+    
+    .days{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:10px;
+    }
+    
+    /* DIA */
+    
+    .days div{
+    height:70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    background:#f4f4f4;
+    cursor:pointer;
+    transition:0.2s;
+    position:relative;
+    }
+    
+    .days div:hover{
+    background:#e6eef5;
+    }
+    
+    /* DIA VAZIO */
+    
+    .empty{
+    background:transparent !important;
+    cursor:default;
+    }
+    
+    /* DIA ATUAL */
+    
+    .today{
+    background:#31BADF !important;
+    color:white;
+    font-weight:bold;
+    }
+    
+    /* DIA SELECIONADO */
+    
+    .selected{
+    background:#053B5E !important;
+    color:white;
+    font-weight:bold;
+    }
+    
+    /* EVENTO ENIAC */
+    
+    .event-day::after{
+    content:"";
+    width:8px;
+    height:8px;
+    background:#053B5E;
+    border-radius:50%;
+    position:absolute;
+    bottom:6px;
+    left:50%;
+    transform:translateX(-50%);
+    }
+    
+    /* FERIADO */
+    
+    .holiday::after{
+    content:"";
+    width:8px;
+    height:8px;
+    background:red;
+    border-radius:50%;
+    position:absolute;
+    bottom:6px;
+    left:50%;
+    transform:translateX(-50%);
+    }
+    
+    /* DOMINGOS */
+    
+    .days div:nth-child(7n+1){
+    color:red;
+    font-weight:600;
+    }
+    
+    .days div:nth-child(7n+1):hover{
+    background:rgba(255,0,0,0.1);
+    }
+    
+    /* PAINEL EVENTOS */
+    
+    .event-panel{
+    flex:1;
+    background:#fff;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    height:fit-content;
+    }
+    
+    .event-item{
+    margin-top:15px;
+    padding-bottom:10px;
+    border-bottom:1px solid #eee;
+    }
+    
+    /* PAINEIS LADO ESQUERDO */
+    
+    .left-panels{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    }
+    
+    .panel{
+    width:275px;
+    height:180px;
+    background:#dcdcdc;
+    border-radius:15px;
+    }
+    
+    /* ===== MODO ESCURO ===== */
+    
+    body.dark-mode .calendar{
+    background:#2a2a2a;
+    color:#e4e4e4;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    body.dark-mode .calendar-header button{
+    background:#2788C8;
+    }
+    
+    body.dark-mode .weekdays{
+    color:#bbb;
+    }
+    
+    body.dark-mode .days div{
+    background:#333;
+    color:#e4e4e4;
+    }
+    
+    body.dark-mode .days div:hover{
+    background:#555;
+    }
+    
+    body.dark-mode .today{
+    background:#2788C8 !important;
+    }
+    
+    body.dark-mode .selected{
+    background:#1f6ea5 !important;
+    }
+    
+    body.dark-mode .event-day::after{
+    background:#2788C8;
+    }
+    
+    body.dark-mode .holiday::after{
+    background:#ff6b6b;
+    }
+    
+    body.dark-mode .event-panel{
+    background:#333;
+    color:#e4e4e4;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    body.dark-mode .event-item{
+    border-bottom:1px solid #444;
+    }
+    
+    /* RESPONSIVO */
+    
+    @media(max-width:900px){
+    
+    .calendar-section{
+    flex-direction:column;
+    }
+    
+    .panel{
+    width:100%;
+    }
+    
+    }
 
-.panel{
-width: 275px;
-height: 180px;
-background: #dcdcdc;
-border-radius: 15px;
-}
-
-/* ===== MODO ESCURO ===== */
-body.dark-mode {
-    background: #121212;
-    color: #e4e4e4;
-}
-
-body.dark-mode .hero {
-    background: #1e1e1e;
-    color: #e4e4e4;
-}
-
-body.dark-mode .calendar {
-    background: #2a2a2a;
-    color: #e4e4e4;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-body.dark-mode .calendar-header button {
-    background: #2788C8;
-}
-
-body.dark-mode .weekdays {
-    color: #bbb;
-}
-
-body.dark-mode .days div {
-    background: #333;
-    color: #e4e4e4;
-}
-
-body.dark-mode .days div:hover {
-    background: #555;
-}
-
-body.dark-mode .event-day {
-    background: #2788C8 !important;
-}
-
-body.dark-mode .event-panel {
-    background: #333;
-    color: #e4e4e4;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-body.dark-mode .mini-event {
-    border-bottom: 1px solid #444;
-}
-
-body.dark-mode .mini-event strong {
-    color: #2788C8;
-}
+    .hero {
+        background-color: #31BADF;
+        color: white;
+        padding: 45px;
+        border-radius: 20px;
+        margin-bottom: 40px;
+    }
