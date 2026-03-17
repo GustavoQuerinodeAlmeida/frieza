@@ -337,7 +337,7 @@
 }
 
 /* ================= MODO ESCURO ================= */
-body.dark-mode { background-color: #0f172a; }
+body.dark-mode { background-color: #051D40; }
 
 body.dark-mode .perfil-card, 
 body.dark-mode .projeto-card {
@@ -380,3 +380,4 @@ body.dark-mode .perfil-stats {
 
 body.dark-mode .stat-box { border-color: #334155; }
 body.dark-mode .projeto-footer { border-color: #334155; }
+

@@ -6,6 +6,7 @@
      <link rel="stylesheet" href="../assets/css/geral.css">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
       <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/logotitle.png">
+      <script src="https://unpkg.com/lucide@latest"></script>
     <title>projetos</title>
     
     <script>
@@ -16,7 +17,7 @@ if(localStorage.getItem("theme") === "dark"){
 </head>
 <body>
   <header>
-    <img src="../assets/img/logohead.png" alt="EcoHub" class="logo">
+    <img src="../assets/img/lohead2.png" alt="EcoHub" class="logo">
 
     <nav>
         <a href="Inicio.html" class="ativo">Inicio</a> <a href="Eventos.html">Eventos</a>
@@ -45,7 +46,10 @@ if(localStorage.getItem("theme") === "dark"){
 
         <a href="Cadastro.html" class="btn-cadastro">Cadastre-se</a>
 
-        <button id="modo">🌙</button>
+        <button id="modo">
+            <i data-lucide="moon"></i>
+        </button>
+            
 
         <a href="Perfil.html" class="link-perfil">
             <img src="../assets/img/perfil.jpg" alt="Perfil">

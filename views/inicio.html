@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- BIBLIOTECA DE ÍCONES MINIMALISTAS (LUCIDE) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="../assets/css/geral.css">
     <link rel="stylesheet" href="../assets/css/inicio.css">
@@ -14,49 +18,50 @@
         if(localStorage.getItem("theme") === "dark"){
             document.body.classList.add("dark-mode");
         }
-        </script>
-
-
+    </script>
 </head>
 <body>
-    <header>
+  <header>
 
-        <img src="../assets/img/logohead.png" alt="EcoHub" class="logo">
-        <nav>
-        <a href="Inicio.html" class="ativo">Inicio</a>
-        <a href="Eventos.html ">Eventos</a>
-        <a href="Noticias.html">Notícias</a>
-        <a href="Feed.html">Feed</a>
+    <img src="../assets/img/lohead2.png" alt="EcoHub" class="logo">
+    <nav>
+    <a href="Inicio.html" class="ativo">Inicio</a>
+    <a href="Eventos.html ">Eventos</a>
+    <a href="Noticias.html">Notícias</a>
+    <a href="Feed.html">Feed</a>
         
-        <a href="Sobre.html">Sobre</a>
-        </nav>
+    <a href="Sobre.html">Sobre</a>
+    </nav>
         
-          <div class="header-direita">
+    <div class="header-direita">
               
-              <div class="notificacao-container">
-                  <button class="btn-notificacao" id="btnNotificacao">
-                      <i class="fa-solid fa-bell"></i>
-                      <span class="badge-notificacao">3</span> 
-                  </button>
+    <div class="notificacao-container">
+    <button class="btn-notificacao" id="btnNotificacao">
+    <i class="fa-solid fa-bell"></i>
+    <span class="badge-notificacao">3</span> 
+    </button>
                   
-                  <div class="dropdown-notificacao" id="dropdownNotificacao">
-                      <h4>Suas Notificações</h4>
-                      <ul>
-                          <li><strong>Novo projeto:</strong> O Hub Link+ adicionou um desafio.</li>
-                          <li><strong>Evento amanhã:</strong> A feira de tecnologia começa às 09h.</li>
-                          <li><strong>Mensagem:</strong> Você tem uma nova conexão.</li>
-                      </ul>
-                  </div>
-              </div>
+    <div class="dropdown-notificacao" id="dropdownNotificacao">
+    <h4>Suas Notificações</h4>
+    <ul>
+    <li><strong>Novo projeto:</strong> O Hub Link+ adicionou um desafio.</li>
+    <li><strong>Evento amanhã:</strong> A feira de tecnologia começa às 09h.</li>
+    <li><strong>Mensagem:</strong> Você tem uma nova conexão.</li>
+    </ul>
+    </div>
+    </div>
         
-              <a href="Cadastro.html" class="btn-cadastro">Cadastre-se</a>
+    <a href="Cadastro.html" class="btn-cadastro">Cadastre-se</a>
         
-              <button id="modo">🌙</button>
+    <!-- BOTÃO COM ÍCONES MINIMALISTAS (SEM ESTILO INLINE) -->
+    <button id="modo">
+        <i data-lucide="moon"></i>
+    </button>
         
-              <a href="Perfil.html" class="link-perfil">
-                  <img src="../assets/img/perfil.jpg" alt="Perfil">
-              </a>
-          </div>
+    <a href="Perfil.html" class="link-perfil">
+    <img src="../assets/img/perfil.jpg" alt="Perfil">
+    </a>
+    </div>
     </header>
 
     <h1>Bem-vindo ao EcoHub</h1>
@@ -121,7 +126,7 @@
         <div class="card-noticia">
             <h3>musica boa</h3>
             <p>Resumo pequeno da notícia...</p>
-            <a href="https://www.youtube.com/watch?v=GqodqYVDteA" target="_blank">Ler mais</a>
+            <a href="https://www.youtube.com/watch?v=hfT2wVi_tKU&list=RDhfT2wVi_tKU&start_radio=1&t=754s" target="_blank">Ler mais</a>
         </div>
 
         <div class="card-noticia">
@@ -138,6 +143,11 @@
             <p>© 2026 Ecossistema Academy. Todos os direitos reservados. Conectando estudantes e projetos reais.</p>
         </div>
     </footer>
+
+    <!-- ATIVA OS ÍCONES -->
+    <script>
+        lucide.createIcons();
+    </script>
 
     <script src="../js/inicio.js"></script>
     <script src="../js/geral.js"></script>
