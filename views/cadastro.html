@@ -3,26 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/login_cadastro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <title>Cadastro - EcoHub</title>
     <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/logotitle.png">
-    
+
+    <!-- aplica tema antes de carregar -->
     <script>
-if(localStorage.getItem("theme") === "dark"){
-    document.documentElement.classList.add("dark-mode");
-}
-</script>
+        if(localStorage.getItem("theme") === "dark"){
+            document.body.classList.add("dark-mode");
+        }
+    </script>
 </head>
+
 <body>
 
     <div class="split-layout">
-       
 
         <div class="form-side">
             <div class="form-container">
-                <img src="../assets/img/ecoescuro.png" alt="EcoHub" class="logo">
+
+                <!-- ✅ LOGO CORRETA -->
+                <img id="logo" src="../assets/img/eniacpreto.png" alt="EcoHub" class="logo">
+
                 <h2>Crie sua conta</h2>
                 <p class="subtitle">Preencha os dados para se cadastrar no EcoHub</p>
 
@@ -33,6 +39,7 @@ if(localStorage.getItem("theme") === "dark"){
                     </div>
 
                     <form id="formCadastro">
+
                         <div class="grupo-input">
                             <label>Nome completo</label>
                             <div class="campo">
@@ -40,17 +47,17 @@ if(localStorage.getItem("theme") === "dark"){
                                 <input type="text" placeholder="Seu nome completo" required>
                             </div>
                         </div>
-                        
+
                         <div class="grupo-input">
                             <label>E-mail institucional</label>
                             <div class="campo">
                                 <i class="fa-regular fa-envelope"></i>
-                                <input type="email" id="emailCadastro" placeholder="seu.nome@eniac.edu.br" 
-                                       pattern=".+@eniac\.edu\.br$" 
-                                       title="Por favor, utilize um e-mail com o domínio @eniac.edu.br" required>
+                                <input type="email" id="emailCadastro" placeholder="seu.nome@eniac.edu.br"
+                                    pattern=".+@eniac\.edu\.br$"
+                                    title="Por favor, utilize um e-mail com o domínio @eniac.edu.br" required>
                             </div>
                         </div>
-                        
+
                         <div class="linha">
                             <div class="grupo-input">
                                 <label>Curso</label>
@@ -97,24 +104,24 @@ if(localStorage.getItem("theme") === "dark"){
                                 <i class="fa-regular fa-eye toggle-senha" onclick="toggleSenha('confirmarSenha',this)"></i>
                             </div>
                         </div>
-                        
+
                         <p id="erroSenha" class="erro-senha"></p>
-                        
+
                         <div class="termos">
                             <input type="checkbox" id="aceitarTermos" required>
                             <label for="aceitarTermos">
                                 Eu concordo com os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a>
                             </label>
                         </div>
-                        
+
                         <button type="submit">Criar conta</button>
-                        
+
                         <p class="troca-pagina">
                             Já tem uma conta? <a href="login.html">Faça login</a>
                         </p>
                     </form>
                 </div>
-                
+
                 <a href="../views/inicio.html" class="btn-voltar">&larr; Voltar para a página inicial</a>
             </div>
         </div>
@@ -123,7 +130,7 @@ if(localStorage.getItem("theme") === "dark"){
             <div class="image-content">
                 <h2>Faça Parte do EcoHub</h2>
                 <p>Junte-se a milhares de alunos que já estão compartilhando seus projetos e construindo o futuro da tecnologia.</p>
-                
+
                 <div class="benefits-list">
                     <div class="benefit-item">
                         <i class="fa-solid fa-circle-check"></i>
@@ -132,6 +139,7 @@ if(localStorage.getItem("theme") === "dark"){
                             <p>Mostre seu trabalho para a comunidade acadêmica e empresas parceiras.</p>
                         </div>
                     </div>
+
                     <div class="benefit-item">
                         <i class="fa-solid fa-circle-check"></i>
                         <div>
@@ -139,6 +147,7 @@ if(localStorage.getItem("theme") === "dark"){
                             <p>Hackathons, workshops e palestras com grandes nomes do mercado.</p>
                         </div>
                     </div>
+
                     <div class="benefit-item">
                         <i class="fa-solid fa-circle-check"></i>
                         <div>
@@ -151,9 +160,10 @@ if(localStorage.getItem("theme") === "dark"){
         </div>
 
     </div>
-    
+
     <script src="../js/cadastro.js" defer></script>
     <script src="../js/login_cadastro.js"></script>
     <script src="../js/geral.js" defer></script>
+
 </body>
 </html>

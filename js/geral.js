@@ -1,54 +1,59 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const botao = document.getElementById("modo");
+    const logo = document.getElementById("logo");
 
-    // pega tema salvo
     let temaSalvo = localStorage.getItem("theme");
 
-    // função pra trocar ícone
     function atualizarIcone() {
+        if (!botao) return;
+
         if (document.body.classList.contains("dark-mode")) {
             botao.innerHTML = '<i data-lucide="sun"></i>';
         } else {
             botao.innerHTML = '<i data-lucide="moon"></i>';
         }
 
-        lucide.createIcons(); // renderiza o ícone
+        lucide.createIcons();
     }
 
-    // se existir tema salvo
-    if(temaSalvo === "dark"){
+    function atualizarLogo() {
+        if (!logo) return;
+
+        if (document.body.classList.contains("dark-mode")) {
+            logo.src = "../assets/img/lohead2.png"; // clara
+        } else {
+            logo.src = "../assets/img/eniacpreto.png"; // escura
+        }
+    }
+
+    if (temaSalvo === "dark") {
         document.body.classList.add("dark-mode");
-    }
-    else if(temaSalvo === "light"){
+    } else if (temaSalvo === "light") {
         document.body.classList.remove("dark-mode");
-    }
-    else{
-        // primeira visita → usa modo do navegador
-        if(window.matchMedia("(prefers-color-scheme: dark)").matches){
+    } else {
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
             document.body.classList.add("dark-mode");
         }
     }
 
-    // atualiza ícone ao carregar
     atualizarIcone();
+    atualizarLogo();
 
-    // botão
-    if(botao){
-
+    if (botao) {
         botao.addEventListener("click", () => {
 
             document.body.classList.toggle("dark-mode");
 
-            if(document.body.classList.contains("dark-mode")){
-                localStorage.setItem("theme","dark");
-            }else{
-                localStorage.setItem("theme","light");
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
             }
 
-            atualizarIcone(); // troca ícone
+            atualizarIcone();
+            atualizarLogo();
         });
-
     }
 
 });

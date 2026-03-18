@@ -325,3 +325,30 @@ body.dark-mode button[type=\"submit\"]:hover{
 body.dark-mode .btn-voltar{
     color:#bbb;
 }
+
+img{
+    width: 150px;
+    display: block;
+  margin: 0 auto;}
+
+  .logo.escuro {
+    display: none;
+  }
+  
+  body.dark-mode .lohead2 {
+    display: none;
+  }
+  
+  body.dark-mode .eniacpreto {
+    display: block;
+  }.logo.escuro {
+    display: none;
+  }
+  
+  body.dark-mode .lohead2 {
+    display: none;
+  }
+  
+  body.dark-mode .eniacpreto {
+    display: block;
+  }
