@@ -1,16 +1,15 @@
-/* ===== RESET ===== */
+/* ===== RESET E BASE ===== */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* ===== BODY ===== */
-body{
-    background:#f4f4f4;
-    color:#111;
-    transition:0.3s;
+body {
+    background: #f4f6f9; /* Fundo ligeiramente mais agradável */
+    color: #111;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* ===== FEED ===== */
