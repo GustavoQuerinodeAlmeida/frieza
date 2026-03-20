@@ -179,18 +179,18 @@ width: fit-content;
 
 /* ===== MODO ESCURO ===== */
 body.dark-mode{
-    background: #121212;
+    background: #053B5E;
     color: white;
 }
 
 /* seção estatísticas */
 body.dark-mode .estatisticas{
-    background: #2a2a2a;
+    background: #053B5E;
 }
 
 /* seção notícias */
 body.dark-mode .noticias{
-    background: #1f1f1f;
+    background: #053B5E;
 }
 
 /* cards */
@@ -218,7 +218,7 @@ body.dark-mode .titulo{
 
 
 body.dark-mode {
-    background: #121212;
+    background: #053B5E;
     color: white;
 }
 
@@ -230,12 +230,12 @@ body.dark-mode h1 {
 
 /* seção estatísticas */
 body.dark-mode .estatisticas {
-    background: #121212;
+    background: #053B5E;
 }
 
 /* seção notícias */
 body.dark-mode .noticias {
-    background: #121212;
+    background: #053B5E;
 }
 
 /* cards */

@@ -14,8 +14,8 @@ body {
 }
 
 /* ===== MODO ESCURO ===== */
-body.dark {
-    background: #121212;
+body.dark-mode  {
+    background: #053B5E;
     color: #e4e4e4;
 }
 
@@ -199,16 +199,11 @@ body.dark h2 {
     }
 }
 
-body.dark .titulo {
-    background-color: #2a2a2a; /* fundo escuro */
-    color: #e4e4e4; /* texto claro */
-    border: 1px solid #444; /* opcional: borda suave */
-}
 
 
 /* ===== MODO ESCURO ===== */
 body.dark-mode {
-    background: #121212;
+    background: #053B5E;
     color: #e4e4e4;
 }
 
