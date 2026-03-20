@@ -1,240 +1,400 @@
-/* ===== RESET ===== */
+/* ===== RESET E BASE ===== */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* ===== BODY ===== */
-body{
-    background:#f4f4f4;
-    color:#111;
-    transition:0.3s;
+body {
+    background: #f4f6f9; /* Fundo ligeiramente mais agradável */
+    color: #111;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
-body.dark{
-    background:#121212;
-    color:#e4e4e4;
-}
-
-/* ===== FEED ===== */
-.twitter-feed{
-    max-width:600px;
-    margin:50px auto;
-    padding:0 20px;
-}
-
-/* HEADER DO FEED */
-
-.feed-header{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.feed-header h2{
-    font-size:32px;
-    color:#2788C8;
-}
-
-body.dark .feed-header h2{
-    color:#4db2ff;
-}
-
-.feed-subtitle{
-    background:#E8F5FD;
-    color:#2788C8;
-    padding:6px 14px;
-    border-radius:20px;
-    font-size:14px;
-}
-
-body.dark .feed-subtitle{
-    background:#2a2a2a;
-}
-
-/* ===== POSTAR ===== */
-
-.postar-card{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    margin-bottom:25px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-body.dark .postar-card{
-    background:#2a2a2a;
-}
-
-.postar-header{
-    display:flex;
-    gap:10px;
-}
-
-.postar-header textarea{
-    width:100%;
-    height:80px;
-    border:none;
-    resize:none;
-    font-size:15px;
-    outline:none;
-    background:transparent;
-    color:inherit;
-}
-
-.postar-card button{
-    margin-top:10px;
-    background:#2788C8;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-.postar-card button:hover{
-    background:#1f6fa5;
-}
-
-/* ===== TWEET CARD ===== */
-
-.feed-container{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
-}
-
-.tweet-card{
-    background:white;
-    padding:15px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    transition:0.2s;
-}
-
-body.dark .tweet-card{
-    background:#2a2a2a;
-}
-
-.tweet-card:hover{
-    transform:translateY(-3px);
-}
-
-/* HEADER */
-
-.tweet-header{
-    display:flex;
-    align-items:center;
-    margin-bottom:10px;
-}
-
-.avatar{
-    width:45px;
-    height:45px;
-    border-radius:50%;
-    margin-right:10px;
-}
-
-.tweet-user{
-    display:flex;
-    flex-direction:column;
-}
-
-.name{
-    font-weight:600;
-}
-
-.username{
-    font-size:13px;
-    color:#666;
-}
-
-body.dark .username{
-    color:#aaa;
-}
-
-/* TEXTO */
-
-.tweet-text{
-    font-size:15px;
-    margin-bottom:10px;
-    line-height:1.4;
-}
-
-/* IMAGEM */
-
-.tweet-img{
-    width:100%;
-    border-radius:8px;
-    margin-bottom:10px;
-}
-
-/* AÇÕES */
-
-.tweet-actions{
-    display:flex;
-    gap:20px;
-}
-
-.tweet-actions button{
-    background:none;
-    border:none;
-    cursor:pointer;
-    color:#666;
-}
-
-body.dark .tweet-actions button{
-    color:#bbb;
-}
-
-.tweet-actions button:hover{
-    color:#2788C8;
-}
-
-/* ===== RESPONSIVO ===== */
-
-@media(max-width:600px){
-
-.twitter-feed{
-    padding:0 10px;
-}
-
-.tweet-card{
-    padding:12px;
-}
-
-}
-
-/* BODY - modo escuro */
 body.dark-mode {
-    background:#053B5E;
-    color:#e4e4e4;
+    background: #053B5E;
+    color: #e4e4e4;
 }
 
-/* Feed Header */
+/* ===== LAYOUT GRID PRINCIPAL ===== */
+.feed-layout {
+    max-width: 1050px; 
+    margin: 50px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 340px; /* Coluna do feed expande, lateral tem 340px fixos */
+    gap: 35px;
+    align-items: start; 
+}
+
+.feed-principal {
+    width: 100%;
+}
+
+/* ===== CABEÇALHO DO FEED ===== */
+.feed-header {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.feed-header h2 {
+    font-size: 28px;
+    color: #051D40;
+    font-weight: 700;
+}
+
 body.dark-mode .feed-header h2 {
-    color:#4db2ff;
+    color: #ffffff;
+}
+
+.feed-subtitle {
+    display: inline-block;
+    background: #E8F5FD;
+    color: #2788C8;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 8px;
 }
 
 body.dark-mode .feed-subtitle {
-    background:#1e1e1e;
+    background: #1e3a5f;
+    color: #4db2ff;
 }
 
-/* Postar Card */
+/* ===== CAIXA DE NOVA POSTAGEM ===== */
+.postar-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid #e1e5eb;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: background 0.3s;
+}
+
 body.dark-mode .postar-card {
-    background:#2a2a2a;
+    background: #1e293b;
+    border-color: #334155;
 }
 
-/* Tweet Card */
+.postar-header {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.postar-header textarea {
+    width: 100%;
+    height: 70px;
+    border: 1px solid #e1e5eb;
+    border-radius: 8px;
+    padding: 12px 15px;
+    resize: none;
+    font-size: 14px;
+    outline: none;
+    background: #f8f9fa;
+    color: inherit;
+    transition: all 0.3s;
+}
+
+.postar-header textarea:focus {
+    border-color: #2788C8;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(39, 136, 200, 0.1);
+}
+
+body.dark-mode .postar-header textarea {
+    background: #0f172a;
+    border-color: #334155;
+    color: #e4e4e4;
+}
+
+.tweet-actions-postar {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+body.dark-mode .tweet-actions-postar {
+    border-color: #334155;
+}
+
+.btn-publicar {
+    background: #051D40;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-publicar:hover {
+    background: #2788C8;
+    transform: translateY(-2px);
+}
+
+body.dark-mode .btn-publicar {
+    background: #2788C8;
+}
+
+body.dark-mode .btn-publicar:hover {
+    background: #4db2ff;
+}
+
+/* ===== CARTÃO DE POST (TWEET) ===== */
+.feed-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tweet-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e1e5eb;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
 body.dark-mode .tweet-card {
-    background:#2a2a2a;
+    background: #1e293b;
+    border-color: #334155;
 }
 
-body.dark-mode .username {
-    color:#aaa;
+.tweet-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.tweet-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0; /* Impede a imagem de distorcer */
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.tweet-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-weight: 600;
+    color: #051D40;
+    font-size: 15px;
+}
+
+body.dark-mode .name {
+    color: #ffffff;
+}
+
+.username {
+    font-size: 13px;
+    color: #888;
+}
+
+.tweet-text {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+body.dark-mode .tweet-text {
+    color: #cbd5e1;
+}
+
+.tweet-img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Ações (Curtir, Comentar) */
+.tweet-actions {
+    display: flex;
+    gap: 25px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+}
+
+body.dark-mode .tweet-actions {
+    border-color: #334155;
+}
+
+.tweet-actions button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s ease;
 }
 
 body.dark-mode .tweet-actions button {
-    color:#bbb;
+    color: #94a3b8;
+}
+
+.tweet-actions button:hover {
+    color: #2788C8;
+}
+
+/* ===== BARRA LATERAL (SUGESTÕES) ===== */
+.sugestoes-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e1e5eb;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    position: sticky; 
+    top: 100px; /* Faz a barra colar no topo ao fazer scroll */
+}
+
+body.dark-mode .sugestoes-card {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+.sugestoes-card h3 {
+    font-size: 16px;
+    color: #051D40;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+body.dark-mode .sugestoes-card h3 {
+    color: #ffffff;
+}
+
+.sugestao-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    gap: 12px;
+}
+
+.avatar-sugestao {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0; /* Impede amassar a foto */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sugestao-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    overflow: hidden; 
+}
+
+.sugestao-nome {
+    font-size: 14px;
+    font-weight: 600;
+    color: #051D40;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sugestao-bio {
+    font-size: 12px;
+    color: #888;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+body.dark-mode .sugestao-nome { color: #f1f5f9; }
+body.dark-mode .sugestao-bio { color: #94a3b8; }
+
+.btn-conectar {
+    background: #E8F5FD;
+    color: #2788C8;
+    border: none;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .btn-conectar {
+    background: #0f172a;
+    color: #4db2ff;
+}
+
+.btn-conectar:hover {
+    background: #2788C8;
+    color: white;
+    transform: scale(1.1);
+}
+
+body.dark-mode .btn-conectar:hover {
+    background: #4db2ff;
+    color: #0f172a;
+}
+
+.ver-todos {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+    font-size: 13px;
+    color: #2788C8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.ver-todos:hover {
+    color: #051D40;
+}
+
+body.dark-mode .ver-todos {
+    border-color: #334155;
+    color: #4db2ff;
+}
+
+body.dark-mode .ver-todos:hover {
+    color: #ffffff;
+}
+
+/* ===== RESPONSIVO ===== */
+@media(max-width: 900px) {
+    .feed-layout {
+        grid-template-columns: 1fr; /* Quebra para uma coluna no telemóvel */
+    }
+    
+    .sugestoes-card {
+        position: relative; 
+        top: 0;
+    }
 }
