@@ -252,103 +252,95 @@ button[type="submit"]:hover {
     .image-side { display: none; }
 }
 
+
 /* ===== MODO ESCURO ===== */
 
+/* ===== MODO ESCURO PADRÃO (ALINHADO COM O OUTRO CSS) ===== */
+
 body.dark-mode{
-    background:#121212;
-    color:white;
+    background:#0f172a;
+    color:#ffffff;
 }
 
+/* LADO FORM */
 body.dark-mode .form-side{
-    background:#121212;
+    background:#0f172a;
 }
 
+/* CARD */
 body.dark-mode .form-box{
-    background:#1e1e1e;
-    border:1px solid #2a2a2a;
+    background:#020817;
+    border:1px solid #1e293b;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
+/* TEXTOS */
 body.dark-mode .form-container h2,
 body.dark-mode .form-header h3,
 body.dark-mode .grupo-input label{
-    color:white;
+    color:#ffffff;
 }
 
 body.dark-mode .subtitle,
 body.dark-mode .form-header p{
-    color:#bbb;
+    color:#94a3b8;
 }
 
+/* INPUT */
 body.dark-mode .campo{
-    background:#2a2a2a;
-    border:1px solid #333;
+    background:#020817;
+    border:1px solid #1e293b;
 }
 
 body.dark-mode .campo input{
-    color:white;
+    color:#ffffff;
 }
 
+body.dark-mode .campo input::placeholder{
+    color:#64748b;
+}
+
+/* ÍCONES */
 body.dark-mode .campo i{
-    color:#9aa4ad;
+    color:#94a3b8;
 }
 
+/* FOCO */
 body.dark-mode .campo:focus-within{
-    border-color:#31BADF;
-    background:#2f2f2f;
-    box-shadow:0 0 0 4px rgba(49,186,223,0.15);
+    border-color:#387499;
+    background:#020817;
+    box-shadow:0 0 0 4px rgba(56,116,153,0.3);
 }
 
+/* SELECT */
 body.dark-mode select{
-    background:#2a2a2a;
-    border:1px solid #333;
-    color:white;
+    background:#020817;
+    border:1px solid #1e293b;
+    color:#ffffff;
 }
 
+/* TEXTOS SECUNDÁRIOS */
 body.dark-mode .termos,
 body.dark-mode .troca-pagina{
-    color:#ccc;
+    color:#94a3b8;
 }
 
+/* LINKS */
 body.dark-mode .troca-pagina a,
 body.dark-mode .termos a{
-    color:#31BADF;
+    color:#60a5fa;
 }
 
-body.dark-mode button[type=\"submit\"]{
-    background:#2788C8;
+/* BOTÃO */
+body.dark-mode button[type="submit"]{
+    background:#1e3a8a;
 }
 
-body.dark-mode button[type=\"submit\"]:hover{
-    background:#31BADF;
+body.dark-mode button[type="submit"]:hover{
+    background:#1e40af;
 }
 
+/* BOTÃO VOLTAR */
 body.dark-mode .btn-voltar{
-    color:#bbb;
+    color:#94a3b8;
 }
-
-img{
-    width: 150px;
-    display: block;
-  margin: 0 auto;}
-
-  .logo.escuro {
-    display: none;
-  }
-  
-  body.dark-mode .lohead2 {
-    display: none;
-  }
-  
-  body.dark-mode .eniacpreto {
-    display: block;
-  }.logo.escuro {
-    display: none;
-  }
-  
-  body.dark-mode .lohead2 {
-    display: none;
-  }
-  
-  body.dark-mode .eniacpreto {
-    display: block;
-  }

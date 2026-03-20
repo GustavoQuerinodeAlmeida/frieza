@@ -24,7 +24,7 @@ body{
 /* ================= HEADER ================= */
 
 header{
-    background:#2788C8; /* azul claro */
+    background:#2788C8;
     color:#051D40;
     padding:20px;
     height:80px;
@@ -59,7 +59,6 @@ nav a{
     color:white;
     font-size:16px;
     transition:0.3s;
-    
 }
 
 nav a:hover{
@@ -79,8 +78,6 @@ nav a.ativo{
     align-items:center;
     gap:12px;
 }
-
-/* Retirado o estilo genérico que afetava todos os links da direita para não estragar o botão */
 
 /* ================= PERFIL ================= */
 
@@ -199,7 +196,7 @@ nav a.ativo{
     color:#666;
 }
 
-/* ================= FOOTER MODO CLARO ================= */
+/* ================= FOOTER ================= */
 
 .footer{
     background:#2788C8;
@@ -228,7 +225,7 @@ nav a.ativo{
     color:#051D40;
 }
 
-/* ================= BOTÃO DE CADASTRO OTIMIZADO ================= */
+/* ================= BOTÃO DE CADASTRO ================= */
 
 .btn-cadastro {
     background-color: #051D40;
@@ -251,7 +248,7 @@ nav a.ativo{
     box-shadow: 0 6px 12px rgba(5, 29, 64, 0.3);
 }
 
-/* ================= SISTEMA DE NOTIFICAÇÕES ================= */
+/* ================= NOTIFICAÇÕES ================= */
 
 .notificacao-container {
     position: relative;
@@ -267,15 +264,9 @@ nav a.ativo{
     color: white;
     cursor: pointer;
     position: relative;
-    transition: color 0.3s ease;
     padding: 5px;
 }
 
-.btn-notificacao:hover {
-    color: #051D40;
-}
-
-/* Bolinha vermelha com o número */
 .badge-notificacao {
     position: absolute;
     top: -2px;
@@ -290,12 +281,11 @@ nav a.ativo{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 2px solid #2788C8; /* Cor do fundo do header */
+    border: 2px solid #2788C8;
 }
 
-/* Caixa suspensa de mensagens */
 .dropdown-notificacao {
-    display: none; /* Escondida por padrão */
+    display: none;
     position: absolute;
     top: 150%;
     right: -10px;
@@ -308,9 +298,8 @@ nav a.ativo{
     flex-direction: column;
 }
 
-/* Classe ativada pelo JavaScript para mostrar a caixa */
 .dropdown-notificacao.ativo {
-    display: flex; 
+    display: flex;
 }
 
 .dropdown-notificacao h4 {
@@ -318,7 +307,6 @@ nav a.ativo{
     border-bottom: 1px solid #e1e5eb;
     font-size: 15px;
     color: #051D40;
-    margin: 0;
     font-weight: 600;
 }
 
@@ -326,8 +314,6 @@ nav a.ativo{
     list-style: none;
     max-height: 300px;
     overflow-y: auto;
-    padding: 0;
-    margin: 0;
 }
 
 .dropdown-notificacao ul li {
@@ -335,31 +321,14 @@ nav a.ativo{
     font-size: 13px;
     color: #555;
     border-bottom: 1px solid #f4f6f9;
-    cursor: pointer;
-    transition: background 0.2s;
-    line-height: 1.4;
 }
 
-.dropdown-notificacao ul li:hover {
-    background-color: #f8f9fa;
-}
-
-
-/* ================= MODO ESCURO ================= */
-
-body.dark-mode{
-    background:#053B5E;
-    color:white;
-}
-
-/* HEADER ESCURO */
+/* ================= MODO ESCURO (HEADER + FOOTER) ================= */
 
 body.dark-mode header{
     background:#051D40;
     color:white;
 }
-
-/* MENU ESCURO */
 
 body.dark-mode nav a{
     background:#051D40;
@@ -369,74 +338,44 @@ body.dark-mode nav a{
 body.dark-mode nav a:hover{
     background:#2788C8;
 }
+
 body.dark-mode nav a.ativo{
     background:#2788C8;
 }
-
-/* BOTÕES ESCURO */
 
 body.dark-mode #modo{
     background:#051D40;
 }
 
 body.dark-mode .btn-cadastro{
-    background-color: #2788C8;
+    background:#2788C8;
 }
 
-body.dark-mode .btn-cadastro:hover{
-    background-color: #ffffff;
-    color: #051D40 !important;
-}
-
-/* NOTIFICAÇÕES MODO ESCURO */
-
-body.dark-mode .btn-notificacao { color: white; }
-body.dark-mode .btn-notificacao:hover { color: #2788C8; }
-body.dark-mode .badge-notificacao { border-color: #051D40; } /* Borda acompanha o header escuro */
-
-body.dark-mode .dropdown-notificacao { 
-    background-color: #1a1a1a; 
-    border-color: #333; 
-    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
-}
-body.dark-mode .dropdown-notificacao h4 { 
-    color: white; 
-    border-bottom-color: #333; 
-}
-body.dark-mode .dropdown-notificacao ul li { 
-    color: #ccc; 
-    border-bottom-color: #222; 
-}
-body.dark-mode .dropdown-notificacao ul li:hover { 
-    background-color: #2a2a2a; 
-}
-
-/* FOOTER ESCURO */
-
-body.dark-mode .footer{
-    background:#051D40;
+body.dark-mode .btn-notificacao{
     color:white;
 }
 
-body.dark-mode .calmapae{
-    color:#e4dddd;
+body.dark-mode .badge-notificacao{
+    border-color:#051D40;
 }
 
-body.dark-mode .link-perfil img{
-    background:#2a2a2a;
+body.dark-mode .dropdown-notificacao{
+    background:#1a1a1a;
+    border-color:#333;
 }
 
-.btn-notificacao i {
-  color: white !important;
+body.dark-mode .dropdown-notificacao h4{
+    color:white;
 }
 
-header .btn-notificacao i {
-    color: white !important;
+body.dark-mode .dropdown-notificacao ul li{
+    color:#ccc;
 }
 
-body.dark-mode #modo svg {
-    stroke: white;
+body.dark-mode .footer{
+    background:#051D40;
 }
-#modo svg {
-    stroke: white;
+
+body.dark-mode #modo svg{
+    stroke:white;
 }

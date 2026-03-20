@@ -268,3 +268,64 @@ body.dark-mode #inicio{
     background:  #053B5E;
 }
 
+
+/* ===== MODO ESCURO PADRÃO (PADRONIZADO) ===== */
+
+body.dark-mode{
+    background: #0f172a;
+    color: white;
+}
+
+/* H1 (topo bonito no escuro) */
+body.dark-mode h1 {
+    color: white;
+    background: linear-gradient(#020817, #0f172a);
+}
+
+/* subtítulo azul */
+body.dark-mode #inicio{
+    background: #0f172a;
+    color: #94a3b8;
+}
+
+/* seção estatísticas */
+body.dark-mode .estatisticas{
+    background: #0f172a;
+}
+
+/* seção notícias */
+body.dark-mode .noticias{
+    background: #0f172a;
+}
+
+/* cards principais */
+body.dark-mode .card{
+    background: #020817;
+    color: white;
+    border: 1px solid #1e293b;
+}
+
+/* cards de notícia */
+body.dark-mode .card-noticia{
+    background: #020817;
+    color: white;
+    border: 1px solid #1e293b;
+}
+
+/* textos */
+body.dark-mode .card p,
+body.dark-mode .card-noticia p{
+    color: #94a3b8;
+}
+
+/* links */
+body.dark-mode .card-noticia a{
+    color: #60a5fa;
+}
+
+/* título */
+body.dark-mode .titulo{
+    background: #020817;
+    color: white;
+    border: 1px solid #1e293b;
+}

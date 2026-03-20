@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/esqueceu.css">
+</head>
+<body>
+
+    <main class="container-centralizado">
+        <div class="card-formulario">
+
+            <div class="cabecalho-form">
+                <h1>Esqueci senha</h1>
+                <p>Informe o e-mail associado à sua conta e enviaremos as instruções para redefinição.</p>
+            </div>
+
+            <form action="#" method="POST">
+                <div class="grupo-input">
+                    <label type="email" for="email">Endereço de E-mail</label>
+                    <div class="input-com-icone">
+                        <svg class="icone-input" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <input type="email" id="email" name="email" placeholder="@eniac.edu.br" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-principal">Recuperar senha</button>
+            </form>
+
+            <div class="rodape-form">
+                <p>Lembrou da senha? <a href="../views/login.html">Voltar para o login</a></p>
+            </div>
+            
+        </div>
+    </main>
+<script src="../js/cadastro.js" defer></script>
+    <script src="../js/login_cadastro.js"></script>
+    <script src="../js/geral.js" defer></script>
+
+</body>
+</html>
