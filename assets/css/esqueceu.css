@@ -169,3 +169,70 @@ body {
         padding: 32px 24px;
     }
 }
+
+/* ================= MODO ESCURO ================= */
+
+body.dark-mode {
+    --cor-fundo: #0f172a; /* fundo escuro */
+    --texto-principal: #ffffff;
+    --texto-secundario: #94a3b8;
+
+    --borda: #1e293b;
+    --fundo-input: #020817;
+    --foco-ring: rgba(56, 116, 153, 0.3);
+}
+
+/* FUNDO GERAL */
+body.dark-mode {
+    background-color: var(--cor-fundo);
+    color: var(--texto-principal);
+}
+
+/* CARD */
+body.dark-mode .card-formulario {
+    background-color: #020817;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* TEXTOS */
+body.dark-mode .cabecalho-form h1 {
+    color: white;
+}
+
+body.dark-mode .cabecalho-form p {
+    color: var(--texto-secundario);
+}
+
+/* INPUTS */
+body.dark-mode .input-com-icone input {
+    background-color: var(--fundo-input);
+    border-color: var(--borda);
+    color: white;
+}
+
+body.dark-mode .input-com-icone input::placeholder {
+    color: #64748b;
+}
+
+/* ÍCONES */
+body.dark-mode .icone-input {
+    color: #94a3b8;
+}
+
+/* BOTÃO */
+body.dark-mode .btn-principal {
+    background-color: #1e3a8a;
+}
+
+body.dark-mode .btn-principal:hover {
+    background-color: #1e40af;
+}
+
+/* RODAPÉ */
+body.dark-mode .rodape-form p {
+    color: #94a3b8;
+}
+
+body.dark-mode .rodape-form a {
+    color: #60a5fa;
+}

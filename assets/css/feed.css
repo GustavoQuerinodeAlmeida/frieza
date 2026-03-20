@@ -1,21 +1,15 @@
-/* ===== RESET ===== */
+/* ===== RESET E BASE ===== */
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* ===== BODY ===== */
-body{
-    background:#f4f4f4;
-    color:#111;
-    transition:0.3s;
-}
-
-body.dark{
-    background:#121212;
-    color:#e4e4e4;
+body {
+    background: #f4f6f9; /* Fundo ligeiramente mais agradável */
+    color: #111;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* ===== FEED ===== */
@@ -37,20 +31,12 @@ body.dark{
     color:#2788C8;
 }
 
-body.dark .feed-header h2{
-    color:#4db2ff;
-}
-
 .feed-subtitle{
     background:#E8F5FD;
     color:#2788C8;
     padding:6px 14px;
     border-radius:20px;
     font-size:14px;
-}
-
-body.dark .feed-subtitle{
-    background:#2a2a2a;
 }
 
 /* ===== POSTAR ===== */
@@ -61,10 +47,6 @@ body.dark .feed-subtitle{
     border-radius:10px;
     margin-bottom:25px;
     box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
-
-body.dark .postar-card{
-    background:#2a2a2a;
 }
 
 .postar-header{
@@ -113,10 +95,6 @@ body.dark .postar-card{
     transition:0.2s;
 }
 
-body.dark .tweet-card{
-    background:#2a2a2a;
-}
-
 .tweet-card:hover{
     transform:translateY(-3px);
 }
@@ -150,10 +128,6 @@ body.dark .tweet-card{
     color:#666;
 }
 
-body.dark .username{
-    color:#aaa;
-}
-
 /* TEXTO */
 
 .tweet-text{
@@ -184,10 +158,6 @@ body.dark .username{
     color:#666;
 }
 
-body.dark .tweet-actions button{
-    color:#bbb;
-}
-
 .tweet-actions button:hover{
     color:#2788C8;
 }
@@ -196,45 +166,67 @@ body.dark .tweet-actions button{
 
 @media(max-width:600px){
 
-.twitter-feed{
-    padding:0 10px;
+    .twitter-feed{
+        padding:0 10px;
+    }
+
+    .tweet-card{
+        padding:12px;
+    }
 }
 
-.tweet-card{
-    padding:12px;
+/* ===================================================== */
+/* ===== MODO ESCURO (PADRÃO DO SEU INÍCIO) ===== */
+/* ===================================================== */
+
+body.dark-mode{
+    background:#0f172a;
+    color:white;
 }
 
+/* TÍTULO */
+body.dark-mode .feed-header h2{
+    color:#60a5fa;
 }
 
-/* BODY - modo escuro */
-body.dark-mode {
-    background:#053B5E;
-    color:#e4e4e4;
+/* SUBTÍTULO */
+body.dark-mode .feed-subtitle{
+    background:#020817;
+    color:#94a3b8;
+    border:1px solid #1e293b;
 }
 
-/* Feed Header */
-body.dark-mode .feed-header h2 {
-    color:#4db2ff;
+/* POSTAR */
+body.dark-mode .postar-card{
+    background:#020817;
+    border:1px solid #1e293b;
 }
 
-body.dark-mode .feed-subtitle {
-    background:#1e1e1e;
+/* BOTÃO */
+body.dark-mode .postar-card button{
+    background:#1e293b;
 }
 
-/* Postar Card */
-body.dark-mode .postar-card {
-    background:#2a2a2a;
+body.dark-mode .postar-card button:hover{
+    background:#334155;
 }
 
-/* Tweet Card */
-body.dark-mode .tweet-card {
-    background:#2a2a2a;
+/* CARDS */
+body.dark-mode .tweet-card{
+    background:#020817;
+    border:1px solid #1e293b;
 }
 
-body.dark-mode .username {
-    color:#aaa;
+/* TEXTO SECUNDÁRIO */
+body.dark-mode .username{
+    color:#94a3b8;
 }
 
-body.dark-mode .tweet-actions button {
-    color:#bbb;
+/* BOTÕES */
+body.dark-mode .tweet-actions button{
+    color:#94a3b8;
+}
+
+body.dark-mode .tweet-actions button:hover{
+    color:#60a5fa;
 }
