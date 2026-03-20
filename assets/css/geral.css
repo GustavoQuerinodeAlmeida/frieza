@@ -425,3 +425,18 @@ body.dark-mode .calmapae{
 body.dark-mode .link-perfil img{
     background:#2a2a2a;
 }
+
+.btn-notificacao i {
+  color: white !important;
+}
+
+header .btn-notificacao i {
+    color: white !important;
+}
+
+body.dark-mode #modo svg {
+    stroke: white;
+}
+#modo svg {
+    stroke: white;
+}
