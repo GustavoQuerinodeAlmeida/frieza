@@ -198,33 +198,149 @@ nav a.ativo{
 
 /* ================= FOOTER ================= */
 
-.footer{
-    background:#2788C8;
-    color:white;
-    padding:20px;
-    margin-top:auto;
+.footer {
+    background: #2788C8;
+    color: white;
+    padding: 50px 20px 20px;
+    margin-top: auto;
+    position: relative;
 }
 
-.footer-content{
-    max-width:1200px;
-    margin:0 auto;
-    text-align:center;
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Faz as colunas quebrarem em telas menores */
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.footer-logo{
-    height:50px;
-    margin-bottom:20px;
-    border-radius:8px;
+.footer-col {
+    flex: 1;
+    min-width: 220px; /* Garante que não fique espremido no celular */
 }
 
-.footer p{
-    font-size:14px;
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
 }
 
-.calmapae{
-    color:#051D40;
+/* Linha decorativa embaixo do título das colunas */
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #051D40;
+    height: 3px;
+    width: 40px;
+    border-radius: 2px;
 }
 
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #f4f4f4;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-col ul li a:hover {
+    color: #051D40;
+    transform: translateX(5px); /* Efeito legal de empurrar o link pro lado */
+}
+
+/* Redes Sociais */
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #051D40;
+    transform: translateY(-3px);
+}
+
+/* Linha de baixo (Direitos autorais) */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+    color: #e1e5eb;
+}
+
+/* ================= BOTÃO VOLTAR AO TOPO ================= */
+
+.btn-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #051D40;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+    z-index: 1000;
+}
+
+.btn-topo:hover {
+    background-color: white;
+    color: #051D40;
+    transform: translateY(-5px);
+}
+
+/* Ajuste no Modo Escuro (caso o título fique ruim de ler) */
+body.dark-mode .footer-col h4::after {
+    background: #2788C8;
+}
+body.dark-mode .footer-col ul li a:hover {
+    color: #2788C8;
+}
 /* ================= BOTÃO DE CADASTRO ================= */
 
 .btn-cadastro {
