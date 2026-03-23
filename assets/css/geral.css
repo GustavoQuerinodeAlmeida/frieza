@@ -24,7 +24,7 @@ body{
 /* ================= HEADER ================= */
 
 header{
-    background:#2788C8; /* azul claro */
+    background:#2788C8;
     color:#051D40;
     padding:20px;
     height:80px;
@@ -59,7 +59,6 @@ nav a{
     color:white;
     font-size:16px;
     transition:0.3s;
-    
 }
 
 nav a:hover{
@@ -78,20 +77,6 @@ nav a.ativo{
     display:flex;
     align-items:center;
     gap:12px;
-}
-
-.header-direita a{
-    text-decoration:none;
-    padding:6px 14px;
-    border-radius:10px;
-    background:#2788C8;
-    color:white;
-    font-size:16px;
-    transition:0.3s;
-}
-
-.header-direita a:hover{
-    background:#2788C8;
 }
 
 /* ================= PERFIL ================= */
@@ -134,8 +119,6 @@ nav a.ativo{
 }
 
 /* ================= HERO ================= */
-
-
 
 .hero h1{
     font-size:32px;
@@ -213,7 +196,7 @@ nav a.ativo{
     color:#666;
 }
 
-/* ================= FOOTER MODO CLARO ================= */
+/* ================= FOOTER ================= */
 
 .footer{
     background:#2788C8;
@@ -242,21 +225,110 @@ nav a.ativo{
     color:#051D40;
 }
 
-/* ================= MODO ESCURO ================= */
+/* ================= BOTÃO DE CADASTRO ================= */
 
-body.dark-mode{
-    background:#121212;
-    color:white;
+.btn-cadastro {
+    background-color: #051D40;
+    color: white !important;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(5, 29, 64, 0.2);
 }
 
-/* HEADER ESCURO */
+.btn-cadastro:hover {
+    background-color: #ffffff;
+    color: #051D40 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(5, 29, 64, 0.3);
+}
+
+/* ================= NOTIFICAÇÕES ================= */
+
+.notificacao-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.btn-notificacao {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+}
+
+.badge-notificacao {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    height: 16px;
+    width: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid #2788C8;
+}
+
+.dropdown-notificacao {
+    display: none;
+    position: absolute;
+    top: 150%;
+    right: -10px;
+    width: 320px;
+    background-color: #ffffff;
+    border: 1px solid #e1e5eb;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    z-index: 1000;
+    flex-direction: column;
+}
+
+.dropdown-notificacao.ativo {
+    display: flex;
+}
+
+.dropdown-notificacao h4 {
+    padding: 15px;
+    border-bottom: 1px solid #e1e5eb;
+    font-size: 15px;
+    color: #051D40;
+    font-weight: 600;
+}
+
+.dropdown-notificacao ul {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.dropdown-notificacao ul li {
+    padding: 15px;
+    font-size: 13px;
+    color: #555;
+    border-bottom: 1px solid #f4f6f9;
+}
+
+/* ================= MODO ESCURO (HEADER + FOOTER) ================= */
 
 body.dark-mode header{
     background:#051D40;
     color:white;
 }
-
-/* MENU ESCURO */
 
 body.dark-mode nav a{
     background:#051D40;
@@ -266,31 +338,44 @@ body.dark-mode nav a{
 body.dark-mode nav a:hover{
     background:#2788C8;
 }
+
 body.dark-mode nav a.ativo{
     background:#2788C8;
 }
-
-/* BOTÕES ESCURO */
 
 body.dark-mode #modo{
     background:#051D40;
 }
 
-body.dark-mode .header-direita a{
-    background:#051D40;
+body.dark-mode .btn-cadastro{
+    background:#2788C8;
 }
 
-/* FOOTER ESCURO */
-
-body.dark-mode .footer{
-    background:#051D40;
+body.dark-mode .btn-notificacao{
     color:white;
 }
 
-body.dark-mode .calmapae{
-    color:#e4dddd;
+body.dark-mode .badge-notificacao{
+    border-color:#051D40;
 }
 
-body.dark-mode .link-perfil img{
-    background:#2a2a2a;
+body.dark-mode .dropdown-notificacao{
+    background:#1a1a1a;
+    border-color:#333;
+}
+
+body.dark-mode .dropdown-notificacao h4{
+    color:white;
+}
+
+body.dark-mode .dropdown-notificacao ul li{
+    color:#ccc;
+}
+
+body.dark-mode .footer{
+    background:#051D40;
+}
+
+body.dark-mode #modo svg{
+    stroke:white;
 }

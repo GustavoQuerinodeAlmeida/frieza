@@ -1,3 +1,4 @@
+
 const formCadastro = document.getElementById("formCadastro");
 const emailInput = document.getElementById("emailCadastro");
 const senhaInput = document.getElementById("senhaCadastro");

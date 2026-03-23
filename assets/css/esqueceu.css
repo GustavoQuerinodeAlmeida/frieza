@@ -1,0 +1,238 @@
+/* --- Variáveis de Cor (Extraídas da imagem EcoHub) --- */
+:root {
+    --cor-primaria: #001b3f; /* Azul marinho escuro do título principal */
+    --cor-primaria-hover: #001026; /* Um tom ainda mais escuro para o hover do botão */
+    --cor-secundaria: #387499; /* Azul médio/acinzentado do subtítulo */
+    
+    --cor-fundo: #f4f7f9; /* Fundo levemente azulado para combinar */
+    --texto-principal: #001b3f; /* Usa a cor escura para textos fortes */
+    --texto-secundario: #387499; /* Usa a cor média para textos de apoio */
+    
+    --borda: #d1d9e0;
+    --fundo-input: #ffffff;
+    --foco-ring: rgba(56, 116, 153, 0.2); /* Sombra do input usando o azul mais claro */
+    --fonte-padrao: 'Inter', sans-serif;
+}
+
+/* --- Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    background-color: var(--cor-fundo);
+    color: var(--texto-principal);
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* --- Card Central --- */
+.card-formulario {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 440px;
+    padding: 48px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 27, 63, 0.08); /* Sombra levemente tingida com o azul marinho */
+}
+
+
+.cabecalho-form {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.cabecalho-form h1 {
+    font-size: 1.6rem;
+    font-weight: 800; /* Deixei mais gordinho igual ao "Bem-vindo de volta!" */
+    color: var(--cor-primaria);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.cabecalho-form p {
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* --- Inputs --- */
+.grupo-input {
+    margin-bottom: 24px;
+}
+
+.grupo-input label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--texto-principal);
+}
+
+.input-com-icone {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.icone-input {
+    position: absolute;
+    left: 14px;
+    color: var(--cor-secundaria); /* Ícone com a cor secundária */
+    transition: color 0.2s ease;
+}
+
+.input-com-icone input {
+    width: 100%;
+    padding: 12px 14px 12px 42px;
+    background-color: var(--fundo-input);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--texto-principal);
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.input-com-icone input::placeholder {
+    color: #94a3b8;
+}
+
+.input-com-icone input:focus {
+    outline: none;
+    border-color: var(--cor-secundaria);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px var(--foco-ring);
+}
+
+.input-com-icone input:focus + .icone-input,
+.input-com-icone input:focus ~ .icone-input {
+    color: var(--cor-primaria);
+}
+
+/* --- Botão --- */
+.btn-principal {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-principal:hover {
+    background-color: var(--cor-primaria-hover);
+}
+
+.btn-principal:active {
+    transform: scale(0.98);
+}
+
+/* --- Rodapé do Form --- */
+.rodape-form {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.rodape-form p {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.rodape-form a {
+    color: var(--cor-primaria);
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.rodape-form a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 480px) {
+    .card-formulario {
+        padding: 32px 24px;
+    }
+}
+
+/* ================= MODO ESCURO ================= */
+
+body.dark-mode {
+    --cor-fundo: #0f172a; /* fundo escuro */
+    --texto-principal: #ffffff;
+    --texto-secundario: #94a3b8;
+
+    --borda: #1e293b;
+    --fundo-input: #020817;
+    --foco-ring: rgba(56, 116, 153, 0.3);
+}
+
+/* FUNDO GERAL */
+body.dark-mode {
+    background-color: var(--cor-fundo);
+    color: var(--texto-principal);
+}
+
+/* CARD */
+body.dark-mode .card-formulario {
+    background-color: #020817;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* TEXTOS */
+body.dark-mode .cabecalho-form h1 {
+    color: white;
+}
+
+body.dark-mode .cabecalho-form p {
+    color: var(--texto-secundario);
+}
+
+/* INPUTS */
+body.dark-mode .input-com-icone input {
+    background-color: var(--fundo-input);
+    border-color: var(--borda);
+    color: white;
+}
+
+body.dark-mode .input-com-icone input::placeholder {
+    color: #64748b;
+}
+
+/* ÍCONES */
+body.dark-mode .icone-input {
+    color: #94a3b8;
+}
+
+/* BOTÃO */
+body.dark-mode .btn-principal {
+    background-color: #1e3a8a;
+}
+
+body.dark-mode .btn-principal:hover {
+    background-color: #1e40af;
+}
+
+/* RODAPÉ */
+body.dark-mode .rodape-form p {
+    color: #94a3b8;
+}
+
+body.dark-mode .rodape-form a {
+    color: #60a5fa;
+}

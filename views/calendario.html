@@ -8,11 +8,9 @@
 
 <link rel="stylesheet" href="../assets/css/geral.css">
 <link rel="stylesheet" href="../assets/css/calendario.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="icon" type="image/png" href="../assets/img/logotitle.png">
-
+<script src="https://unpkg.com/lucide@latest"></script>
 
     <script>
 if(localStorage.getItem("theme") === "dark"){
@@ -23,31 +21,40 @@ if(localStorage.getItem("theme") === "dark"){
 
 <body>
 
- <header>
+<header>
 
-<img src="../assets/img/logohead.png" alt="EcoHub" class="logo">
-
+<img src="../assets/img/lohead2.png" alt="EcoHub" class="logo">
 <nav>
 <a href="Inicio.html" >Inicio</a>
-<a href="Eventos.html" class="ativo">Eventos</a>
+<a href="Eventos.html " class="ativo">Eventos</a>
 <a href="Noticias.html">Notícias</a>
 <a href="Feed.html">Feed</a>
-<a href="Projetos.html">Projetos</a>
 <a href="Sobre.html">Sobre</a>
 </nav>
-
-<div class="header-direita">
-
-<a href="Cadastro.html">Cadastro</a>
-
-<button id="modo">🌙</button>
-
+<div class="header-direita">          
+<div class="notificacao-container">
+<button class="btn-notificacao" id="btnNotificacao">
+<i class="fa-solid fa-bell"></i>
+<span class="badge-notificacao">3</span> 
+</button>            
+<div class="dropdown-notificacao" id="dropdownNotificacao">
+<h4>Suas Notificações</h4>
+<ul>
+<li><strong>Novo projeto:</strong> O Hub Link+ adicionou um desafio.</li>
+<li><strong>Evento amanhã:</strong> A feira de tecnologia começa às 09h.</li>
+<li><strong>Mensagem:</strong> Você tem uma nova conexão.</li>
+</ul>
+</div>
+</div>   
+<a href="Cadastro.html" class="btn-cadastro">Cadastre-se</a>    
+<button id="modo">
+    <i data-lucide="moon"></i>
+</button>
+     
 <a href="Perfil.html" class="link-perfil">
 <img src="../assets/img/perfil.jpg" alt="Perfil">
 </a>
-
 </div>
-
 </header>
 
 <main class="container">
@@ -102,16 +109,57 @@ if(localStorage.getItem("theme") === "dark"){
 
 </main>
 
-<footer class="footer">
+ <footer class="footer-novo">
+    <div class="footer-container">
+      
+      <div class="footer-col sobre-col">
+        <h4>Sobre o EcoHub</h4>
+        <p>O Ecossistema ENIAC é uma rede que conecta estudantes, empresas e a comunidade por meio de inovação, projetos reais e oportunidades profissionais.</p>
+      </div>
 
-<div class="footer-content">
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="inicio.html">Início</a></li>
+          <li><a href="feed.html">Feed da Comunidade</a></li>
+          <li><a href="projetos.html">Projetos Publicados</a></li>
+          <li><a href="noticias.html">Últimas Notícias</a></li>
+          <li><a href="sobre.html">Sobre o Ecossistema</a></li>
+        </ul>
+      </div>
 
-<img src="../assets/img/logo2.eniac.png" class="footer-logo">
+      <div class="footer-col">
+        <h4>Comunidade</h4>
+        <ul>
+          <li><a href="eventos.html">Próximos Eventos</a></li>
+          <li><a href="calendario.html">Calendário Acadêmico</a></li>
+          <li><a href="perfil.html">Meu Perfil</a></li>
+          <li><a href="login.html">Fazer Login</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+      </div>
 
-<p>
-© 2026 Ecossistema Academy. Todos os direitos reservados.
-Conectando estudantes e projetos reais.
-</p>
+      <div class="footer-col">
+        <h4>Redes Sociais</h4>
+        <div class="social-links">
+          <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Ecossistema Academy. Todos os direitos reservados. Conectando estudantes e projetos reais.</p>
+    </div>
+
+    <button class="btn-topo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Voltar ao topo">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </footer>
 
 </div>
 

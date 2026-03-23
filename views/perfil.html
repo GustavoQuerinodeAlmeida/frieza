@@ -1,149 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Perfil</title>
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/perfil.css">
-<link rel="stylesheet" href="../assets/css/geral.css">
- <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/logotitle.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/geral.css">
+    <link rel="stylesheet" href="../assets/css/perfil.css">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/logotitle.png">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Meu Perfil - EcoHub</title>
 
     <script>
-if(localStorage.getItem("theme") === "dark"){
-    document.documentElement.classList.add("dark-mode");
-}
-</script>
+        if(localStorage.getItem("theme") === "dark"){
+            document.documentElement.classList.add("dark-mode");
+        }
+    </script>
 </head>
-
 <body>
 
- <header>
+    <header>
 
-<img src="../assets/img/logohead.png" alt="EcoHub" class="logo">
+        <img src="../assets/img/lohead2.png" alt="EcoHub" class="logo">
+        <nav>
+        <a href="Inicio.html" >Inicio</a>
+        <a href="Eventos.html ">Eventos</a>
+        <a href="Noticias.html">Notícias</a>
+        <a href="Feed.html">Feed</a>
+            
+        <a href="Sobre.html">Sobre</a>
+        </nav>
+            
+        <div class="header-direita">
+                  
+        <div class="notificacao-container">
+        <button class="btn-notificacao" id="btnNotificacao">
+        <i class="fa-solid fa-bell"></i>
+        <span class="badge-notificacao">3</span> 
+        </button>
+                      
+        <div class="dropdown-notificacao" id="dropdownNotificacao">
+        <h4>Suas Notificações</h4>
+        <ul>
+        <li><strong>Novo projeto:</strong> O Hub Link+ adicionou um desafio.</li>
+        <li><strong>Evento amanhã:</strong> A feira de tecnologia começa às 09h.</li>
+        <li><strong>Mensagem:</strong> Você tem uma nova conexão.</li>
+        </ul>
+        </div>
+        </div>
+            
+        <a href="Cadastro.html" class="btn-cadastro">Cadastre-se</a>
+            
+        <!-- BOTÃO COM ÍCONES MINIMALISTAS (SEM ESTILO INLINE) -->
+        <button id="modo">
+            <i data-lucide="moon"></i>
+        </button>
+            
+        <a href="Perfil.html" class="link-perfil" >
+        <img src="../assets/img/perfil.jpg" alt="Perfil">
+        </a>
+        </div>
+        </header>
 
-<nav>
-<a href="Inicio.html" >Inicio</a>
-<a href="Eventos.html">Eventos</a>
-<a href="Noticias.html">Notícias</a>
-<a href="Feed.html">Feed</a>
-<a href="Projetos.html">Projetos</a>
-<a href="Sobre.html">Sobre</a>
-</nav>
-
-<div class="header-direita">
-
-<a href="Cadastro.html">Cadastro</a>
-
-<button id="modo">🌙</button>
-
-<a href="Perfil.html" class="link-perfil">
-<img src="../assets/img/perfil.jpg" alt="Perfil">
-</a>
-
-</div>
-
-</header>
-
-<section class="perfil-header">
-  <div class="foto-perfil"></div>
-
-  <div class="info-perfil">
-    <h1>João Pedro Santos</h1>
-    <p>Engenharia de Software - 5º Semestre</p>
-    <p class="bio">
-      Desenvolvedor full-stack apaixonado por tecnologia e inovação.
-    </p>
-
-    <div class="stats">
-      <span>34 Projetos</span>
-      <span>120 Posts</span>
-      <span>560 Curtidas</span>
-    </div>
-
-    <button>Editar Perfil</button>
-    <button onclick="mostrarAba('postagens')">Postagens</button>
-  <button onclick="mostrarAba('projetos')">Projetos</button>
-  <button onclick="mostrarAba('sobre')">Sobre</button>
-  </div>
-
-  
-</section>
-
-
-
-<section id="postagens" class="conteudo-perfil">
-
-  <article class="post">
-    <h3>Sistema de Controle de Acesso</h3>
-    <p>
-      Acabei de publicar meu projeto de API RESTful com Node.js e TypeScript!
-    </p>
-  </article>
-
-  <article class="post">
-    <h3>Workshop Clean Architecture</h3>
-    <p>
-      Participando do workshop hoje. Aprendendo bastante sobre boas práticas.
-    </p>
-  </article>
-
-</section>
+    <main class="perfil-container">
+        
+        <div class="perfil-card">
+            <div class="perfil-capa">
+                <button class="btn-editar-capa"><i class="fa-solid fa-camera"></i> Alterar Capa</button>
+            </div>
+            
+            <div class="perfil-info">
+                <div class="perfil-avatar-wrapper">
+                    <img src="../assets/img/perfil.jpg" alt="Foto de Allan" class="perfil-avatar">
+                    <button class="btn-editar-avatar"><i class="fa-solid fa-pen"></i></button>
+                </div>
+                
+                <div class="perfil-detalhes">
+                    <div class="perfil-texto">
+                        <h2 class="perfil-nome">Allan Gondim</h2>
+                        <p class="perfil-curso"><i class="fa-solid fa-graduation-cap"></i> Engenharia de Software</p>
+                        <p class="perfil-bio">AI Manager e Desenvolvedor apaixonado por automação (n8n), C++, Rust e Java. Nas horas vagas, entusiasta de Airsoft e hardware de alta performance.</p>
+                        
+                        <div class="perfil-links">
+                            <a href="#" class="link-social"><i class="fa-solid fa-location-dot"></i> São Paulo, SP</a>
+                            <a href="https://github.com/Ratatosk123" target="_blank" class="link-social"><i class="fa-brands fa-github"></i> Ratatosk123</a>
+                            <a href="mailto:allanmaiagondim.amg@gmail.com" class="link-social"><i class="fa-solid fa-envelope"></i> Contato</a>
+                        </div>
+                    </div>
+                    
+                    <div class="perfil-acoes">
+                        <button class="btn-primario"><i class="fa-solid fa-user-pen"></i> Editar Perfil</button>
+                        <button class="btn-secundario"><i class="fa-solid fa-gear"></i> Configurações</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="perfil-stats">
+                <div class="stat-box">
+                    <h3>12</h3>
+                    <p>Projetos</p>
+                </div>
+                <div class="stat-box">
+                    <h3>84</h3>
+                    <p>Conexões</p>
+                </div>
+                <div class="stat-box">
+                    <h3>5</h3>
+                    <p>Eventos</p>
+                </div>
+            </div>
+        </div>
 
 
-<section id="projetos" class="conteudo-perfil" style="display:none;">
+    </main>
 
-  <button class="publicar-projeto">Publicar Projeto</button>
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="../assets/img/logo2.eniac.png" alt="Logo" class="footer-logo">
+            <p>© 2026 Ecossistema Academy. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-  <p class="sem-projetos">
-    Você ainda não publicou nenhum projeto.
-  </p>
-
-</section>
-
-
-<section id="sobre" class="conteudo-perfil" style="display:none;">
-
-  <h3>Sobre</h3>
-  <p>
-    Desenvolvedor focado em criar soluções que impactem positivamente a sociedade.
-  </p>
-
-  <h3>Formação</h3>
-  <p>Engenharia de Software - Faculdade Eniac</p>
-
-  <h3>Habilidades</h3>
-  <div class="habilidades">
-    <span>JavaScript</span>
-    <span>React</span>
-    <span>Node.js</span>
-    <span>Python</span>
-    <span>SQL</span>
-    <span>Docker</span>
-  </div>
-
-</section>
-
-<script>
-function mostrarAba(aba) {
-  document.getElementById("postagens").style.display = "none";
-  document.getElementById("projetos").style.display = "none";
-  document.getElementById("sobre").style.display = "none";
-
-  document.getElementById(aba).style.display = "block";
-}
-</script>
-<footer class="footer">
-  <div class="footer-content">
-    
-   <img src="../assets/img/logo2.eniac.png" alt="Logo" class="footer-logo">
-
-    <p>
-      © 2026 Ecossistema Academy. Todos os direitos reservados.
-      Conectando estudantes e projetos reais.
-    </p>
-
-  </div>
-</footer>
-<script src="../js/geral.js"></script>
+    <script src="../js/geral.js"></script>
 </body>
 </html>

@@ -38,20 +38,22 @@ h1, p {
     flex: 1;
     padding: 20px;
     background: #f4f4f4;
-    display: flex;
-    gap: 35px;          /* espaço entre as caixas */
-    flex-wrap: wrap;  
 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+
+    justify-content: space-evenly;
 }
 
 
 
 .card-noticia {
     background: white;
-    padding: 20px;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    width: 200px; /* define largura */
+    width: 260px; /* define largura */
 }
 
 .card-noticia a {
@@ -179,18 +181,18 @@ width: fit-content;
 
 /* ===== MODO ESCURO ===== */
 body.dark-mode{
-    background: #121212;
+    background: #053B5E;
     color: white;
 }
 
 /* seção estatísticas */
 body.dark-mode .estatisticas{
-    background: #181818;
+    background: #053B5E;
 }
 
 /* seção notícias */
 body.dark-mode .noticias{
-    background: #181818;
+    background: #053B5E;
 }
 
 /* cards */
@@ -218,7 +220,7 @@ body.dark-mode .titulo{
 
 
 body.dark-mode {
-    background: #121212;
+    background: #053B5E;
     color: white;
 }
 
@@ -230,12 +232,12 @@ body.dark-mode h1 {
 
 /* seção estatísticas */
 body.dark-mode .estatisticas {
-    background: #181818;
+    background: #053B5E;
 }
 
 /* seção notícias */
 body.dark-mode .noticias {
-    background: #181818;
+    background: #053B5E;
 }
 
 /* cards */
@@ -266,3 +268,64 @@ body.dark-mode #inicio{
     background:  #053B5E;
 }
 
+
+/* ===== MODO ESCURO PADRÃO (PADRONIZADO) ===== */
+
+body.dark-mode{
+    background: #0f172a;
+    color: white;
+}
+
+/* H1 (topo bonito no escuro) */
+body.dark-mode h1 {
+    color: white;
+    background: linear-gradient(#020817, #0f172a);
+}
+
+/* subtítulo azul */
+body.dark-mode #inicio{
+    background: #0f172a;
+    color: #94a3b8;
+}
+
+/* seção estatísticas */
+body.dark-mode .estatisticas{
+    background: #0f172a;
+}
+
+/* seção notícias */
+body.dark-mode .noticias{
+    background: #0f172a;
+}
+
+/* cards principais */
+body.dark-mode .card{
+    background: #020817;
+    color: white;
+    border: 1px solid #1e293b;
+}
+
+/* cards de notícia */
+body.dark-mode .card-noticia{
+    background: #020817;
+    color: white;
+    border: 1px solid #1e293b;
+}
+
+/* textos */
+body.dark-mode .card p,
+body.dark-mode .card-noticia p{
+    color: #94a3b8;
+}
+
+/* links */
+body.dark-mode .card-noticia a{
+    color: #60a5fa;
+}
+
+/* título */
+body.dark-mode .titulo{
+    background: #020817;
+    color: white;
+    border: 1px solid #1e293b;
+}

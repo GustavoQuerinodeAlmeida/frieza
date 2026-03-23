@@ -11,7 +11,7 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #ffffff;
-    overflow: hidden; /* Trava o scroll da tela principal para não atacar o TIC */
+    overflow: auto; /* ALTERADO (antes hidden) */
 }
 
 .split-layout {
@@ -25,15 +25,15 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px; /* Reduzi um pouco para ganhar espaço vertical */
+    align-items: flex-start; /* 🔥 CORREÇÃO PRINCIPAL */
+    padding: 40px 20px; /* 🔥 MELHORA VISUAL */
     background-color: #ffffff;
-    overflow-y: auto; /* Scroll apenas interno se a tela for muito pequena */
+    overflow-y: auto;
 }
 
 .form-container {
-    width: 100%;
-    max-width: 400px;
+    width: 80%;              /* ALTERADO */
+    max-width: 700px;        /* ALTERADO (antes 400px) */
     display: flex;
     flex-direction: column;
 }
@@ -43,28 +43,27 @@ body {
     justify-content: space-around;
     flex-direction: row;
     margin-top: auto;
-
 }
 
 .icon-logo {
-    width: 145px;
+    width: 120px; /* LEVEMENTE MAIOR */
     margin-bottom: 15px;
     align-self: center;
 }
 
 .form-container h2 {
-    font-size: 24px; /* Reduzi levemente para caber tudo */
+    font-size: 28px; /* MAIOR */
     color: #051D40;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .subtitle {
     color: #666;
-    font-size: 13px;
+    font-size: 14px;
     text-align: center;
-    margin-bottom: 20px; /* Reduzi para o bloco subir */
+    margin-bottom: 25px;
 }
 
 /* --- O BLOCO DE INFORMAÇÃO --- */
@@ -72,37 +71,37 @@ body {
     width: 100%;
     border: 1px solid #e1e5eb;
     border-radius: 12px;
-    padding: 22px; /* Ajuste fino no respiro interno */
+    padding: 30px; /* ALTERADO (antes 22px) */
     background: #ffffff;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .form-header h3 {
-    font-size: 18px;
+    font-size: 20px; /* MAIOR */
     color: #051D40;
     margin-bottom: 5px;
 }
 
 .form-header p {
-    font-size: 12px;
+    font-size: 13px;
     color: #888;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    gap: 12px; /* Espaço reduzido para o cadastro caber na tela */
+    gap: 15px; /* MAIS ESPAÇO */
 }
 
 .grupo-input {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
 }
 
 .grupo-input label {
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
     color: #051D40;
 }
@@ -114,7 +113,7 @@ form {
     background: #f8f9fa;
     border: 1px solid #e1e5eb;
     border-radius: 10px;
-    height: 44px; /* Altura otimizada para economizar tela */
+    height: 50px; /* ALTERADO (antes 44px) */
     padding: 0 15px;
     transition: all 0.3s ease;
 }
@@ -136,11 +135,11 @@ form {
     outline: none;
     background: transparent;
     flex: 1;
-    font-size: 14px;
+    font-size: 15px; /* LEVEMENTE MAIOR */
     color: #333;
 }
 
-/* --- SELETORES LADO A LADO --- */
+/* --- SELETORES --- */
 .linha {
     display: flex;
     gap: 12px;
@@ -153,44 +152,23 @@ form {
 }
 
 .linha select {
-    height: 44px;
+    height: 50px; /* ALTERADO */
     border-radius: 10px;
     border: 1px solid #e1e5eb;
     padding: 0 10px;
     background: #f8f9fa;
     outline: none;
-    font-size: 13px;
+    font-size: 14px;
     width: 100%;
     cursor: pointer;
 }
 
 /* --- LINKS E BOTÕES --- */
-.opcoes-login {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-}
-
-.lembrar {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: #555;
-    cursor: pointer;
-}
-
-.esqueci-senha {
-    color: #2788C8;
-    text-decoration: none;
-    font-weight: 500;
-}
-
 .termos {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    font-size: 11px;
+    font-size: 12px;
     color: #666;
     line-height: 1.4;
     margin-top: 5px;
@@ -208,10 +186,10 @@ button[type="submit"] {
     background-color: #051D40;
     color: white;
     border: none;
-    height: 46px;
+    height: 50px; /* ALTERADO */
     border-radius: 10px;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 16px;
     cursor: pointer;
     transition: all 0.3s;
     margin-top: 5px;
@@ -226,7 +204,7 @@ button[type="submit"]:hover {
 
 .troca-pagina {
     text-align: center;
-    font-size: 13px;
+    font-size: 14px;
     margin-top: 15px;
     color: #555;
 }
@@ -239,8 +217,8 @@ button[type="submit"]:hover {
 
 .btn-voltar {
     align-self: center;
-    margin-top: 15px;
-    font-size: 12px;
+    margin-top: 20px;
+    font-size: 13px;
     color: #aaa;
     text-decoration: none;
 }
@@ -248,7 +226,6 @@ button[type="submit"]:hover {
 /* --- LADO DA IMAGEM --- */
 .image-side {
     flex: 1.2;
-    /* CORREÇÃO DO CAMINHO PARA A IMAGEM APARECER */
     background: linear-gradient(rgba(5, 29, 64, 0.8), rgba(39, 136, 200, 0.6)), 
                 url('../img/eniac.jpg') center/cover no-repeat;
     display: flex;
@@ -275,90 +252,95 @@ button[type="submit"]:hover {
     .image-side { display: none; }
 }
 
+
 /* ===== MODO ESCURO ===== */
 
+/* ===== MODO ESCURO PADRÃO (ALINHADO COM O OUTRO CSS) ===== */
+
 body.dark-mode{
-    background:#121212;
-    color:white;
+    background:#0f172a;
+    color:#ffffff;
 }
 
-/* lado do formulário */
+/* LADO FORM */
 body.dark-mode .form-side{
-    background:#121212;
+    background:#0f172a;
 }
 
-/* container do formulário */
+/* CARD */
 body.dark-mode .form-box{
-    background:#1e1e1e;
-    border:1px solid #2a2a2a;
+    background:#020817;
+    border:1px solid #1e293b;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
-/* títulos */
+/* TEXTOS */
 body.dark-mode .form-container h2,
 body.dark-mode .form-header h3,
 body.dark-mode .grupo-input label{
-    color:white;
+    color:#ffffff;
 }
 
-/* subtitulo */
 body.dark-mode .subtitle,
 body.dark-mode .form-header p{
-    color:#bbb;
+    color:#94a3b8;
 }
 
-/* campos */
+/* INPUT */
 body.dark-mode .campo{
-    background:#2a2a2a;
-    border:1px solid #333;
+    background:#020817;
+    border:1px solid #1e293b;
 }
 
 body.dark-mode .campo input{
-    color:white;
+    color:#ffffff;
 }
 
-/* icones */
+body.dark-mode .campo input::placeholder{
+    color:#64748b;
+}
+
+/* ÍCONES */
 body.dark-mode .campo i{
-    color:#9aa4ad;
+    color:#94a3b8;
 }
 
-/* foco */
+/* FOCO */
 body.dark-mode .campo:focus-within{
-    border-color:#31BADF;
-    background:#2f2f2f;
-    box-shadow:0 0 0 4px rgba(49,186,223,0.15);
+    border-color:#387499;
+    background:#020817;
+    box-shadow:0 0 0 4px rgba(56,116,153,0.3);
 }
 
-/* select */
+/* SELECT */
 body.dark-mode select{
-    background:#2a2a2a;
-    border:1px solid #333;
-    color:white;
+    background:#020817;
+    border:1px solid #1e293b;
+    color:#ffffff;
 }
 
-/* textos */
-body.dark-mode .lembrar,
+/* TEXTOS SECUNDÁRIOS */
 body.dark-mode .termos,
 body.dark-mode .troca-pagina{
-    color:#ccc;
+    color:#94a3b8;
 }
 
-/* links */
+/* LINKS */
 body.dark-mode .troca-pagina a,
-body.dark-mode .termos a,
-body.dark-mode .esqueci-senha{
-    color:#31BADF;
+body.dark-mode .termos a{
+    color:#60a5fa;
 }
 
-/* botão */
+/* BOTÃO */
 body.dark-mode button[type="submit"]{
-    background:#2788C8;
+    background:#1e3a8a;
 }
 
 body.dark-mode button[type="submit"]:hover{
-    background:#31BADF;
+    background:#1e40af;
 }
 
-/* botão voltar */
+/* BOTÃO VOLTAR */
 body.dark-mode .btn-voltar{
-    color:#bbb;
+    color:#94a3b8;
 }
